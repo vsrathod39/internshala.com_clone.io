@@ -66,3 +66,19 @@ h5 {
     font-size: 2vh;
     margin-left: 52%;
 }
+@media(max-width: 600px) {
+    #footer_pageLinks > div:nth-child(1), #footer_pageLinks > div:nth-child(2) {
+        display: none;
+    }
+    #footer_pageLinks {
+        flex-direction: column;
+    }
+    #footer_pageLinks > div:nth-child(3) {
+        border-bottom: 1px solid #666;
+        margin-bottom: 3vh;
+        padding-bottom: 1vh;
+    }
+    #social #crIcon {
+        margin-left: 10%;
+    }
+}
