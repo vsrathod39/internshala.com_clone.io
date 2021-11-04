@@ -1,12 +1,13 @@
-* {
+/* * {
     margin: 0px -3px;
     padding: 0;
-}
+} */
 #footer {
     background-color: #333333;
     box-sizing: border-box;
     padding: 8px 0;
     color: white;
+    margin: -10px -10px;
 }
 #footer_pageLinks {
     display: flex;
