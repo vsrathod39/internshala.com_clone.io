@@ -1,0 +1,68 @@
+* {
+    margin: 0px -3px;
+    padding: 0;
+}
+#footer {
+    background-color: #333333;
+    box-sizing: border-box;
+    padding: 8px 0;
+    color: white;
+}
+#footer_pageLinks {
+    display: flex;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+#footer_pageLinks > div > div {
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+h5 {
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+#footer_pageLinks > div {
+    flex-basis: 22%;
+    margin: 0 6%;
+}
+#footer_pageLinks span {
+    background-color: #ff8c00;
+    padding: 2px;
+    border-radius: 10%;
+    font-size: 14px;
+    font-weight: 400;
+}
+#social {
+    border-top: 1px solid #666;
+    padding-bottom: 40px;
+    padding-top: 24px;
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+#social i {
+    margin: 0 1%;
+    font-size: 30px;
+}
+#social > div {
+    width: 12%;
+    border: 1px white solid;
+    padding: 3px;
+    border-radius: 5%;
+    margin-right: 2%;
+}
+#social > div > i, #social > div > span {
+    vertical-align: middle;
+}
+#social #crIcon {
+    font-size: 15px;
+    margin-left: 52%;
+}
