@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../styles/navbar.css">
 </head>
 <body>
-    <nav>
+    <div id="navBar">
+
+    </div>
+    <!-- <nav>
         <section id="brandLogo">
             <img src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="brandLogo">
         </section>
@@ -72,6 +75,10 @@
                 </li>
             </ul>
         </section>
-    </nav>
+    </nav> -->
 </body>
 </html>
+<script type="module">
+    import navbar from "./navbar.js";
+    document.getElementById('navBar').innerHTML =  navbar();
+</script>
