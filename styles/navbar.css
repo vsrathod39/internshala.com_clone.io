@@ -8,13 +8,21 @@ nav{
     width: 100%;
     height: 75px;
     display: flex;
-    align-items: center;
     font-family: "Inter var", sans-serif;
     font-weight: 500;
     font-size: 14px;
 }
 #brandLogo{
     width: 45%;
+    height: 55px;
+    line-height: 65px;
+    display: flex;
+    align-items: center;
+    border: 1px solid blue;
+}
+#brandLogo img{
+    margin-left: 3%;
+    width: 120px;
 }
 #services{
     border: 1px solid blue;
@@ -31,17 +39,31 @@ nav{
     border: 1px solid red;
     line-height: 40px;
 }
+.hotText{
+    padding: 3px 6px;
+    font-size: 12px;
+    margin: 0 5px;
+    color: white;
+    background-color: #ff8c00;
+    border-radius: 3px;
+}
 #logIn_button{
     outline: none;
     border: 1px solid #00a5ec;
-    padding: 6px 20px;
+    padding: 7px 20px;
     background-color: white;
     border-radius: 3px;
     color: #00a5ec;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: Arial;
 }
 #register_button{
     background-color: #00a5ec;
     padding: 8px 30px;
     color: white;
     border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: Arial;
 }
