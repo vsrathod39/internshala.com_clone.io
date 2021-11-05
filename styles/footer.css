@@ -58,6 +58,7 @@ h5 {
     padding: 0.5vh;
     border-radius: 5%;
     margin-right: 2%;
+    cursor: pointer;
 }
 #social > div > i, #social > div > span {
     vertical-align: middle;
@@ -71,6 +72,9 @@ h5 {
 }
 #crIcon, #social p {
     vertical-align: middle;
+}
+i {
+    cursor: pointer;
 }
 @media(max-width: 600px) {
     #footer_pageLinks > div:nth-child(1), #footer_pageLinks > div:nth-child(2) {
