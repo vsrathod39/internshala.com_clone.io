@@ -1,0 +1,89 @@
+* {
+    font-family: "Inter var", sans-serif;
+}
+#bigB {
+    width: 85%;
+    margin: auto;
+}
+.headDiv {
+    display: flex;
+    justify-content: space-between;
+}
+/* div {
+    border: 1px solid red;
+} */
+.anchor {
+    padding-top: 30%;
+    font-weight: 600;
+    font-size: 1.2vw;
+}
+.title {
+    line-height: 5vh;
+    color: #333333;
+    font-weight: 600;
+    font-size: 2vw;
+}
+.gridB {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.gridB p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2vw;
+}
+#internships > div{
+    margin-bottom: 3%;
+}
+.description {
+    color: #484848;
+    font-weight: 400;
+    font-size: 1.2vw;
+}
+.header {
+    color: #333333;
+    margin-bottom: 2%;
+    font-weight: 600;
+    font-size: 1.2vw;
+}
+#internT > div{
+    margin-bottom: 3%;
+}
+#internT  p{
+    line-height: 1.5em;
+}
+#freshJ > div{
+    margin-bottom: 3%;
+}
+#new {
+    color: white;
+    font-weight: 600;
+    font-size: 1.3vw;
+    text-align: center;
+    padding: 3.7%;
+    vertical-align: middle;
+}
+#bgSpan {
+    background-color: #f28c3c;
+    border-radius: 3px;
+}
+#bigB > div {
+    margin-bottom: 8%;
+}
+#freshJ .gridB {
+    width: 70%;
+    text-align: center;
+}
+#bigB img {
+    width: 10vw;
+    height: 10vh;
+}
+.gridB > div:hover {
+    box-shadow: 0 0 1vh rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+    color: #008bdc;
+}
+.gridB > div {
+    cursor: pointer;
+}
