@@ -14,11 +14,18 @@ nav{
     width: 45%;
 }
 #services{
+    /* border: 1px solid blue; */
     width: 55%;
+    height: 100%;
+    line-height: 75px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
 }
 #services ul{
+    list-style: none;
+}
+#services ul li ul{
     border: 1px solid red;
+    line-height: 40px;
 }
