@@ -9,18 +9,20 @@ nav{
     height: 75px;
     display: flex;
     align-items: center;
+    font-family: "Inter var", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
 }
 #brandLogo{
     width: 45%;
 }
 #services{
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     width: 55%;
     height: 100%;
     line-height: 75px;
     display: flex;
-    /* align-items: center; */
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #services ul{
     list-style: none;
@@ -28,4 +30,18 @@ nav{
 #services ul li ul{
     border: 1px solid red;
     line-height: 40px;
+}
+#logIn_button{
+    outline: none;
+    border: 1px solid #00a5ec;
+    padding: 6px 20px;
+    background-color: white;
+    border-radius: 3px;
+    color: #00a5ec;
+}
+#register_button{
+    background-color: #00a5ec;
+    padding: 8px 30px;
+    color: white;
+    border-radius: 3px;
 }
