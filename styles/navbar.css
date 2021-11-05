@@ -18,14 +18,12 @@ nav{
     line-height: 65px;
     display: flex;
     align-items: center;
-    border: 1px solid blue;
 }
 #brandLogo img{
     margin-left: 3%;
     width: 120px;
 }
 #services{
-    border: 1px solid blue;
     width: 55%;
     height: 100%;
     line-height: 75px;
@@ -34,10 +32,41 @@ nav{
 }
 #services ul{
     list-style: none;
+    cursor: pointer;
 }
-#services ul li ul{
-    border: 1px solid red;
-    line-height: 40px;
+#services ul{
+    line-height: 70px;
+}
+#services ul li:hover{
+    color: #00a5ec;
+}
+#services ul ul{
+    display: none;
+    line-height: 35px;
+    margin-top: 4px;
+    position: relative;
+    width: 240%;
+    background-color: white;
+    height: 300px;
+    color: black;
+}
+#services ul li:hover > ul{
+    display: block;
+}
+.spanTag:hover{
+    background-color: #e7f5fc;
+    border-radius: 8px;
+    width: 90%;
+}
+#services ul ul ul{
+    margin-left: 100%;
+    line-height: 35px;
+    width: 150%;
+    top: -5px;
+    position: absolute;
+    background-color: white;
+    border-left: 1px solid rgb(230, 230, 230);
+    overflow-y: scroll;
 }
 .hotText{
     padding: 3px 6px;
@@ -57,6 +86,7 @@ nav{
     font-size: 13px;
     font-weight: 600;
     font-family: Arial;
+    cursor: pointer;
 }
 #register_button{
     background-color: #00a5ec;
