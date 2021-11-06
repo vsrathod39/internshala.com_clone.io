@@ -1,5 +1,5 @@
 function footer() {
-    return ` <div id="footer_pageLinks">
+    return `<div id="footer_pageLinks">
     <div>
         <h5>Internships by places</h5>
         <div>Internship in India</div>
@@ -54,12 +54,16 @@ function footer() {
         <i class='bx bxl-play-store'></i>
         <span>Get Android App</span>
     </div>
-    <i class='bx bxl-instagram' ></i>
-    <i class='bx bxl-twitter' ></i>
-    <i class='bx bxl-youtube' ></i>
-    <i class='bx bxl-linkedin' ></i>
-    <i class='bx bx-copyright' id="crIcon"></i>
-    <p>Copyright 2021 Internshala</p>
+    <div>
+        <i class='bx bxl-instagram' ></i>
+        <i class='bx bxl-twitter' ></i>
+        <i class='bx bxl-youtube' ></i>
+        <i class='bx bxl-linkedin' ></i>
+    </div>
+    <div>
+        <i class='bx bx-copyright' id="crIcon"></i>
+        <p>Copyright 2021 Internshala</p>
+    </div>
 </div>`
 }
 
