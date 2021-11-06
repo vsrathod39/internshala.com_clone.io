@@ -13,22 +13,28 @@ nav{
     font-size: 14px;
 }
 #brandLogo{
-    width: 45%;
+    width: 25%;
     height: 55px;
     line-height: 65px;
     display: flex;
     align-items: center;
 }
-#brandLogo img{
+#brandLogo img:nth-child(1){
+    margin-left: 3%;
+    margin-top: 17px;
+    display: none;
+}
+#brandLogo img:nth-child(2){
     margin-left: 3%;
     width: 120px;
 }
 #services{
-    width: 55%;
+    width: 73%;
     height: 100%;
     line-height: 75px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 5%;
 }
 #services ul{
     list-style: none;
@@ -96,4 +102,12 @@ nav{
     font-size: 13px;
     font-weight: 600;
     font-family: Arial;
+}
+@media (max-width:940px) {
+    #brandLogo img:nth-child(1){
+        display: block;
+    }
+    #services ul:first-child, ul:nth-child(2), ul:nth-child(3), ul:nth-child(4){
+        display: none;
+    }
 }
