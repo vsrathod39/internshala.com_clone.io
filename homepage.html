@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internshala | Summer Internship 2021</title>
     <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/homepage.css">
     <link rel="stylesheet" href="./styles/footer.css">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div id="navbar"></div>
+    <div id="navBar">
+
+    </div>
+    <nav>
+        
+    </nav>
     <div id="searchNslide"></div>
     <div id="bigB">
         <div id="internships">
@@ -184,6 +190,19 @@
 </body>
 </html>
 <script type="module">
+    import {navbar, huberberg} from "./components/navbar.js";
+    document.getElementsByTagName('nav')[0].innerHTML =  navbar();
+    document.getElementById('navBar').addEventListener('click', hidehuberberg);
+    document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+    function showHuberberg(){
+        document.getElementById('navBar').innerHTML =  huberberg();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+    }
+    function hidehuberberg(){
+        document.getElementById('navBar').innerHTML = null;
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    }
+
     import {footer} from "./components/footer.js";
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
