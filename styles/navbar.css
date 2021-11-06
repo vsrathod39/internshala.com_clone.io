@@ -46,9 +46,6 @@ nav{
     list-style: none;
     cursor: pointer;
 }
-#services ul{
-    /* line-height: 70px; */
-}
 #services ul li:hover{
     color: #00a5ec;
 }
@@ -112,17 +109,11 @@ nav{
     font-size: 13px;
     font-weight: 600;
     font-family: Arial;
-    border: 1px solid red;
-    /* display: flex; */
 }
 #upDownArrow{
     width: 13px;
-    /* border: 1px solid red; */
     margin-left: 5px;
 }
-/* #upDownArrow:hover{
-    transform: rotate(180deg);
-} */
 #huberberg{
     font-family: "Inter var", sans-serif;
     font-weight: 500;
@@ -174,7 +165,7 @@ nav{
         display: none;
     }
     #register_button{
-        padding: 13px 30px;
+        padding: 13px 20px;
     }
     #navBar{
         display: block;
