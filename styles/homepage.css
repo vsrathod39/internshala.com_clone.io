@@ -2,8 +2,8 @@
     font-family: "Inter var", sans-serif;
 }
 #bigB {
-    width: 85%;
-    margin: auto;
+    width: 95%;
+    margin: 35px auto;
 }
 .headDiv {
     display: flex;
