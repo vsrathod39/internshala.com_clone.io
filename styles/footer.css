@@ -59,13 +59,23 @@ h5 {
     padding: 0.5vh;
     border-radius: 5%;
     margin-right: 2%;
+    cursor: pointer;
 }
 #social > div > i, #social > div > span {
     vertical-align: middle;
 }
 #social #crIcon {
     font-size: 2vh;
-    margin-left: 52%;
+    margin-left: 53.5%;
+}
+#social > div > span, #social p {
+    font-size: 2.5vh;
+}
+#crIcon, #social p {
+    vertical-align: middle;
+}
+i {
+    cursor: pointer;
 }
 @media(max-width: 600px) {
     #footer_pageLinks > div:nth-child(1), #footer_pageLinks > div:nth-child(2) {
@@ -80,6 +90,6 @@ h5 {
         padding-bottom: 1vh;
     }
     #social #crIcon {
-        margin-left: 10%;
+        margin-left: 18.5%;
     }
 }
