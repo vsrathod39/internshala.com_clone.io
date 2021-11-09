@@ -13,7 +13,6 @@ body {
 }
 #poster {
     flex-basis: 65%;
-    height: 100%;
     background-image: url("https://internshala.com/static/images/registration/student/background-768.png");
     background-size: 950px;
     background-repeat: no-repeat;
@@ -148,4 +147,33 @@ button {
 }
 #msg {
     margin: 0 20%;
+}
+
+@media(max-width: 940px) {
+    #regStd {
+        flex-direction: column;
+        height: 130vh;
+    }
+    #poster {
+        flex-basis: 45%;
+        width: 100%;
+        background-image: url("https://internshala.com/static/images/registration/student/background-425.png");
+        background-size: contain;
+    }
+    h3 {
+        display: none;
+    }
+    h4 {
+        font-size: 2.5vw;
+    }
+    .cat {
+        margin-top: 10px;
+    }
+    #signupSec {
+        flex-basis: 55%;
+    }
+    #poster > div > div:nth-child(1) {
+        font-size: 4.5vw;
+        font-weight: 700;
+    }
 }
