@@ -55,7 +55,6 @@ async function signup(event) {
         description: "Masai wale bhaiya",
     };
 
-    console.log(user_data);
 
     user_data = JSON.stringify(user_data);
 
