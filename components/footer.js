@@ -25,7 +25,7 @@ function footer() {
         <div>Campus Ambassador Program</div>
     </div>
     <div>
-        <h5>Online Trainings&nbsp;&nbsp;<span>OFFER</span></h5>
+        <h5 id='sectionTitle'>Online Trainings&nbsp;&nbsp;<span>OFFER</span></h5>
         <div>Programming with Python</div>
         <div>Digital Marketing</div>
         <div>Web Development</div>
@@ -49,17 +49,24 @@ function footer() {
         <div>Contact us</div>
     </div>
 </div>
+<hr>
 <div id="social">
     <div>
-        <i class='bx bxl-play-store'></i>
-        <span>Get Android App</span>
+        <div id='playStore'>
+            <i class='bx bxl-play-store' style="font-size: 1.8em;"></i>
+            <span>Get Android App</span>
+        </div>
+        <div>
+            <i class='bx bxl-instagram' style="font-size: 1.8em;"></i>
+            <i class='bx bxl-twitter' style="font-size: 1.8em;"></i>
+            <i class='bx bxl-youtube' style="font-size: 1.8em;"></i>
+            <i class='bx bxl-linkedin' style="font-size: 1.8em;"></i>
+        </div>
     </div>
-    <i class='bx bxl-instagram' ></i>
-    <i class='bx bxl-twitter' ></i>
-    <i class='bx bxl-youtube' ></i>
-    <i class='bx bxl-linkedin' ></i>
-    <i class='bx bx-copyright' id="crIcon"></i>
-    <p>Copyright 2021 Internshala</p>
+    <div>
+        <i class='bx bx-copyright' id="crIcon"></i>
+        <p id='cpRight'>Copyright 2021 Internshala</p>
+    </div>
 </div>`
 }
 
