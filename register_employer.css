@@ -124,6 +124,7 @@ h1 {
     font-size: 40px;
     font-weight: 700;
     margin: 12vh 0;
+    color: #222;
 }
 #stepsToFollow {
     width: 75%;
@@ -221,8 +222,98 @@ h6 span {
 #social > div {
     display: flex;
     margin-right: 5%;
+    margin-left: 5%;
 }
 
 @media(max-width: 940px) {
-   
+    #stepsToFollow {
+        flex-direction: column;
+        width: 70%;
+    }
+    #footer_pageLinks {
+        flex-direction: column;
+    }
+    #footer_pageLinks > div {
+        margin-bottom: 10px;
+    }
+    #social {
+        flex-direction: column;
+    }
+    .steps {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .steps p {
+        font-size: 18px;
+        color: #444444;
+    }
+    #regBtn {
+        width: 35%;
+        margin: 0 32.5%;
+    }
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 12vh 15%;
+    }
+    #noOfComp {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 12vh 5%;
+    }
+    #knowMore {
+        background-image: url("https://internshala.com/static/images/registration/employer/registration_new/internship/jobs_banner/r575-min.png");
+        background-size: cover;
+        height: 450px;
+    }
+    #knowMore > div:nth-child(1) {
+        width: 80%;
+    }
+    h2 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    h6 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    #knowMore > div > div {
+        width: 40%;
+    }
+    #poster {
+        background-image: url("https://internshala.com/static/images/registration/employer/registration_new/internship/banner/r575-new.png");
+        background-size: cover;
+    }
+    #regStd {
+        height: 170vh;
+        background-image: none;
+        flex-direction: column;
+    }
+    #signupDiv {
+        margin-top: 0;
+        position: relative;
+        bottom: 5vh;
+    }
+    #poster > div {
+        margin: auto;
+        margin-top: 6vh;
+        width: 75%;
+        text-align: center;
+    }
+    #poster > div > div:nth-child(1) {
+        font-size: 7vw;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 15px;
+        font-weight: 600;
+        color: black;
+        margin: 12px 0;
+    }
+    h4 {
+        margin: 16px 2vw;
+        font-size: 16px;
+        color: #222222;
+        font-weight: 500;
+    }
 }
