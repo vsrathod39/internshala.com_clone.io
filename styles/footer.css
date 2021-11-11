@@ -1,8 +1,7 @@
 
-/* * {
-    margin: 0px -3px;
-    padding: 0;
-} */
+* {
+    margin: 0;
+}
 #footer {
     background-color: #333333;
     box-sizing: border-box;
@@ -15,6 +14,8 @@
     margin-top: 4.5vh;
     margin-bottom: 16px;
     box-sizing: border-box;
+    padding: 4vw;
+    justify-content: space-between;
 }
 #footer_pageLinks > div > div {
     line-height: 2.8vh;
@@ -29,8 +30,8 @@ h5 {
     margin-bottom: 2vh;
 }
 #footer_pageLinks > div {
-    flex-basis: 22%;
-    margin: 0 6%;
+    flex-basis: 15%;
+    margin: 0;
 }
 #footer_pageLinks span {
     background-color: #ff8c00;
@@ -43,17 +44,19 @@ h5 {
     border-top: 1px solid #666;
     padding-bottom: 4.5vh;
     padding-top: 3.2vh;
-    width: 90%;
+    width: 98%;
     margin: auto;
     box-sizing: border-box;
     display: flex;
     align-items: center;
 }
 #social i {
-    margin: 0 1%;
     font-size: 4vh;
 }
 #social > div {
+    display: flex;
+}
+#social > div:nth-child(1) {
     width: 12%;
     border: 1px white solid;
     padding: 0.5vh;
@@ -61,18 +64,18 @@ h5 {
     margin-right: 2%;
     cursor: pointer;
 }
-#social > div > i, #social > div > span {
-    vertical-align: middle;
-}
 #social #crIcon {
     font-size: 2vh;
-    margin-left: 53.5%;
+    margin-right: 2%;
 }
-#social > div > span, #social p {
+#social > div:nth-child(1) > span, #social p {
     font-size: 2.5vh;
 }
-#crIcon, #social p {
-    vertical-align: middle;
+#social span {
+    margin-top: 0.7vh;
+}
+#crIcon {
+    margin-top: 0.6vh;
 }
 i {
     cursor: pointer;
@@ -89,7 +92,25 @@ i {
         margin-bottom: 3vh;
         padding-bottom: 1vh;
     }
-    #social #crIcon {
-        margin-left: 18.5%;
+    #social {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #social > div:nth-child(3) {
+        width: 98%;
+        margin: auto;
+        padding-top: 3vh;
+    }
+    #social > div:nth-child(1) {
+        width: 47vw;
+    }
+    #social > div {
+        margin-bottom: 5vh;
+    }
+    #social > div:nth-child(3) {
+        border-top: 1px solid #666;
+    }
+    #social > div:nth-child(2) {
+        width: 40%;
     }
 }
