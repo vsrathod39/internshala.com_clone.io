@@ -1,6 +1,6 @@
+
 * {
     margin: 0;
-    padding: 0;
 }
 #footer {
     background-color: #333333;
@@ -80,15 +80,7 @@ h5 {
 i {
     cursor: pointer;
 }
-#social > div:nth-child(2) {
-    justify-content: space-between;
-    width: 13vw;
-}
-#social > div:nth-child(3) {
-    width: 15vw;
-    margin-left: 55vw;
-}
-@media(max-width: 600px) {
+@media(max-width: 940px) {
     #footer_pageLinks > div:nth-child(1), #footer_pageLinks > div:nth-child(2) {
         display: none;
     }
