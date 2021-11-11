@@ -1,5 +1,5 @@
 function footer() {
-    return ` <div id="footer_pageLinks">
+    return `<div id="footer_pageLinks">
     <div>
         <h5>Internships by places</h5>
         <div>Internship in India</div>
