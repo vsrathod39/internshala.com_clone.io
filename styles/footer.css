@@ -1,6 +1,6 @@
 
-* {
-    margin: 0;
+*{
+    font-family: "Inter var", sans-serif;
 }
 #footer {
     background-color: #333333;
@@ -14,103 +14,141 @@
     margin-top: 4.5vh;
     margin-bottom: 16px;
     box-sizing: border-box;
-    padding: 4vw;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 #footer_pageLinks > div > div {
-    line-height: 2.8vh;
-    font-size: 2.2vh;
+    line-height: 4.5vh;
+    font-size: 14px;
     font-weight: 400;
     padding-bottom: 1.1vh;
 }
 h5 {
     line-height: 3.5vh;
-    font-size: 2.5vh;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 2vh;
 }
 #footer_pageLinks > div {
-    flex-basis: 15%;
-    margin: 0;
+    flex-basis: 22%;
 }
 #footer_pageLinks span {
     background-color: #ff8c00;
     padding: 0.15vh;
     border-radius: 10%;
-    font-size: 2.5vh;
+    font-size: 14px;
     font-weight: 400;
 }
 #social {
-    border-top: 1px solid #666;
-    padding-bottom: 4.5vh;
-    padding-top: 3.2vh;
-    width: 98%;
+    padding: 4.5vh 3.2vh;
+    width: 100%;
     margin: auto;
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+#social div{
+    display: flex;
+    align-items: center;
 }
 #social i {
-    font-size: 4vh;
+    margin-left: 20px;
+    cursor: pointer;
 }
-#social > div {
-    display: flex;
+hr{
+    width: 97%;
+    margin: auto;
+    border: none;
+    border-top: 1px solid grey;
 }
-#social > div:nth-child(1) {
-    width: 12%;
+#playStore{
+    width: 170px;
+    height:45px;
     border: 1px white solid;
-    padding: 0.5vh;
-    border-radius: 5%;
-    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 3px;
     cursor: pointer;
 }
-#social #crIcon {
-    font-size: 2vh;
-    margin-right: 2%;
-}
-#social > div:nth-child(1) > span, #social p {
-    font-size: 2.5vh;
-}
-#social span {
-    margin-top: 0.7vh;
-}
-#crIcon {
-    margin-top: 0.6vh;
-}
-i {
-    cursor: pointer;
+#playStore, #social p {
+    font-size: 14px;
+    font-weight: 400;
 }
 @media(max-width: 940px) {
     #footer_pageLinks > div:nth-child(1), #footer_pageLinks > div:nth-child(2) {
         display: none;
     }
+    h5{
+        display: block;
+    }
     #footer_pageLinks {
         flex-direction: column;
+        padding: 20px;
     }
     #footer_pageLinks > div:nth-child(3) {
-        border-bottom: 1px solid #666;
-        margin-bottom: 3vh;
-        padding-bottom: 1vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+        justify-content: space-between;
+        grid-gap: 3vh;
+        border-bottom: 1px solid grey;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
     }
-    #social {
+    #footer_pageLinks > div:nth-child(4){
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+        justify-content: space-between;
+        grid-gap: 3vh;
+    }
+    #footer_pageLinks > div > div{
+        line-height: 2.5vh;
+    }
+}
+@media (max-width:620px) {
+    #footer_pageLinks > div:nth-child(1), #footer_pageLinks > div:nth-child(2) {
+        display: none;
+    }
+    h5{
+        display: block;
+    }
+    #footer_pageLinks {
+        flex-direction: column;
+        padding: 20px;
+    }
+    #footer_pageLinks > div:nth-child(3) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        justify-content: space-between;
+        border-bottom: 1px solid grey;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    #footer_pageLinks > div:nth-child(4){
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        justify-content: space-between;
+    }
+    #footer_pageLinks > div > div{
+        line-height: 2.5vh;
+    }
+    #social{
         flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
     }
-    #social > div:nth-child(3) {
-        width: 98%;
-        margin: auto;
-        padding-top: 3vh;
+    #social >div:first-child{
+        flex-direction: column;
+        gap: 20px;
     }
-    #social > div:nth-child(1) {
-        width: 47vw;
-    }
-    #social > div {
-        margin-bottom: 5vh;
-    }
-    #social > div:nth-child(3) {
-        border-top: 1px solid #666;
-    }
-    #social > div:nth-child(2) {
-        width: 40%;
-    }
+    #social i{
+        margin-left: 0;
+        margin-right: 14px;
+  }
 }
