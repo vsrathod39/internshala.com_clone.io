@@ -169,6 +169,13 @@
         color: #006BC2;
         cursor: pointer;
     }
+    .clear_searchBtn{
+        outline:none;
+        height: 30px;
+        letter-spacing: 1px;
+        padding:2px;
+        cursor: pointer;
+    }
 
 </style>
 </head>
@@ -218,10 +225,10 @@
                         <span class="slider round"></span>
                     </label><br>
                     
-                    <button type="button" onclick="clearFilter()">Clear all</button><br>
+                    <button type="button" onclick="clearFilter()" class="clear_searchBtn">Clear all</button><br>
             
-                    <input type="text" id="search_id" placeholder="e.g. Design, Mumbai, infosys"><br>
-                    <button onclick="searchProducts()">Get Element By Id</button>
+                    <input type="text" id="search_id" placeholder="e.g. Design, Mumbai, infosys" class="clear_searchBtn"><br>
+                    <button onclick="searchProducts()" class="clear_searchBtn">Search</button>
 
                 </div>
 
