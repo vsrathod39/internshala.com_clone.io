@@ -81,6 +81,9 @@ h3 {
     border: 1px solid #eeeeee;
     cursor: pointer;
 }
+#signGoogle img {
+    vertical-align: top;
+}
 #opt {
     position: relative;
     bottom: 1.8vh;
