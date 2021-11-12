@@ -16,3 +16,18 @@ function autoSlider(){
 }
 document.addEventListener("DOMContentLoaded", autoSlider());
 
+const dataName = document.getElementsByClassName('getDatabaseValue');
+console.log("dataName" , dataName);
+
+
+for(let i=0; i<dataName.length; i++){
+    dataName[i].onclick = function () {
+         
+          getvalueData(dataName[i].innerText); 
+    }
+}
+
+
+function getvalueData(dd){
+    console.log("dd" , dd);
+}
