@@ -3,16 +3,16 @@
 }
 #scrollSlider{
     width: 100%;
-    overflow: scroll;
+    overflow-x: scroll;
     scroll-behavior: smooth;
-    margin: 45px 0;
+    margin: 45px 0 30px 0;
     display: grid;
-    grid-template-columns: 85% 85% 85% 85%;
+    grid-template-columns: 90% 90% 90% 90%;
     gap: 2%;
 }
 .getWidth{
     width: 100%;
-    height: 320px;
+    height: 340px;
     border-radius: 5px;
 }
 .sliderImg1{
@@ -36,7 +36,8 @@
     background-repeat: no-repeat;
 }
 .sliderContentBox{
-    padding: 4%;
+    margin-top: 20px;
+    margin-left: 3%;
     display: flex;
     flex-direction: column;
 }
@@ -50,6 +51,9 @@
     font-size: 18px;
     font-weight: 500;
     color: #484848;
+}
+.sliderContentBox >div:nth-child(5){
+    display: none;
 }
 #scrollSlider::-webkit-scrollbar{
     display: none;
@@ -198,5 +202,45 @@ a{
 @media (max-width: 940px) {
     #gridD{
         flex-direction: column;
+    }
+}
+@media (max-width: 760px) {
+    #scrollSlider{
+        grid-template-columns: 97% 97% 97% 97%;
+        gap: 1%;
+    }
+    .getWidth{
+        height: 200px;
+    }
+    .sliderContentBox >div:nth-child(3){
+        display: none;
+    }
+    .sliderContentBox >div:nth-child(4){
+        display: none;
+    }
+    .sliderContentBox >div:nth-child(5){
+        display: flex;
+    }
+    .sliderContentBox h1{
+        font-size: 18px;
+    }
+    .sliderContentBox h3{
+        font-size: 14px;
+    }
+    .sliderContentBox p{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .sliderImg1{
+        background-image: url(https://internshala.com/cached_uploads/banner-images/home/home_internships-575.png);
+    }
+    .sliderImg2{
+        background-image: url(https://internshala.com/cached_uploads/banner-images/home/practice_makes_progress-320-53c159.png);
+    }
+    .sliderImg3{
+        background-image: url(https://internshala.com/cached_uploads/banner-images/home/home_jobs-575.png);
+    }
+    .sliderImg4{
+        background-image: url(https://internshala.com/cached_uploads/banner-images/home/bc_1-320-9781a0.png);
     }
 }
