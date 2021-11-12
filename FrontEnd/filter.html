@@ -251,6 +251,7 @@
     searchInternships();
     var data = null;
     
+    // Search Internships
     async function searchInternships(){
         try{
         let respose = await fetch(`http://localhost:5000/api/internships`,{
@@ -265,7 +266,8 @@
        
         }catch(e){ console.log("e", e); }
     }
-
+    
+    // Display internships
     function display_internships(array){
 
         internships_div.innerHTML = null;
@@ -337,7 +339,8 @@
     let checkedbrand = null;
     let rangeValue = null;
     var markedCheckbox = null;
-  
+    
+    // Display on checked Data
     function onChecked() {
         rangeValue = document.getElementById("myRange").value;
         // console.log("rangeValue" , rangeValue);
@@ -763,6 +766,7 @@
         document.getElementById("myRange").value = "0";
     }
    
+    // Search Internships
     async function searchProducts(){
         
         try{
@@ -783,6 +787,7 @@
     
     let roleCount = 0;
     let locationCount = 0;   
+    // Display Search Internships
     function display_search(array){
         internships_div.innerHTML = null;
 
@@ -798,7 +803,7 @@
         console.log( "search_id: " , search_id);
 
         if(search_id == ""){
-            alert("Please Enter a search");
+            alert("Please Enter something to search");
             searchInternships();
         }
         else{
@@ -938,4 +943,20 @@
         }
     }
  
+
+    // let parent  = document.getElementById("cartList");
+    let cart = JSON.parse(localStorage.getItem("database"));
+    console.log("Details" , cart);
+        
+    function showProducts(){
+        
+        internships_div.innerHeight = null;
+        const { strMealThumb ,  strMeal , idMeal , strCategory , strInstructions } = cart[cart.length - 1][0];	
+        parent.innerHTML = `
+        
+        `;
+    }
+
+    showProducts();	
+
 </script>
