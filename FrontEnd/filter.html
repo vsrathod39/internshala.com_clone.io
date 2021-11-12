@@ -952,8 +952,10 @@
  
 
     // let parent  = document.getElementById("cartList");
-    let cart = JSON.parse(localStorage.getItem("database"));
-    console.log("Details" , cart);
+    // let cart = JSON.parse(localStorage.getItem("database"));
+    
+    let cart = JSON.parse(localStorage.getItem("internshipDatabase"));
+    console.log("Internship Database" , cart);
         
     function showProducts(){
         
@@ -963,7 +965,6 @@
         
         `;
     }
-
     showProducts();	
 
 </script>
