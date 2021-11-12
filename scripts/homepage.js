@@ -21,13 +21,21 @@ console.log("dataName" , dataName);
 
 
 for(let i=0; i<dataName.length; i++){
-    dataName[i].onclick = function () {
-         
+    dataName[i].onclick = function () {         
           getvalueData(dataName[i].innerText); 
     }
 }
 
+if(localStorage.getItem("internshipDatabase") == null){
+    localStorage.setItem("internshipDatabase" , JSON.stringify([]));
+}
 
-function getvalueData(dd){
-    console.log("dd" , dd);
+// Adding ID in LocalStorage
+function getvalueData(p){
+
+    let dataList = JSON.parse(localStorage.getItem("internshipDatabase"));
+    localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
+    dataList.push(p);
+    localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
+    window.location.href = "./Frontend/filter.html";
 }
