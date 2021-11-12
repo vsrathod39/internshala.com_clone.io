@@ -1,6 +1,60 @@
 * {
     font-family: "Inter var", sans-serif;
 }
+#scrollSlider{
+    width: 100%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    margin: 45px 0;
+    display: grid;
+    grid-template-columns: 85% 85% 85% 85%;
+    gap: 2%;
+}
+.getWidth{
+    width: 100%;
+    height: 320px;
+    border-radius: 5px;
+}
+.sliderImg1{
+    background-image: url(https://internshala.com/cached_uploads/banner-images/home/home_internships-1920.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sliderImg2{
+    background-image: url(https://internshala.com/cached_uploads/banner-images/home/practice_makes_progress-1920-fa74a4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sliderImg3{
+    background-image: url(https://internshala.com/cached_uploads/banner-images/home/home_jobs-1920.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sliderImg4{
+    background-image: url(https://internshala.com/cached_uploads/banner-images/home/bc_1-1920-c7e7e2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sliderContentBox{
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+}
+.sliderContentBox > div{
+    margin-bottom: 18px;
+}
+.sliderCheckMark{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #484848;
+}
+#scrollSlider::-webkit-scrollbar{
+    display: none;
+  }
+
 #bigB {
     width: 100%;
     padding: 20px;
