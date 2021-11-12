@@ -141,3 +141,8 @@ a{
         overflow: unset;
     }
 }
+@media (max-width: 940px) {
+    #gridD{
+        flex-direction: column;
+    }
+}
