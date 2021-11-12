@@ -2,3 +2,28 @@ let btn = document.getElementsByTagName("button");
 btn[0].onclick = function() {
     window.location.href = ""
 }
+
+let advertisement = document.getElementById("adver");
+
+/* setInterval(function() {
+    if(window.innerWidth <= 940)
+    {
+        advertisement.src = "https://internshala.com/uploads/cms_banners/Mobile%20dashboard%20banner_503852.png";
+    }
+}, 1000)
+
+
+setInterval(function() {
+    if(window.innerWidth > 940)
+    {
+        advertisement.src = "https://internshala.com/uploads/cms_banners/Desktop%20dashboard%20banner_454570.png";
+    }
+}, 1000) */
+
+document.onblur = function() {
+    if(window.innerWidth <= 940)
+    {
+        advertisement.src = "https://internshala.com/uploads/cms_banners/Mobile%20dashboard%20banner_503852.png";
+    }
+    alert("done");
+}

@@ -49,3 +49,15 @@ h5 {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
+@media(max-width: 940px) {
+    #container {
+        width: 95%;
+    }
+    button {
+        margin-left: 33%;
+    }
+    #folder {
+        margin-left: 29%;
+    }
+}
