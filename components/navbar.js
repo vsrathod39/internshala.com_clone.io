@@ -51,10 +51,10 @@ function navbar(){
             <ul>
                 <li>Fresher Jobs</li>
             </ul>
-            <ul>
+            <ul id="login_btn">
                 <li><button id="logIn_button">Login</button></li>
             </ul>
-            <ul>
+            <ul id="register_btn">
                 <li>
                     <span id="register_button">Register<img id="upDownArrow" src="../images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
                     <ul>
