@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter var", sans-serif;
+}
+#container{
+    border: 1px solid red;
+    width: 70%;
+    margin: auto;
+}
+#container >div:first-child{
+    text-align: center;
+}
+#wrapper{
+    /* border: 1px solid blue; */
+    width: 90%;
+    margin: auto;
+}
+.content{
+    /* border: 1px solid yellowgreen; */
+    margin: 2%;
+    display: grid;
+    grid-template-columns: 25% 65% 10%;
+    justify-content: space-around;
+}
+.title{
+    font-weight: 600;
+    font-size: 28px;
+    color: #333333;
+}
+.section_title{
+    font-weight: 500;
+    font-size: 12px;
+    color: #666666;
+}
+.content_title{
+    font-weight: 600;
+    font-size: 14px;
+    color: #333333;
+}
+.text_content{
+    font-weight: 400;
+    font-size: 14px;
+    color: #666666;
+}
