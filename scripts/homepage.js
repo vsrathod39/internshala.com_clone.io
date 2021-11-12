@@ -15,3 +15,4 @@ function autoSlider(){
     }, 3000)
 }
 document.addEventListener("DOMContentLoaded", autoSlider());
+
