@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+    <link href="./login.css" rel="stylesheet">
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter var',sans-serif;
+    z-index: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div id="loginSec">
+        <div id="loginDiv">
+            <i class='bx bx-x'></i>
+            <div id="userCat">
+                <div class="textCenter">
+                    Student
+                </div>
+                <div class="textCenter">
+                    Employer / T&P
+                </div>
+            </div>
+            <div class="textCenter" id="loginGoogle">
+                <img src="https://internshala.com/static/images/login/google_logo.png">
+                <h4>Login with Google</h4>
+            </div>
+            <div id="horStroke">
+
+            </div>
+            <div class="textCenter" id="opt">
+                <p>OR</p>
+            </div>
+            <form onsubmit="login(event)">
+                <div class="details1">
+                    <label>Email</label>
+                    <input placeholder="vivek@example.com"/>
+                </div>
+                <div class="details1">
+                    <label>Password</label>
+                    <input placeholder="Must be at least 6 characters" type="password"/>
+                </div>
+                <p id="tc"><span>Forgot password?</span></p>
+                <button class="textCenter" type="submit">Login</button>
+            </form>
+            <p id="msg">New to Internshala? Register (<span>Student</span> / <span>Company</span>)</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="./login.js"></script>
