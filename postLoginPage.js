@@ -5,25 +5,13 @@ btn[0].onclick = function() {
 
 let advertisement = document.getElementById("adver");
 
-/* setInterval(function() {
+window.onresize = function() {
     if(window.innerWidth <= 940)
     {
         advertisement.src = "https://internshala.com/uploads/cms_banners/Mobile%20dashboard%20banner_503852.png";
     }
-}, 1000)
-
-
-setInterval(function() {
     if(window.innerWidth > 940)
     {
         advertisement.src = "https://internshala.com/uploads/cms_banners/Desktop%20dashboard%20banner_454570.png";
     }
-}, 1000) */
-
-document.onblur = function() {
-    if(window.innerWidth <= 940)
-    {
-        advertisement.src = "https://internshala.com/uploads/cms_banners/Mobile%20dashboard%20banner_503852.png";
-    }
-    alert("done");
 }
