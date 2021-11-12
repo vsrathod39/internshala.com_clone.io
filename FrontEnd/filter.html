@@ -1,0 +1,941 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../BackEnd/CSS/style.css">
+    <!-- <link rel="stylesheet" href="../BackEnd/CSS/sliderCheckbox.css"> -->
+    <title>Index</title>
+<style>
+
+    #internships_list_container{
+        padding: 48px 16px 16px 16px;
+        border: 1px solid #ccc;
+    }
+    .max-width-container{
+        max-width: 1224px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #ccc;
+    }
+    #reference{
+        min-height: 734px;
+        max-width: 956px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        padding-bottom: 40px;
+        margin-top: 24px;
+    }
+    .reference1{
+        max-width: 956px;
+        margin-left: 24px;
+       display:flex;
+       height: auto;
+       text-align: center;
+    }
+    .reference11{
+    width: 316px;
+    /* border: 1px solid yellow; */
+    height: auto;
+    }
+
+    .reference12{
+    flex: 1;
+    max-width: 616px;
+    margin-left: 24px;
+    display:flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    }
+    #total-internships{
+        padding-top: 10px;
+        font-size: 18px;
+        line-height: 1.33333333;
+        font-weight: 600;
+    }
+
+    .fixed_on_scroll{
+        width: 316px;
+        position: relative;
+       top: 0;
+       height:auto;
+    }
+    #filters{
+    overflow: auto;
+    border: 1px solid #EEE;
+    width: 316px;
+    overflow-y: auto;
+    border-radius: 6px;
+    padding: 23px;
+    background: #fff;
+    position: relative;
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:70vh;
+    }
+
+    #list_container{
+    flex: 1;
+    max-width: 616px;
+    margin-left: 24px;
+    display:flex;
+    flex-direction: column;
+    }
+
+    *, ::after, ::before {
+    box-sizing: border-box;
+    }
+    .list_container1{
+        letter-spacing: 1px;
+        background: #fff;
+        padding: 23px;
+        margin-bottom: 24px;
+        border: 1px solid #EEE;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+        border-radius: 6px;
+    }
+    .individual_internship_header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+    .company_1{
+    font-size: 18px;
+    line-height: 1.33333333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+    }
+    .company_2{
+    font-size: 14px;
+    line-height: 1.33333333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    opacity: .8;
+    letter-spacing: 2px;
+    }
+    .internship_logo{
+        margin-left: 16px;
+    }
+     
+    .internship_logo img{
+    max-width: 104px;
+    max-height: 48px;
+    color: transparent;
+    }
+    .individual_internship_details{
+        margin-bottom: 8px;
+        box-sizing: border-box;
+    }
+    #location_names{
+    line-height: 16px;
+    display: flex;
+    margin-bottom: 24px;
+    }
+    #location_names span {
+        display: inline-block;
+        width:5%;
+        opacity: .8;
+        text-align: center;
+    }
+    .internship_other_details_container{
+        display: flex;
+        justify-content:space-between;
+    }
+    .button_container{
+        display: flex;
+        justify-content:space-between;
+    }
+    .button_container11{
+        display: flex;
+    }
+    
+    .button_container1{
+    padding: 6px 12px;
+    background: #F8F8F8;
+    border-radius: 14px;
+    font-size: 14px;
+    color: #666;
+    line-height: 16px;
+    margin-right: 8px;
+    }
+    .button_container2{
+        color: #006BC2;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+
+<section id="internships_list_container">
+
+    <div class="max-width-container">
+
+        <div class="reference1">
+
+            <div class="reference11"></div>
+            
+            <div class="reference12">
+                <div id="total-internships"></div>
+            </div>
+
+        </div>
+        
+        <div id="reference">
+            
+            <!-- Filter -->
+            <div class="fixed_on_scroll">
+
+                <div id="filters">
+
+                    <label class="switch">Include work from home also
+                        <input type="checkbox" id="messageCheckbox" value="Yes" onclick="onChecked()">
+                        <span class="slider round"></span>
+                    </label><br>
+                      
+                    <label class="switch">Part-time
+                        <input type="checkbox" id="messageCheckbox" value="parttime" onclick="onChecked()">
+                        <span class="slider round"></span>
+                    </label><br>
+            
+                    Desired minimum monthly stipend (₹)
+                    <input type="range" min="0" max="10000" step="2000" id="myRange" value="0" oninput="onChecked()"><br>
+            
+                    <label class="switch">Internships for women
+                        <input type="checkbox" id="messageCheckbox" >
+                        <span class="slider round"></span>
+                    </label><br>
+                      
+                    <label class="switch">Internships with job offer
+                        <input type="checkbox" id="messageCheckbox" value="Internship with job offer" onclick="onChecked()">
+                        <span class="slider round"></span>
+                    </label><br>
+                    
+                    <button type="button" onclick="clearFilter()">Clear all</button><br>
+            
+                    <input type="text" id="search_id" placeholder="e.g. Design, Mumbai, infosys"><br>
+                    <button onclick="searchProducts()">Get Element By Id</button>
+
+                </div>
+
+            </div>
+
+             <!-- List -->
+            <div id="list_container">
+
+                <div id="list_container1"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+
+<script>
+
+    let internships_div = document.getElementById('list_container1');
+    let totalInternships_div = document.getElementById('total-internships');
+    let Product_count = 0;
+    searchInternships();
+    var data = null;
+    
+    async function searchInternships(){
+        try{
+        let respose = await fetch(`http://localhost:5000/api/internships`,{
+            method:"GET",
+            headers:{
+                "Content-Type":"application/json",
+            },
+        });
+        data =await respose.json();
+        console.log("Internships" , data);
+        display_internships(data);
+       
+        }catch(e){ console.log("e", e); }
+    }
+
+    function display_internships(array){
+
+        internships_div.innerHTML = null;
+        totalInternships_div.innerHTML = `<span>${array.length} Internships</span>`;
+
+        array.forEach( element => {
+        let {id, role , company_name , company_icon, location , work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
+        let inside_div = document.createElement('div');
+        
+        let x = "";
+        for (let i = 0; i < job_type.length; i++) {
+            x += "<div class='button_container1'>" + job_type[i] +"</div>";
+        }
+        let loc = "";
+        if(work_form_home === "Yes"){
+            loc = "Work From Home";
+        }
+        else{
+            loc = "<span>" + location + "</span>";
+        }
+
+        inside_div.innerHTML = `
+        <div class="list_container1">
+            <div class="individual_internship_header">
+                <div class="company">
+                    <div class="company_1">${role}</div>
+                    <div class="company_2" style="font-size: 14px;">${company_name}</div>
+                </div>
+                <div class="internship_logo">
+                    <img src = "${company_icon}">
+                </div>
+            </div>
+            <div class="individual_internship_details">
+                <div id="location_names">
+                    <span><i class="material-icons">add_location</i></span>
+                    ${loc}
+                </div>
+                <div class="internship_other_details_container">
+                    <div class="">
+                        <p><i></i>START DATE</p>
+                        <p>${startDate}</p>
+                    </div>
+                    <div class="">
+                        <p><i></i>DURATION</p>
+                        <p>${duration} Months</p>
+                    </div>
+                    <div class="">
+                        <p><i></i>STIPEND</p>
+                        <p>&#8377; ${stipend}/month</p>
+                    </div>
+                    <div class="">
+                        <p><i></i>APPLY BY</p>
+                        <p>${applyby}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button_container" >
+
+                <div class="button_container11">${x}</div>
+                
+                <a class="button_container2">View details</a>
+            </div>
+            </div>
+                `;
+        internships_div.appendChild(inside_div);
+        });
+    }
+     
+    let checkedbrand = null;
+    let rangeValue = null;
+    var markedCheckbox = null;
+  
+    function onChecked() {
+        rangeValue = document.getElementById("myRange").value;
+        // console.log("rangeValue" , rangeValue);
+        markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+            if(markedCheckbox.length > 0 && rangeValue >= 0){
+                for (var checkbox of markedCheckbox) {  
+                    checkedbrand = checkbox.value;
+                    if(checkedbrand){
+                        internships_div.innerHTML = null;
+                        data.forEach(function(word) {
+                            if(word.work_form_home == checkedbrand && ( word.parttime == checkedbrand  || word.stipend >= rangeValue || word.internships_with_job == checkedbrand ) ){
+
+                                let {id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type ,internships_with_job} = word;
+                                totalInternships_div.innerHTML = null;
+                                
+                                totalInternships_div.innerHTML = `<span>${++Product_count} Work from home/Internships</span>`;
+                                
+                                let x = "";
+                                for (let i = 0; i < job_type.length; i++) {
+                                    x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                                }
+
+                                let loc = "";
+                                if(work_form_home === "Yes"){
+                                    loc = "Work From Home";
+                                }
+                                else{
+                                    loc = "<span>" + location + "</span>";
+                                }
+                                
+                                let inside_div = document.createElement('div');
+                                inside_div.innerHTML = `                                        
+                                <div class="list_container1">
+                                    <div class="individual_internship_header">
+                                        <div class="company">
+                                            <div class="company_1">${role}</div>
+                                            <div class="company_2" style="font-size: 14px;">${company_name}</div>
+                                        </div>
+                                        <div class="internship_logo">
+                                            <img src = "${company_icon}">
+                                        </div>
+                                    </div>
+                                    <div class="individual_internship_details">
+                                        <div id="location_names">
+                                            <span><i class="material-icons">add_location</i></span>
+                                            ${loc}
+                                        </div>
+                                        <div class="internship_other_details_container">
+                                            <div class="">
+                                                <p><i></i>START DATE</p>
+                                                <p>${startDate}</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>DURATION</p>
+                                                <p>${duration} Months</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>STIPEND</p>
+                                                <p>&#8377; ${stipend}/month</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>APPLY BY</p>
+                                                <p>${applyby}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="button_container" >
+
+                                        <div class="button_container11">${x}</div>
+                                        
+                                        <a class="button_container2">View details</a>
+                                    </div>
+                                </div>`;
+                            internships_div.appendChild(inside_div);
+                            }
+                            else if(word.parttime == checkedbrand && ( word.work_form_home == checkedbrand  || word.stipend >= rangeValue || word.internships_with_job == checkedbrand ) ){
+
+                                let {id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
+                                totalInternships_div.innerHTML = null;
+
+                                totalInternships_div.innerHTML = `<span>${++Product_count} Part time/Internships</span>`;
+                                let x = "";
+                                for (let i = 0; i < job_type.length; i++) {
+                                    x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                                }
+                                let loc = "";
+                                if(work_form_home === "Yes"){
+                                    loc = "Work From Home";
+                                }
+                                else{
+                                    loc = "<span>" + location + "</span>";
+                                }
+                                
+                                let inside_div = document.createElement('div');
+                                inside_div.innerHTML = `
+                                <div class="list_container1">
+                                    <div class="individual_internship_header">
+                                        <div class="company">
+                                            <div class="company_1">${role}</div>
+                                            <div class="company_2" style="font-size: 14px;">${company_name}</div>
+                                        </div>
+                                        <div class="internship_logo">
+                                            <img src = "${company_icon}">
+                                        </div>
+                                    </div>
+                                    <div class="individual_internship_details">
+                                        <div id="location_names">
+                                            <span><i class="material-icons">add_location</i></span>
+                                            ${loc}
+                                        </div>
+                                        <div class="internship_other_details_container">
+                                            <div class="">
+                                                <p><i></i>START DATE</p>
+                                                <p>${startDate}</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>DURATION</p>
+                                                <p>${duration} Months</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>STIPEND</p>
+                                                <p>&#8377; ${stipend}/month</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>APPLY BY</p>
+                                                <p>${applyby}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="button_container" >
+
+                                        <div class="button_container11">${x}</div>
+                                        
+                                        <a class="button_container2">View details</a>
+                                    </div>
+                                    </div>                                      
+                                    `;
+                                    internships_div.appendChild(inside_div);
+                            }
+                            else if(word.stipend == checkedbrand && (  word.work_form_home >= rangeValue || word.parttime == checkedbrand || word.internships_with_job == checkedbrand ) ){
+
+                                let {id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
+                                totalInternships_div.innerHTML = null;
+
+                                totalInternships_div.innerHTML = `<span>${++Product_count} Stipend/Internships</span>`;
+                                let x = "";
+                                for (let i = 0; i < job_type.length; i++) {
+                                    x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                                }
+                                let loc = "";
+                                if(work_form_home === "Yes"){
+                                    loc = "Work From Home";
+                                }
+                                else{
+                                    loc = "<span>" + location + "</span>";
+                                }
+
+                                let inside_div = document.createElement('div');
+                                inside_div.innerHTML = `                                        
+                                <div class="list_container1">
+                                    <div class="individual_internship_header">
+                                        <div class="company">
+                                            <div class="company_1">${role}</div>
+                                            <div class="company_2" style="font-size: 14px;">${company_name}</div>
+                                        </div>
+                                        <div class="internship_logo">
+                                            <img src = "${company_icon}">
+                                        </div>
+                                    </div>
+                                    <div class="individual_internship_details">
+                                        <div id="location_names">
+                                            <span><i class="material-icons">add_location</i></span>
+                                            ${loc}
+                                        </div>
+                                        <div class="internship_other_details_container">
+                                            <div class="">
+                                                <p><i></i>START DATE</p>
+                                                <p>${startDate}</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>DURATION</p>
+                                                <p>${duration} Months</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>STIPEND</p>
+                                                <p>&#8377; ${stipend}/month</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>APPLY BY</p>
+                                                <p>${applyby}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="button_container" >
+
+                                        <div class="button_container11">${x}</div>
+                                        
+                                        <a class="button_container2">View details</a>
+                                    </div>
+                                    </div>                                        
+                                    `;
+                                    internships_div.appendChild(inside_div);
+                            }
+                            else if(word.internships_with_job == checkedbrand && ( word.parttime == checkedbrand  || word.stipend >= rangeValue || word.work_form_home == checkedbrand ) ){
+
+                                let {id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
+                                totalInternships_div.innerHTML = null;
+
+                                totalInternships_div.innerHTML = `<span>${++Product_count} Internships with Job/Internships</span>`;
+                                let x = "";
+                                for (let i = 0; i < job_type.length; i++) {
+                                    x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                                }
+                                let loc = "";
+                                if(work_form_home === "Yes"){
+                                    loc = "Work From Home";
+                                }
+                                else{
+                                    loc = "<span>" + location + "</span>";
+                                }
+
+                                let inside_div = document.createElement('div');
+                                inside_div.innerHTML = `                                        
+                                <div class="list_container1">
+                                    <div class="individual_internship_header">
+                                        <div class="company">
+                                            <div class="company_1">${role}</div>
+                                            <div class="company_2" style="font-size: 14px;">${company_name}</div>
+                                        </div>
+                                        <div class="internship_logo">
+                                            <img src = "${company_icon}">
+                                        </div>
+                                    </div>
+                                    <div class="individual_internship_details">
+                                        <div id="location_names">
+                                            <span><i class="material-icons">add_location</i></span>
+                                            ${loc}
+                                        </div>
+                                        <div class="internship_other_details_container">
+                                            <div class="">
+                                                <p><i></i>START DATE</p>
+                                                <p>${startDate}</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>DURATION</p>
+                                                <p>${duration} Months</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>STIPEND</p>
+                                                <p>&#8377; ${stipend}/month</p>
+                                            </div>
+                                            <div class="">
+                                                <p><i></i>APPLY BY</p>
+                                                <p>${applyby}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="button_container" >
+
+                                        <div class="button_container11">${x}</div>
+                                        
+                                        <a class="button_container2">View details</a>
+                                    </div>
+                                    </div>                                        
+                                    `;
+                                    internships_div.appendChild(inside_div);
+                            }
+                            else{
+                                totalInternships_div.innerHTML = `<span>${Product_count} Internships</span>`;
+                                console.log("count" , Product_count);
+                                                               
+                            }
+                        });
+                        Product_count = 0;
+                    }
+                }
+                Product_count = 0;
+            }
+            else if(rangeValue > 0){
+                internships_div.innerHTML = null;
+                data.forEach(function(word) {
+                    if( word.stipend >= rangeValue){
+                        totalInternships_div.innerHTML = `<span>${++Product_count} Stipend/Internships</span>`;
+                        let {id, role , company_name , location , company_icon, work_form_home,internships_with_job ,parttime, startDate , duration, stipend, applyby, job_type} = word;
+                        let inside_div = document.createElement('div');
+
+                        let x = "";
+                        for (let i = 0; i < job_type.length; i++) {
+                            x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                        }
+                        let loc = "";
+                        if(work_form_home === "Yes"){
+                            loc = "Work From Home";
+                        }
+                        else{
+                            loc = "<span>" + location + "</span>";
+                        }
+
+                        inside_div.innerHTML = `
+                        <div class="list_container1">
+                            <div class="individual_internship_header">
+                                <div class="company">
+                                    <div class="company_1">${role}</div>
+                                    <div class="company_2" style="font-size: 14px;">${company_name}</div>
+                                </div>
+                                <div class="internship_logo">
+                                    <img src = "${company_icon}">
+                                </div>
+                            </div>
+                            <div class="individual_internship_details">
+                                <div id="location_names">
+                                    <span><i class="material-icons">add_location</i></span>
+                                    ${loc}
+                                </div>
+                                <div class="internship_other_details_container">
+                                    <div class="">
+                                        <p><i></i>START DATE</p>
+                                        <p>${startDate}</p>
+                                    </div>
+                                    <div class="">
+                                        <p><i></i>DURATION</p>
+                                        <p>${duration} Months</p>
+                                    </div>
+                                    <div class="">
+                                        <p><i></i>STIPEND</p>
+                                        <p>&#8377; ${stipend}/month</p>
+                                    </div>
+                                    <div class="">
+                                        <p><i></i>APPLY BY</p>
+                                        <p>${applyby}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button_container" >
+
+                                <div class="button_container11">${x}</div>
+                                
+                                <a class="button_container2">View details</a>
+                            </div>
+                            </div>
+                            `;
+                            internships_div.appendChild(inside_div);
+                    }    
+                });
+                Product_count = 0;
+            }
+            else{
+                internships_div.innerHTML = null;
+                data.forEach(function(word) {
+                    if( word.stipend >= rangeValue){
+                        totalInternships_div.innerHTML = `<span>${++Product_count} Internships</span>`;
+                        let {id, role , company_name , location , company_icon, work_form_home,internships_with_job ,parttime, startDate , duration, stipend, applyby, job_type} = word;
+                        let inside_div = document.createElement('div');
+                        let x = "";
+                        for (let i = 0; i < job_type.length; i++) {
+                            x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                        }
+                        let loc = "";
+                        if(work_form_home === "Yes"){
+                            loc = "Work From Home";
+                        }
+                        else{
+                            loc = "<span>" + location + "</span>";
+                        }
+
+                        inside_div.innerHTML = `
+                        <div class="list_container1">
+                            <div class="individual_internship_header">
+                                <div class="company">
+                                    <div class="company_1">${role}</div>
+                                    <div class="company_2" style="font-size: 14px;">${company_name}</div>
+                                </div>
+                                <div class="internship_logo">
+                                    <img src = "${company_icon}">
+                                </div>
+                            </div>
+                            <div class="individual_internship_details">
+                                <div id="location_names">
+                                    <span><i class="material-icons">add_location</i></span>
+                                    ${loc}
+                                </div>
+                                <div class="internship_other_details_container">
+                                    <div class="">
+                                        <p><i></i>START DATE</p>
+                                        <p>${startDate}</p>
+                                    </div>
+                                    <div class="">
+                                        <p><i></i>DURATION</p>
+                                        <p>${duration} Months</p>
+                                    </div>
+                                    <div class="">
+                                        <p><i></i>STIPEND</p>
+                                        <p>&#8377; ${stipend}/month</p>
+                                    </div>
+                                    <div class="">
+                                        <p><i></i>APPLY BY</p>
+                                        <p>${applyby}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button_container" >
+
+                                <div class="button_container11">${x}</div>
+                                
+                                <a class="button_container2">View details</a>
+                            </div>
+                            </div>
+                            `;
+                            internships_div.appendChild(inside_div);
+                    }    
+                });
+                Product_count = 0;
+            }
+    }
+
+    //create uncheckall function
+    function clearFilter() {
+        display_internships(data);
+        let inputs = document.querySelectorAll('#messageCheckbox');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].checked = false;
+        }
+        document.getElementById("myRange").value = "0";
+    }
+   
+    async function searchProducts(){
+        
+        try{
+        let respose = await fetch(`http://localhost:5000/api/internships`,{
+            method:"GET",
+            headers:{
+                "Content-Type":"application/json",
+            },
+        });
+        let res_data =await respose.json();
+        console.log("Res_data" , res_data);
+        display_search(res_data);
+
+        }catch(e){
+            console.log("e", e);
+        }
+    }
+    
+    let roleCount = 0;
+    let locationCount = 0;   
+    function display_search(array){
+        internships_div.innerHTML = null;
+
+        // unchecking all Input
+        let inputs = document.querySelectorAll('#messageCheckbox');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].checked = false;
+        }
+        // set input range Zero
+        document.getElementById("myRange").value = "0";
+
+        let search_id = document.getElementById('search_id').value;
+        console.log( "search_id: " , search_id);
+
+        if(search_id == ""){
+            alert("Please Enter a search");
+            searchInternships();
+        }
+        else{
+        totalInternships_div.innerHTML = `<span>${array.length} Products</span>`;
+        array.forEach( element => {
+            if(element.role == search_id || element.company_name == search_id ) {
+                totalInternships_div.innerHTML = `<span>${++roleCount} ${search_id}/Internships</span>`;
+                let {id, role , company_name , location , work_form_home , company_icon, parttime, startDate , duration, stipend, applyby, job_type} = element;
+                let inside_div = document.createElement('div');
+                let x = "";
+                for (let i = 0; i < job_type.length; i++) {
+                    x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                }
+                let loc = "";
+                if(work_form_home === "Yes"){
+                    loc = "Work From Home";
+                }
+                else{
+                    loc = "<span>" + location + "</span>";
+                }
+
+                inside_div.innerHTML = `
+                <div class="list_container1">
+                    <div class="individual_internship_header">
+                        <div class="company">
+                            <div class="company_1">${role}</div>
+                            <div class="company_2" style="font-size: 14px;">${company_name}</div>
+                        </div>
+                        <div class="internship_logo">
+                            <img src = "${company_icon}">
+                        </div>
+                    </div>
+                    <div class="individual_internship_details">
+                        <div id="location_names">
+                            <span><i class="material-icons">add_location</i></span>
+                            ${loc}
+                        </div>
+                        <div class="internship_other_details_container">
+                            <div class="">
+                                <p><i></i>START DATE</p>
+                                <p>${startDate}</p>
+                            </div>
+                            <div class="">
+                                <p><i></i>DURATION</p>
+                                <p>${duration} Months</p>
+                            </div>
+                            <div class="">
+                                <p><i></i>STIPEND</p>
+                                <p>&#8377; ${stipend}/month</p>
+                            </div>
+                            <div class="">
+                                <p><i></i>APPLY BY</p>
+                                <p>${applyby}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button_container" >
+
+                        <div class="button_container11">${x}</div>
+                        
+                        <a class="button_container2">View details</a>
+                    </div>
+                    </div>
+                        `;
+                internships_div.appendChild(inside_div);
+            }else{
+                
+                element.location.forEach( loc =>{
+                    
+                    if(search_id == loc ){
+                        totalInternships_div.innerHTML = `<span>${++locationCount} ${search_id}/Internships</span>`;
+                        let {id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
+                        let inside_div = document.createElement('div');
+                        let x = "";
+                        for (let i = 0; i < job_type.length; i++) {
+                            x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                        }
+                        let loc = "";
+                        if(work_form_home === "Yes"){
+                            loc = "Work From Home";
+                        }
+                        else{
+                            loc = "<span>" + location + "</span>";
+                        }
+                        
+                        inside_div.innerHTML = `
+                        <div class="list_container1">
+                            <div class="individual_internship_header">
+                                <div class="company">
+                                    <div class="company_1">${role}</div>
+                                    <div class="company_2" style="font-size: 14px;">${company_name}</div>
+                                </div>
+                                <div class="internship_logo">
+                                    <img src = "${company_icon}">
+                                </div>
+                            </div>
+                            <div class="individual_internship_details">
+                                <div id="location_names">
+                                    <span><i class="material-icons">add_location</i></span>
+                                    ${loc}
+                                </div>
+                                <div class="internship_other_details_container">
+                                    <div class="">
+                                        <p><i></i>START DATE</p>
+                                        <p>${startDate}</p>
+                                    </div>
+                                    <div class="">
+                                        <p><i></i>DURATION</p>
+                                        <p>${duration} Months</p>
+                                    </div>
+                                    <div class="">
+                                        <p><i></i>STIPEND</p>
+                                        <p>&#8377; ${stipend}/month</p>
+                                    </div>
+                                    <div class="">
+                                        <p><i></i>APPLY BY</p>
+                                        <p>${applyby}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button_container" >
+
+                                <div class="button_container11">${x}</div>
+                                
+                                <a class="button_container2">View details</a>
+                            </div>
+                            </div>
+                                `;
+                        internships_div.appendChild(inside_div);
+                    }
+                });
+            }
+        });
+        
+        locationCount = 0;
+        roleCount = 0;
+        }
+    }
+ 
+</script>
