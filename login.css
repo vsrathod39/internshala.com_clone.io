@@ -119,4 +119,5 @@ border-bottom: 2px solid #008bdc;
 @media(max-width: 940px) {
     #loginSec {
         width: 85%;
+    }
 }
