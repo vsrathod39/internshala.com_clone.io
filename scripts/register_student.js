@@ -50,7 +50,7 @@ async function signup(event) {
         name: details[2].value + details[3].value,
         email: details[0].value,
         password: details[1].value,
-        username: details[2].value,
+        username: details[0].value,
         mobile: "7561313347",
         description: "Masai wale bhaiya",
     };
