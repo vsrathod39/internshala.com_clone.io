@@ -3,7 +3,6 @@
     margin: 0;
     scroll-behavior: smooth;
     font-family: 'Inter var',sans-serif;
-    z-index: 1;
 }
 #regStd {
     display: flex;
@@ -13,10 +12,10 @@
     background-size: contain;
 }
 #poster {
-    flex-basis: 65%;
+    flex-basis: 62%;
 }
 #signupSec {
-    flex-basis: 33%;
+    flex-basis: 36%;
 }
 #poster > div {
     margin-top: 5.5vh;
@@ -108,7 +107,7 @@ button {
     line-height: 14px;
     cursor: pointer;
 }
-#msg {
+#msg_regEmployer {
     margin: 0 31%;
 }
 #code {
@@ -170,7 +169,7 @@ img {
 }
 h2 {
     color: #0E5678;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 42px;
     margin-bottom: 15px;
 }

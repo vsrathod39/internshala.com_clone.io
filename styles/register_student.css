@@ -4,21 +4,20 @@
 }
 body {
     font-family: 'Inter var',sans-serif;
-    z-index: 1;
 }
 #regStd {
     display: flex;
+    justify-content: center;
     background-color: #f9feff;
-    height: 83vh;
 }
 #poster {
-    flex-basis: 65%;
+    flex-basis: 63%;
     background-image: url("https://internshala.com/static/images/registration/student/background-768.png");
     background-size: 950px;
     background-repeat: no-repeat;
 }
 #signupSec {
-    flex-basis: 33%;
+    flex-basis: 35%;
 }
 #poster > div {
     margin: 4.5vh 4.3vw;
@@ -148,7 +147,7 @@ button {
     line-height: 14px;
     cursor: pointer;
 }
-#msg {
+#msg_regStudent {
     margin: 0 20%;
 }
 

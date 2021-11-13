@@ -45,13 +45,14 @@ loginMsg.onclick = function() {
 
 async function signup(event) {
     event.preventDefault();
-
+    let num = 1000000000;
+    num = (num + Math.floor(Math.random() * 10000)).toString();
     let user_data = {
         name: details[2].value + details[3].value,
         email: details[0].value,
         password: details[1].value,
-        username: details[2].value,
-        mobile: "7561313347",
+        username: details[0].value,
+        mobile: num,
         description: "Masai wale bhaiya",
     };
 
@@ -68,6 +69,7 @@ async function signup(event) {
     let data = await res.json();
 
     alert(data.message);
+    console.log(data);
 
     details[0].value = "";
     details[1].value = "";

@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <title>Login</title>
-    <link href="./login.css" rel="stylesheet">
-    <style>
-        *{
-    padding: 0;
-    margin: 0;
-    font-family: 'Inter var',sans-serif;
-    z-index: 1;
-}
-
-    </style>
-</head>
-<body>
+function loginModal(){
+    return `
     <div id="loginSec">
         <div id="loginDiv">
-            <i class='bx bx-x'></i>
+            <i id="closeLogin_modal" class='bx bx-x'></i>
             <div id="userCat">
                 <div class="textCenter">
                     Student
@@ -39,7 +21,7 @@
             <div class="textCenter" id="opt">
                 <p>OR</p>
             </div>
-            <form onsubmit="login(event)">
+            <form id="logInForm">
                 <div class="details1">
                     <label>Email</label>
                     <input placeholder="vivek@example.com"/>
@@ -53,8 +35,6 @@
             </form>
             <p id="msg">New to Internshala? Register (<span>Student</span> / <span>Company</span>)</p>
         </div>
-    </div>
-</body>
-</html>
-
-<script src="./login.js"></script>
+    </div>`
+}
+export default loginModal;

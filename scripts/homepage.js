@@ -36,18 +36,9 @@ function getvalueData(p){
     localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
     dataList.push(p);
     localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
-    window.location.href = "./Frontend/filter.html";
+    window.location.href = "pages/filter.html";
+}
 // search box
 document.getElementById('searchInput').onfocus = () => {
     window.location.href = "searchSec.html"
-}
-// Job type filter
-console.log(document.getElementsByClassName('typeOfJob')[0])
-document.getElementsByClassName('typeOfJob')[0].onclick = () => {
-    // if(localStorage.getItem('internshipDatabase') === null){
-    //     localStorage.setItem('internshipDatabase', JSON.stringify([]));
-    // }
-    // let data = JSON.parse(localStorage.getItem('internshipDatabase'));
-    console.log("hi");
-    console.log(localStorage.getItem("mytime"))
 }

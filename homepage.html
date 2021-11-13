@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/homepage.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/login.css">
 </head>
 <body>
     <!-- Navbar  -->
@@ -19,12 +20,14 @@
     <nav>
         
     </nav>
+    <!-- Search Box -->
     <div id="searchbar">
         <input id="searchInput" placeholder="What are you looking for?">
         <div id="searchGlass">
             <i class='bx bx-search'></i>
         </div>
     </div>
+    <!-- Slider -->
     <div id="scrollSlider">
         <div class="getWidth sliderImg1">
             <div class="sliderContentBox">
@@ -76,6 +79,10 @@
         <div class="getWidth sliderImg4">
             
         </div>
+    </div>
+    <!-- login Modal Pop-up-->
+    <div id="login_modal_popup">
+
     </div>
     <!-- Contentnt Body -->
     <div id="bigB">
@@ -250,10 +257,12 @@
 </div>
 <!-- Footer -->
 <div id="footer">
+
 </div>
 </body>
 </html>
 <script type="module">
+    // nav-bar modal
     import {navbar, huberberg} from "./components/navbar.js";
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
@@ -266,9 +275,37 @@
         document.getElementById('navBar').innerHTML = null;
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
-
+    // login modal
+    import loginModal from "./components/login_modal.js";
+    import {core} from "./scripts/login.js";
+    document.getElementById("logIn_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+        core();
+    }
+    // document.getElementById("login_modal_popup").onclick = () => {
+    //     console.log("hi")
+    //     document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    //     document.getElementById("login_modal_popup").style.display = "none";
+    // }
+    // footer modal
     import {footer} from "./components/footer.js";
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
+    // register as student page change
+    document.getElementById("register_as_student").onclick = () => {
+        window.location.href = "./pages/register_student.html";
+    }
+    // register as employer page change
+    document.getElementById("register_as_employer").onclick = () => {
+        window.location.href = "./pages/register_employer.html";
+    }
+    // return to homepage onclick brand logo
+    document.getElementById("intershalaLogo").onclick = () => {
+        window.location.href = "./homepage.html";
+    }
 </script>
 <script src="./scripts/homepage.js"></script>
+<!-- <script src="./scripts/login.js"></script> -->
