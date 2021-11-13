@@ -111,7 +111,6 @@ async function login(event) {
 
     if(!data.error)
     {
-        alert("succes");
         window.location.href = "../pages/postLoginPage.html";
     }
     else
