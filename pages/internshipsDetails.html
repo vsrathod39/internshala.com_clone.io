@@ -4,14 +4,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="../styles/intenshipDetails.css">
 </head>
 <body>
-    internshipsDetails
-
+    <h1 id="heading"></h1>
     <div id="internshipsDetails">
+        <h3 id="Role"></h3>
+        <div id="icon">
+            <img>
+        </div>
+        <p id="companyName"></p>
+        <p id="wfh"></p>
+        <div id="brief">
+            <div class="detailOfIntern">
+                <h5>START DATE</h5>
+                <p>Immediately</p>
+            </div>
+            <div class="detailOfIntern">
+                <h5>Duration</h5>
+                <p></p>
+            </div>
+            <div class="detailOfIntern">
+                <h5>STIPEND</h5>
+                <p></p>
+            </div>
+            <div class="detailOfIntern">
+                <h5>APPLY BY</h5>
+                <p></p>
+            </div>
+        </div>
+        <p id="applicants"></p>
+        <hr/>
+        <h3 id="about"></h3>
+        <div id="aboutCompany">
 
+        </div>
+        <h3 id="aboutWork"></h3>
+        <p>Selected intern's day-to-day responsibilities include:</p>
+        <div id="workDes">
+            <ol></ol>
+        </div>
+        <h3>Skill(s) required</h3>
+        <div id="skills">
+
+        </div>
+        <h3>Who can apply</h3>
+        <div id="whoApply">
+            <ol></ol>
+        </div>
+        <h3>Perks</h3>
+        <div id="perks">
+
+        </div>
+        <h3>Number of openings</h3>
+        <p id="openings"></p>
+        <button>Apply now</button>
     </div>
-
 </body>
 </html>
 
@@ -26,18 +74,88 @@
         
         internshipsDetails.innerHeight = null;
         const id = internshipsList[internshipsList.length - 1];
-        console.log("Id" , id);
 
         const res = await fetch(`http://localhost:5000/api/internships/${id}`);
 		const resData = await res.json();
 		console.log("ResData" , resData);
 
-        displayDD( resData );
+        displayJD( resData );
     }
 
-    function displayDD(pp){
-        internshipsDetails.innerHTML = null;
-
+    function displayJD(jobDesc){
+        let heading = document.getElementById("heading");
+        if(jobDesc.internships_with_job == "")
+        heading.innerHTML = `${jobDesc.role} internship at ${jobDesc.company_name}`;
+        else if(jobDesc.internships_with_job != "" || jobDesc.work_from_home == "Yes")
+        {
+            heading.innerHTML = `${jobDesc.role} work from home job/internship at ${jobDesc.company_name}`;
+        }
+        else if(jobDesc.internships_with_job != "" || jobDesc.work_from_home == "No")
+        heading.innerHTML = `${jobDesc.role} job/internship at ${jobDesc.company_name}`;
+        let role = document.getElementById("Role");
+        role.innerText = jobDesc.role;
+        let companyName = document.getElementById("companyName");
+        companyName.innerText = jobDesc.company_name;
+        let wfh = document.getElementById("wfh")
+        if(jobDesc.work_from_home == "Yes")
+        {
+            wfh.innerText = "Work From Home"
+        }
+        else
+        wfh.style.display = "none";
+        let briefDesc = document.querySelectorAll(".detailOfIntern > p")
+        briefDesc[1].innerText = `${jobDesc.duration} months`
+        briefDesc[2].innerText = `${jobDesc.stipend} /month`
+        briefDesc[3].innerText = jobDesc.applyby;
+        let applicants = document.getElementById("applicants");
+        applicants.innerText = `${jobDesc.total_applied} applicants`;
+        let aboutHead = document.getElementById("about");
+        aboutHead.innerText = `About ${jobDesc.company_name}`
+        let aboutComp = document.getElementById("aboutCompany");
+        aboutComp.innerHTML = jobDesc.company_about;
+        let aboutWorkHead = document.getElementById("aboutWork");
+        if(jobDesc.work_from_home == "Yes")
+        {
+            aboutWorkHead.innerText = "About the work from home job/internship";
+        }
+        else
+        {
+            aboutWorkHead.innerText = "About the internship";
+        }
+        
+        let workDescription = document.getElementById("workDes");
+        let workDesList = document.querySelector("#workDes > ol")
+        for(let i = 0; i<jobDesc.about_internship.length; i++)
+        {
+            let list = document.createElement("li");
+            list.innerText = jobDesc.about_internship[i];
+            workDesList.appendChild(list);
+        }
+        let skills = document.getElementById("skills");
+        for(let j = 0; j<jobDesc.skills.length; j++)
+        {
+            let skill = document.createElement("div");
+            skill.innerText = jobDesc.skills[j];
+            skills.appendChild(skill);
+        }
+        let whoCanApply = document.getElementById("whoApply");
+        let whoCanApplyList = document.querySelector("#whoApply > ol")
+        for(let i = 0; i<jobDesc.who_can_apply.length; i++)
+        {
+            let list = document.createElement("li");
+            list.innerText = jobDesc.who_can_apply[i];
+            whoCanApplyList.appendChild(list);
+        }
+        let perks = document.getElementById("perks");
+        for(let j = 0; j<jobDesc.perks.length; j++)
+        {
+            let perk = document.createElement("div");
+            perk.innerText = jobDesc.perks[j];
+            perks.appendChild(perk);
+        }
+        let openings = document.getElementById("openings");
+        openings.innerHTML = jobDesc.number_of_openings;
+        let icon = document.querySelector("#icon > img");
+        icon.src = jobDesc.company_icon;
     }
-
 </script>
