@@ -1,0 +1,318 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Inter var',sans-serif;
+}
+#regStd {
+    display: flex;
+    background-color: #f9feff;
+    height: 105vh;
+    background-image: url("https://internshala.com/static/images/registration/employer/registration_new/internship/banner/r1366-new.png");
+    background-size: contain;
+}
+#poster {
+    flex-basis: 62%;
+}
+#signupSec {
+    flex-basis: 36%;
+}
+#poster > div {
+    margin-top: 5.5vh;
+    margin-left: 14.5vw;
+}
+#poster > div > div:nth-child(1) {
+    font-size: 3.5vw;
+    font-weight: 700;
+}
+h3 {
+    font-size: 23px;
+    font-weight: 600;
+    color: black;
+    margin: 12px 0;
+}
+h4 {
+    margin: 16px 0;
+    font-size: 18px;
+    color: #222222;
+    font-weight: 550;
+}
+#signupDiv {
+    background-color: white;
+    z-index: 2;
+    width: 77%;
+    margin: auto;
+    margin-top: 5.5vh;
+    padding: 16px;
+    border-radius: 10px;
+}
+.textCenter {
+    text-align: center;
+}
+#signupDiv img {
+    width: 16px;
+}
+#signupDiv h4 {
+    color: #484848;
+}
+.details1 input {
+    width: 95%;
+}
+input {
+    outline: none;
+    border: 1px solid #dddddd;
+    height: 6vh;
+    margin-top: 1vh;
+    padding-left: 3%;
+}
+#name {
+    display: flex;
+    justify-content: space-between;
+}
+#name input {
+    width: 91%;
+    padding-left: 6%;
+}
+#name > div {
+    flex-basis: 48%;
+}
+.details1, .details2{
+    margin-top: 3vh;
+}
+button {
+    width: 100%;
+    background-color: #008bdc;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+::placeholder {
+    color: #998aa8;
+}
+#tc {
+    font-size: 14px;
+    line-height: 19px;
+    color: #484848;
+    font-weight: 400;
+    margin: 20px 0;
+}
+#signupDiv span {
+    color: #186bc2;
+    font-weight: 500;
+    line-height: 14px;
+    cursor: pointer;
+}
+#msg_regEmployer {
+    margin: 0 31%;
+}
+#code {
+    width: 20%;
+}
+#mob {
+    width: 70%;
+}
+#mob::-webkit-inner-spin-button, #mob::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 12vh 0;
+    color: #222;
+}
+#stepsToFollow {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.steps {
+    width: 27%;
+}
+img {
+    width: 100%;
+}
+.steps p {
+    font-size: 26px;
+    color: #444444;
+}
+.steps img {
+    margin-bottom: 10px;
+}
+#regBtn {
+    width: 15%;
+    height: 50px;
+    margin: 0 42.5%;
+    font-size: 18px;
+}
+#knowMore {
+    width: 75%;
+    height: 350px;
+    margin: 12vh auto;
+    background-image: url("https://internshala.com/static/images/registration/employer/registration_new/internship/jobs_banner/r1366-min.png");
+    background-size: cover;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: -2px -2px 10px grey;
+    box-shadow: 2px 2px 10px grey;
+    box-sizing: border-box;
+    padding-top: 8vh;
+    padding-left: 6vh;
+}
+#knowMore > div:nth-child(1) {
+    width: 55%;
+}
+h2 {
+    color: #0E5678;
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 15px;
+}
+h6 {
+    color: #0E5678;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+h6 span {
+    color: #ff7a52;
+}
+#knowMore > div > div {
+    border: 1px solid #008bdc;
+    color: #008bdc;
+    width: 28%;
+    height: 42px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#footer {
+    background-color: #333333;
+    box-sizing: border-box;
+    padding: 0.5vh 0;
+    color: white;
+}
+#footer_pageLinks {
+    display: flex;
+    text-align: left;
+    margin-top: 0vh;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    padding: 4vw;
+    justify-content: space-between;
+    border-bottom: 1px solid #666;
+}
+#social i {
+    font-size: 2.3vh;
+    vertical-align: middle;
+}
+#social {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 24px;
+}
+#social > div {
+    display: flex;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+@media(max-width: 940px) {
+    #stepsToFollow {
+        flex-direction: column;
+        width: 70%;
+    }
+    #footer_pageLinks {
+        flex-direction: column;
+    }
+    #footer_pageLinks > div {
+        margin-bottom: 10px;
+    }
+    #social {
+        flex-direction: column;
+    }
+    .steps {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .steps p {
+        font-size: 18px;
+        color: #444444;
+    }
+    #regBtn {
+        width: 35%;
+        margin: 0 32.5%;
+    }
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 12vh 15%;
+    }
+    #noOfComp {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 12vh 5%;
+    }
+    #knowMore {
+        background-image: url("https://internshala.com/static/images/registration/employer/registration_new/internship/jobs_banner/r575-min.png");
+        background-size: cover;
+        height: 450px;
+    }
+    #knowMore > div:nth-child(1) {
+        width: 80%;
+    }
+    h2 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    h6 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    #knowMore > div > div {
+        width: 40%;
+    }
+    #poster {
+        background-image: url("https://internshala.com/static/images/registration/employer/registration_new/internship/banner/r575-new.png");
+        background-size: cover;
+    }
+    #regStd {
+        height: 170vh;
+        background-image: none;
+        flex-direction: column;
+    }
+    #signupDiv {
+        margin-top: 0;
+        position: relative;
+        bottom: 5vh;
+    }
+    #poster > div {
+        margin: auto;
+        margin-top: 6vh;
+        width: 75%;
+        text-align: center;
+    }
+    #poster > div > div:nth-child(1) {
+        font-size: 7vw;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 15px;
+        font-weight: 600;
+        color: black;
+        margin: 12px 0;
+    }
+    h4 {
+        margin: 16px 2vw;
+        font-size: 16px;
+        color: #222222;
+        font-weight: 500;
+    }
+}
