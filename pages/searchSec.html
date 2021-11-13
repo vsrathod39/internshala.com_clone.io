@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internshala | Summer Internship 2021</title>
+    <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
     <style>
@@ -26,6 +28,8 @@
             width: 50%;
             margin: auto;
             font-size: 18px;
+            border: 1px solid red;
+            margin-top: 7%;
         }
         #searchbar {
             width: 100%;
@@ -61,10 +65,11 @@
             margin: 15px 0;
         }
         #outerBox .textCenter {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 23px;
+            padding: 5px 15px;
+            border: 1px solid rgb(224, 224, 224);
+            border-radius: 15px;
             color: #333;
+            cursor: pointer;
         }
         #popCities {
             margin:  35px 0;
@@ -84,10 +89,10 @@
                 <option value="intern">Internship</option>
             </select>
             in
-            <i class='bx bx-x'></i>
+            <i id="closingSeacrBar" style="cursor: pointer;" class='bx bx-x'></i>
         </div>
         <div id="searchbar">
-            <input placeholder="e.g. Design, Mumbai, Infosys">
+            <input placeholder="e.g. Design, Mumbai, Infosys" type="text"  id="searchInput">
             <div id="searchGlass">
                 <i class='bx bx-search'></i>
             </div>
@@ -95,11 +100,11 @@
         <div id="popCities">
             <div>POPULAR CITIES</div>
             <div id="cities">
-                <div class="textCenter">Work from Home</div>
-                <div class="textCenter">Patna</div>
-                <div class="textCenter">Pune</div>
-                <div class="textCenter">Bangalore</div>
-                <div class="textCenter">Mumbai</div>
+                <div class="textCenter getDatabaseValue">Work From Home</div>
+                <div class="textCenter getDatabaseValue">Patna</div>
+                <div class="textCenter getDatabaseValue">Pune</div>
+                <div class="textCenter getDatabaseValue">Bangalore</div>
+                <div class="textCenter getDatabaseValue">Mumbai</div>
             </div>
         </div>
         <div id="popCat">
@@ -114,3 +119,38 @@
     </div>
 </body>
 </html>
+
+<script>
+
+let searchValue = document.getElementById('searchInput');
+
+document.getElementById('searchGlass').onclick = function(){
+    console.log("searchValue:" , searchValue.value);
+    getvalueData(searchValue.value); 
+}
+
+const dataName = document.getElementsByClassName('getDatabaseValue');
+
+for(let i=0; i<dataName.length; i++){
+    dataName[i].onclick = function () {         
+          getvalueData(dataName[i].innerText); 
+    }
+}
+if(localStorage.getItem("internshipDatabase") == null){
+    localStorage.setItem("internshipDatabase" , JSON.stringify([]));
+}
+// Adding ID in LocalStorage
+function getvalueData(p){
+
+    let dataList = JSON.parse(localStorage.getItem("internshipDatabase"));
+    localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
+    dataList.push(p);
+    localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
+    window.location.href = "./filter.html";
+}
+// close search bar and redirec to home page
+document.getElementById("closingSeacrBar").onclick = () => {
+    console.log("hii");
+    window.location.href = "../homepage.html";
+}
+</script>
