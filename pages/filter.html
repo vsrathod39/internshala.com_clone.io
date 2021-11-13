@@ -3,13 +3,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internshala | Summer Internship 2021</title>
+    <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- <link rel="stylesheet" href="../BackEnd/CSS/style.css"> -->
-    <!-- <link rel="stylesheet" href="../BackEnd/CSS/sliderCheckbox.css"> -->
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/login.css">
     <title>Index</title>
 <style>
-
+    section{
+        font-family: "Inter var", sans-serif;
+    }
     #internships_list_container{
         padding: 48px 16px 16px 16px;
         border: 1px solid #ccc;
@@ -18,10 +22,9 @@
         max-width: 1224px;
         margin-left: auto;
         margin-right: auto;
-        border: 1px solid #ccc;
+        border: 1px solid rgb(226, 226, 226);
     }
     #reference{
-        min-height: 734px;
         max-width: 956px;
         margin-left: auto;
         margin-right: auto;
@@ -38,7 +41,6 @@
     }
     .reference11{
     width: 316px;
-    /* border: 1px solid yellow; */
     height: auto;
     }
 
@@ -48,7 +50,6 @@
     margin-left: 24px;
     display:flex;
     flex-direction: column;
-    /* border: 1px solid black; */
     }
     #total-internships{
         padding-top: 10px;
@@ -72,12 +73,12 @@
     padding: 23px;
     background: #fff;
     position: relative;
-    /* border: 1px solid green; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height:70vh;
+    overflow-y: auto;
     }
 
     #list_container{
@@ -86,8 +87,12 @@
     margin-left: 24px;
     display:flex;
     flex-direction: column;
+    height: 75vh;
+    overflow-y: auto;
     }
-
+    #list_container::-webkit-scrollbar {
+        display: none;
+    }
     *, ::after, ::before {
     box-sizing: border-box;
     }
@@ -180,7 +185,17 @@
 </style>
 </head>
 <body>
+    <!-- Navbar  -->
+    <div id="navBar">
+        
+    </div>
+    <nav>
+        
+    </nav>
+    <!-- login Modal Pop-up-->
+    <div id="login_modal_popup">
 
+    </div>
 <section id="internships_list_container">
 
     <div class="max-width-container">
@@ -244,12 +259,54 @@
         </div>
 
     </div>
-
 </section>
+<!-- Footer -->
+<div id="footer">
 
+</div>
 </body>
 </html>
-
+<script type="module">
+    // nav-bar modal
+    import {navbar, huberberg} from "../components/navbar.js";
+    document.getElementsByTagName('nav')[0].innerHTML =  navbar();
+    document.getElementById('navBar').addEventListener('click', hidehuberberg);
+    document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+    function showHuberberg(){
+        document.getElementById('navBar').innerHTML =  huberberg();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+    }
+    function hidehuberberg(){
+        document.getElementById('navBar').innerHTML = null;
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    }
+    // login modal
+    import loginModal from "../components/login_modal.js";
+    import {core} from "../scripts/login.js";
+    document.getElementById("logIn_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+        core();
+    }
+    // footer modal
+    import {footer} from "../components/footer.js";
+    let foot = document.getElementById("footer");
+    foot.innerHTML = footer();
+    // register as student page change
+    document.getElementById("register_as_student").onclick = () => {
+        window.location.href = "../pages/register_student.html";
+    }
+    // register as employer page change
+    document.getElementById("register_as_employer").onclick = () => {
+        window.location.href = "../pages/register_employer.html";
+    }
+    // return to homepage onclick brand logo
+    document.getElementById("intershalaLogo").onclick = () => {
+        window.location.href = "../homepage.html";
+    }
+</script>
 <script>
 
     let internships_div = document.getElementById('list_container1');
@@ -415,7 +472,7 @@
 
                                         <div class="button_container11">${x}</div>
                                         
-                                        <a class="button_container2">View details</a>
+                                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                                     </div>
                                 </div>`;
                             internships_div.appendChild(inside_div);
@@ -478,7 +535,7 @@
 
                                         <div class="button_container11">${x}</div>
                                         
-                                        <a class="button_container2">View details</a>
+                                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                                     </div>
                                     </div>                                      
                                     `;
@@ -542,7 +599,7 @@
 
                                         <div class="button_container11">${x}</div>
                                         
-                                        <a class="button_container2">View details</a>
+                                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                                     </div>
                                     </div>                                        
                                     `;
@@ -606,7 +663,7 @@
 
                                         <div class="button_container11">${x}</div>
                                         
-                                        <a class="button_container2">View details</a>
+                                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                                     </div>
                                     </div>                                        
                                     `;
@@ -614,8 +671,6 @@
                             }
                             else{
                                 totalInternships_div.innerHTML = `<span>${Product_count} Internships</span>`;
-                                console.log("count" , Product_count);
-                                                               
                             }
                         });
                         Product_count = 0;
@@ -682,7 +737,7 @@
 
                                 <div class="button_container11">${x}</div>
                                 
-                                <a class="button_container2">View details</a>
+                                <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                             </div>
                             </div>
                             `;
@@ -749,7 +804,7 @@
 
                                 <div class="button_container11">${x}</div>
                                 
-                                <a class="button_container2">View details</a>
+                                <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                             </div>
                             </div>
                             `;
@@ -782,7 +837,6 @@
             },
         });
         let res_data =await respose.json();
-        console.log("Res_data" , res_data);
         display_search(res_data);
 
         }catch(e){
@@ -803,10 +857,7 @@
         }
         // set input range Zero
         document.getElementById("myRange").value = "0";
-
         let search_id = document.getElementById('search_id').value;
-        console.log( "search_id: " , search_id);
-
         if(search_id == ""){
             alert("Please Enter something to search");
             searchInternships();
@@ -869,7 +920,7 @@
 
                         <div class="button_container11">${x}</div>
                         
-                        <a class="button_container2">View details</a>
+                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                     </div>
                     </div>
                         `;
@@ -933,7 +984,7 @@
 
                                 <div class="button_container11">${x}</div>
                                 
-                                <a class="button_container2">View details</a>
+                                <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                             </div>
                             </div>
                                 `;
@@ -948,36 +999,11 @@
         }
     }
  
-    // ----Start--- For Displaying Details of Internships
-    // Get View Details
-    async function getViewDetails(byID){
-        const res = await fetch(`http://localhost:5000/api/internships/${byID}`);
-		const resData = await res.json();
-		console.log("ResData" , resData.id);
-        addtoDatabaseList(resData.id);
-    }
-
-    if(localStorage.getItem("internshipDatabaseList") == null){
-	    localStorage.setItem("internshipDatabaseList" , JSON.stringify([]));
-    }
-    // Adding ID in LocalStorage
-    function addtoDatabaseList(p){
-	
-        let dataList = JSON.parse(localStorage.getItem("internshipDatabaseList"));
-        localStorage.setItem("internshipDatabaseList" , JSON.stringify(dataList));
-        dataList.push(p);
-        localStorage.setItem("internshipDatabaseList" , JSON.stringify(dataList));
-        window.location.href = "internshipsDetails.html";
-    }  
-    //----End--- For Displaying Details of Internships
-
-    
+   
     // ---Start--- For Displaying  Internships
     let cart = JSON.parse(localStorage.getItem("internshipDatabase"));
     let findData = cart[cart.length - 1];
     let lastData = null;
-    console.log("lastData" , findData);
-
     displayDataForLink();
     async function displayDataForLink(){
         const res = await fetch(`http://localhost:5000/api/internships`);
@@ -986,11 +1012,14 @@
         if(cart.length > 0){
             displayLinkData(data);
         }
-
+        else{
+            searchInternships();
+        }
     }
     
     let count1 = 0;
     let count2 = 0;
+    let counterValue = 0;
     function displayLinkData(arr){
 
         if(findData == 'Work From Home'){
@@ -1059,7 +1088,7 @@
 
                         <div class="button_container11">${x}</div>
                         
-                        <a class="button_container2">View details</a>
+                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                     </div>
                     </div>
                         `;
@@ -1123,19 +1152,44 @@
 
                                 <div class="button_container11">${x}</div>
                                 
-                                <a class="button_container2">View details</a>
+                                <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                             </div>
                             </div>
                                 `;
                         internships_div.appendChild(inside_div);
                     }
+                    
                 });
             }
         });        
         count1 = 0;
-        count2 = 0;       
+        count2 = 0;
+        localStorage.setItem("internshipDatabase", JSON.stringify([]));
     }
     
     // ---End--- For Displaying  Internships
+   
+    // ----Start--- For Displaying Details of Internships
+    // Get View Details
+    async function getViewDetails(byID){
+        const res = await fetch(`http://localhost:5000/api/internships/${byID}`);
+		const resData = await res.json();
+        addtoDatabaseList(resData.id);
+    }
+
+    if(localStorage.getItem("internshipDatabaseList") == null){
+	    localStorage.setItem("internshipDatabaseList" , JSON.stringify([]));
+    }
+    // Adding ID in LocalStorage
+    function addtoDatabaseList(p){
+	
+        let dataList = JSON.parse(localStorage.getItem("internshipDatabaseList"));
+        localStorage.setItem("internshipDatabaseList" , JSON.stringify(dataList));
+        dataList.push(p);
+        localStorage.setItem("internshipDatabaseList" , JSON.stringify(dataList));
+        window.location.href = "internshipsDetails.html";
+    }  
+    //----End--- For Displaying Details of Internships
+    
 
 </script>

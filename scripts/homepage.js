@@ -18,17 +18,14 @@ document.addEventListener("DOMContentLoaded", autoSlider());
 const dataName = document.getElementsByClassName('getDatabaseValue');
 console.log("dataName" , dataName);
 
-
 for(let i=0; i<dataName.length; i++){
     dataName[i].onclick = function () {         
           getvalueData(dataName[i].innerText); 
     }
 }
-
 if(localStorage.getItem("internshipDatabase") == null){
     localStorage.setItem("internshipDatabase" , JSON.stringify([]));
 }
-
 // Adding ID in LocalStorage
 function getvalueData(p){
 
@@ -40,5 +37,5 @@ function getvalueData(p){
 }
 // search box
 document.getElementById('searchInput').onfocus = () => {
-    window.location.href = "searchSec.html"
+    window.location.href = "../pages/searchSec.html"
 }
