@@ -1,6 +1,6 @@
 let btn = document.getElementsByTagName("button");
 btn[0].onclick = function() {
-    window.location.href = ""
+    window.location.href = "./filter.html";
 }
 
 let advertisement = document.getElementById("picImg");

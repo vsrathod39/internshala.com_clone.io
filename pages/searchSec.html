@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internshala | Summer Internship 2021</title>
+    <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
     <style>
@@ -26,6 +28,8 @@
             width: 50%;
             margin: auto;
             font-size: 18px;
+            border: 1px solid red;
+            margin-top: 7%;
         }
         #searchbar {
             width: 100%;
@@ -61,9 +65,9 @@
             margin: 15px 0;
         }
         #outerBox .textCenter {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 23px;
+            padding: 5px 15px;
+            border: 1px solid rgb(224, 224, 224);
+            border-radius: 15px;
             color: #333;
             cursor: pointer;
         }
@@ -85,7 +89,7 @@
                 <option value="intern">Internship</option>
             </select>
             in
-            <i class='bx bx-x'></i>
+            <i id="closingSeacrBar" style="cursor: pointer;" class='bx bx-x'></i>
         </div>
         <div id="searchbar">
             <input placeholder="e.g. Design, Mumbai, Infosys" type="text"  id="searchInput">
@@ -142,7 +146,11 @@ function getvalueData(p){
     localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
     dataList.push(p);
     localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
-    window.location.href = "pages/filter.html";
+    window.location.href = "./filter.html";
 }
-
+// close search bar and redirec to home page
+document.getElementById("closingSeacrBar").onclick = () => {
+    console.log("hii");
+    window.location.href = "../homepage.html";
+}
 </script>
