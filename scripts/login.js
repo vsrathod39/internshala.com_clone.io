@@ -99,7 +99,7 @@ async function login(event) {
 
     if(!data.error)
     {
-        alert("Sucessfully loged in")
+        window.location.href = "../pages/postLoginPage.html"
     }
     else
     alert("Invalid credentials");

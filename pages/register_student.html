@@ -116,6 +116,10 @@
     import {footer} from "../components/footer.js";
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
+    // return to homepage onclick brand logo
+    document.getElementById("intershalaLogo").onclick = () => {
+        window.location.href = "./homepage.html";
+    }
 </script>
 <script src="../scripts/register_student.js"></script>
 <script src="../scripts/login.js"></script>

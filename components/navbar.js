@@ -2,7 +2,7 @@ function navbar(){
     return `
     <section id="brandLogo">
             <img id="huberbergMenu" src="https://internshala.com/static/images/icons/hamburger-menu-key-new.svg" alt="menu">
-            <img src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="brandLogo">
+            <img id="intershalaLogo" src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="brandLogo">
         </section>
         <section id="services">
             <ul>
