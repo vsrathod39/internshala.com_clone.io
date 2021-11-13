@@ -65,6 +65,7 @@
             border: 1px solid #ccc;
             border-radius: 23px;
             color: #333;
+            cursor: pointer;
         }
         #popCities {
             margin:  35px 0;
@@ -87,7 +88,7 @@
             <i class='bx bx-x'></i>
         </div>
         <div id="searchbar">
-            <input placeholder="e.g. Design, Mumbai, Infosys">
+            <input placeholder="e.g. Design, Mumbai, Infosys" type="text"  id="searchInput">
             <div id="searchGlass">
                 <i class='bx bx-search'></i>
             </div>
@@ -95,11 +96,11 @@
         <div id="popCities">
             <div>POPULAR CITIES</div>
             <div id="cities">
-                <div class="textCenter">Work from Home</div>
-                <div class="textCenter">Patna</div>
-                <div class="textCenter">Pune</div>
-                <div class="textCenter">Bangalore</div>
-                <div class="textCenter">Mumbai</div>
+                <div class="textCenter getDatabaseValue">Work From Home</div>
+                <div class="textCenter getDatabaseValue">Patna</div>
+                <div class="textCenter getDatabaseValue">Pune</div>
+                <div class="textCenter getDatabaseValue">Bangalore</div>
+                <div class="textCenter getDatabaseValue">Mumbai</div>
             </div>
         </div>
         <div id="popCat">
@@ -114,3 +115,34 @@
     </div>
 </body>
 </html>
+
+<script>
+
+let searchValue = document.getElementById('searchInput').value;
+
+document.getElementById('searchGlass').onclick = function(){
+    console.log("searchValue" , searchValue);
+    // getvalueData(searchValue); 
+}
+
+const dataName = document.getElementsByClassName('getDatabaseValue');
+
+for(let i=0; i<dataName.length; i++){
+    dataName[i].onclick = function () {         
+          getvalueData(dataName[i].innerText); 
+    }
+}
+if(localStorage.getItem("internshipDatabase") == null){
+    localStorage.setItem("internshipDatabase" , JSON.stringify([]));
+}
+// Adding ID in LocalStorage
+function getvalueData(p){
+
+    let dataList = JSON.parse(localStorage.getItem("internshipDatabase"));
+    localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
+    dataList.push(p);
+    localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
+    window.location.href = "pages/filter.html";
+}
+
+</script>
