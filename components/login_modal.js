@@ -21,7 +21,7 @@ function loginModal(){
             <div class="textCenter" id="opt">
                 <p>OR</p>
             </div>
-            <form onsubmit="login(event)">
+            <form id="logInForm">
                 <div class="details1">
                     <label>Email</label>
                     <input placeholder="vivek@example.com"/>

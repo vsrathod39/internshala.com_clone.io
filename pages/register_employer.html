@@ -60,7 +60,7 @@
                     <p id="tc">By signing up, you agree to our <span>Terms and Conditions</span>.</p>
                     <button class="textCenter" type="submit">Register Now</button>
                 </form>
-                <p id="msg"><span>Have a question?</span></p>
+                <p id="msg_regEmployer"><span>Have a question?</span></p>
             </div>
         </div>
     </div>
@@ -126,11 +126,14 @@
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
     // login modal
-    import loginModal from "../components/login_modal.js";
+    import loginModal from "./components/login_modal.js";
+    import {core} from "./scripts/login.js";
     document.getElementById("logIn_button").onclick = () => {
         document.getElementById('login_modal_popup').style.display = "block";
         document.getElementById('login_modal_popup').innerHTML = loginModal();
         document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+        core();
     }
     // document.getElementById("login_modal_popup").onclick = () => {
     //     console.log("hi")

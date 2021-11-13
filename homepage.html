@@ -277,10 +277,13 @@
     }
     // login modal
     import loginModal from "./components/login_modal.js";
+    import {core} from "./scripts/login.js";
     document.getElementById("logIn_button").onclick = () => {
         document.getElementById('login_modal_popup').style.display = "block";
         document.getElementById('login_modal_popup').innerHTML = loginModal();
         document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+        core();
     }
     // document.getElementById("login_modal_popup").onclick = () => {
     //     console.log("hi")
@@ -305,4 +308,4 @@
     }
 </script>
 <script src="./scripts/homepage.js"></script>
-<script src="./scripts/login.js"></script>
+<!-- <script src="./scripts/login.js"></script> -->

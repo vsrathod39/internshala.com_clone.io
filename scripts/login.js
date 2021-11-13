@@ -1,9 +1,13 @@
+function core(){
 let userCategory = document.querySelectorAll("#userCat > div");
 let regisCategory = document.querySelectorAll("#msg > span");
 let horizontalStroke = document.getElementById("horStroke");
-let details = document.getElementsByTagName("input");
+let detail = document.getElementsByTagName("input");
 let orOption = document.getElementById("opt");
 let loginGoogle = document.getElementById("loginGoogle");
+
+console.log("hi",regisCategory);
+
 for(let i = 0; i<userCategory.length; i++)
 {
     userCategory[i].onclick = function() {
@@ -38,18 +42,18 @@ regisCategory[1].onclick = function() {
     window.location.href = "./register_employer.html";
 }
 
-for(let i = 0; i<details.length; i++)
+for(let i = 0; i<detail.length; i++)
 {
-    details[i].onmouseenter = function() {
+    detail[i].onmouseenter = function() {
         changeBorder(event);
     }
-    details[i].onfocus = function() {
+    detail[i].onfocus = function() {
         changeBorderC(event);
     }
-    details[i].onmouseleave = function() {
+    detail[i].onmouseleave = function() {
         restoreBorder(event);
     }
-    details[i].onblur = function() {
+    detail[i].onblur = function() {
         restoreBorderC(event);
     }
 }
@@ -75,16 +79,18 @@ function restoreBorderC(ev) {
         restoreBorder(event);
     }
 }
-
+document.getElementById("logInForm").onsubmit = () => {
+    login(event);
+}
 async function login(event) {
     event.preventDefault();
     let user_data = {
-        username: details[0].value,
-        password: details[1].value,
+        username: detail[0].value,
+        password: detail[1].value,
     };
 
-    console.log(details[0].value);
-    console.log(details[1].value)
+    console.log(detail[0].value);
+    console.log(detail[1].value)
 
     let data_send = JSON.stringify(user_data);
 
@@ -99,8 +105,14 @@ async function login(event) {
 
     if(!data.error)
     {
-        window.location.href = "../pages/postLoginPage.html"
+        alert("succes");
+        window.location.href = "../pages/postLoginPage.html";
     }
     else
     alert("Invalid credentials");
 }
+}
+function exp2(){
+
+}
+export {core};
