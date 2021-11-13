@@ -3,7 +3,7 @@ btn[0].onclick = function() {
     window.location.href = ""
 }
 
-let advertisement = document.getElementById("adver");
+let advertisement = document.getElementById("picImg");
 
 window.onresize = function() {
     if(window.innerWidth <= 940)

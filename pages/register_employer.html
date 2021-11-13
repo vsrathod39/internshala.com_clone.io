@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link href="../styles/register_employer.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../styles/register_employer.css">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/login.css">
     <title>Hire interns | Find interns | Hiring intern | Post internships- Intershala</title>
@@ -112,7 +112,7 @@
 </body>
 </html>
 <script type="module">
-    // nav-bar modal
+    // nav bar
     import {navbar, huberberg} from "../components/navbar.js";
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
@@ -126,8 +126,8 @@
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
     // login modal
-    import loginModal from "./components/login_modal.js";
-    import {core} from "./scripts/login.js";
+    import loginModal from "../components/login_modal.js";
+    import {core} from "../scripts/login.js";
     document.getElementById("logIn_button").onclick = () => {
         document.getElementById('login_modal_popup').style.display = "block";
         document.getElementById('login_modal_popup').innerHTML = loginModal();
@@ -154,4 +154,4 @@
     }
 </script>
 <script src="../scripts/register_employer.js"></script>
-<script src="../scripts/login.js"></script>
+<!-- <script src="../scripts/login.js"></script> -->

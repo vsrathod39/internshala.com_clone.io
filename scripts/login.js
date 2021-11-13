@@ -5,8 +5,14 @@ let horizontalStroke = document.getElementById("horStroke");
 let detail = document.getElementsByTagName("input");
 let orOption = document.getElementById("opt");
 let loginGoogle = document.getElementById("loginGoogle");
+let closeButton = document.getElementById("closeLogin_modal");
+let sectionsLogin = document.getElementById("loginSec");
 
-console.log("hi",regisCategory);
+closeButton.onclick = () => {
+    sectionsLogin.style.display = "none";
+    document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    document.getElementById("login_modal_popup").style.display = "none";
+}
 
 for(let i = 0; i<userCategory.length; i++)
 {
