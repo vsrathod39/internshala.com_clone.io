@@ -257,7 +257,7 @@
 </div>
 <!-- Footer -->
 <div id="footer">
-    
+
 </div>
 </body>
 </html>
@@ -291,6 +291,14 @@
     import {footer} from "./components/footer.js";
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
+    // register as student page change
+    document.getElementById("register_as_student").onclick = () => {
+        window.location.href = "./pages/register_student.html";
+    }
+    // register as employer page change
+    document.getElementById("register_as_employer").onclick = () => {
+        window.location.href = "./pages/register_employer.html";
+    }
 </script>
 <script src="./scripts/homepage.js"></script>
 <script src="./scripts/login.js"></script>

@@ -58,8 +58,8 @@ function navbar(){
                 <li>
                     <span id="register_button">Register<img id="upDownArrow" src="../images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
                     <ul>
-                        <li>As a student</li>
-                        <li>As an employer</li>
+                        <li id="register_as_student">As a student</li>
+                        <li id="register_as_employer">As an employer</li>
                     </ul>
                 </li>
             </ul>
