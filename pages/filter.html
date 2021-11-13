@@ -415,7 +415,7 @@
 
                                         <div class="button_container11">${x}</div>
                                         
-                                        <a class="button_container2">View details</a>
+                                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                                     </div>
                                 </div>`;
                             internships_div.appendChild(inside_div);
@@ -478,7 +478,7 @@
 
                                         <div class="button_container11">${x}</div>
                                         
-                                        <a class="button_container2">View details</a>
+                                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                                     </div>
                                     </div>                                      
                                     `;
@@ -542,7 +542,7 @@
 
                                         <div class="button_container11">${x}</div>
                                         
-                                        <a class="button_container2">View details</a>
+                                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                                     </div>
                                     </div>                                        
                                     `;
@@ -606,7 +606,7 @@
 
                                         <div class="button_container11">${x}</div>
                                         
-                                        <a class="button_container2">View details</a>
+                                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                                     </div>
                                     </div>                                        
                                     `;
@@ -682,7 +682,7 @@
 
                                 <div class="button_container11">${x}</div>
                                 
-                                <a class="button_container2">View details</a>
+                                <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                             </div>
                             </div>
                             `;
@@ -749,7 +749,7 @@
 
                                 <div class="button_container11">${x}</div>
                                 
-                                <a class="button_container2">View details</a>
+                                <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                             </div>
                             </div>
                             `;
@@ -869,7 +869,7 @@
 
                         <div class="button_container11">${x}</div>
                         
-                        <a class="button_container2">View details</a>
+                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                     </div>
                     </div>
                         `;
@@ -933,7 +933,7 @@
 
                                 <div class="button_container11">${x}</div>
                                 
-                                <a class="button_container2">View details</a>
+                                <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                             </div>
                             </div>
                                 `;
@@ -948,30 +948,7 @@
         }
     }
  
-    // ----Start--- For Displaying Details of Internships
-    // Get View Details
-    async function getViewDetails(byID){
-        const res = await fetch(`http://localhost:5000/api/internships/${byID}`);
-		const resData = await res.json();
-		console.log("ResData" , resData.id);
-        addtoDatabaseList(resData.id);
-    }
-
-    if(localStorage.getItem("internshipDatabaseList") == null){
-	    localStorage.setItem("internshipDatabaseList" , JSON.stringify([]));
-    }
-    // Adding ID in LocalStorage
-    function addtoDatabaseList(p){
-	
-        let dataList = JSON.parse(localStorage.getItem("internshipDatabaseList"));
-        localStorage.setItem("internshipDatabaseList" , JSON.stringify(dataList));
-        dataList.push(p);
-        localStorage.setItem("internshipDatabaseList" , JSON.stringify(dataList));
-        window.location.href = "internshipsDetails.html";
-    }  
-    //----End--- For Displaying Details of Internships
-
-    
+   
     // ---Start--- For Displaying  Internships
     let cart = JSON.parse(localStorage.getItem("internshipDatabase"));
     let findData = cart[cart.length - 1];
@@ -1059,7 +1036,7 @@
 
                         <div class="button_container11">${x}</div>
                         
-                        <a class="button_container2">View details</a>
+                        <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                     </div>
                     </div>
                         `;
@@ -1123,7 +1100,7 @@
 
                                 <div class="button_container11">${x}</div>
                                 
-                                <a class="button_container2">View details</a>
+                                <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
                             </div>
                             </div>
                                 `;
@@ -1137,5 +1114,28 @@
     }
     
     // ---End--- For Displaying  Internships
+   
+    // ----Start--- For Displaying Details of Internships
+    // Get View Details
+    async function getViewDetails(byID){
+        const res = await fetch(`http://localhost:5000/api/internships/${byID}`);
+		const resData = await res.json();
+		console.log("ResData" , resData.id);
+        addtoDatabaseList(resData.id);
+    }
+
+    if(localStorage.getItem("internshipDatabaseList") == null){
+	    localStorage.setItem("internshipDatabaseList" , JSON.stringify([]));
+    }
+    // Adding ID in LocalStorage
+    function addtoDatabaseList(p){
+	
+        let dataList = JSON.parse(localStorage.getItem("internshipDatabaseList"));
+        localStorage.setItem("internshipDatabaseList" , JSON.stringify(dataList));
+        dataList.push(p);
+        localStorage.setItem("internshipDatabaseList" , JSON.stringify(dataList));
+        window.location.href = "internshipsDetails.html";
+    }  
+    //----End--- For Displaying Details of Internships
 
 </script>
