@@ -10,15 +10,81 @@
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/homepage.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/login.css">
 </head>
 <body>
+    <!-- Navbar  -->
     <div id="navBar">
-
+        
     </div>
     <nav>
         
     </nav>
-    <div id="searchNslide"></div>
+    <!-- Search Box -->
+    <div id="searchbar">
+        <input id="searchInput" placeholder="What are you looking for?">
+        <div id="searchGlass">
+            <i class='bx bx-search'></i>
+        </div>
+    </div>
+    <!-- Slider -->
+    <div id="scrollSlider">
+        <div class="getWidth sliderImg1">
+            <div class="sliderContentBox">
+                <div>
+                    <h1>Get ahead. Get an Internship!</h1>
+                </div>
+                <div class="sliderCheckMark">
+                    <img src="https://internshala.com/static/images/common/check_box_dark.svg" alt="">
+                    <p>10,000+ internships with stipend</p>
+                </div>
+                <div class="sliderCheckMark">
+                    <img src="https://internshala.com/static/images/common/check_box_dark.svg" alt="">
+                    <p>100% verified</p>
+                </div>
+                <div class="sliderCheckMark">
+                    <img src="https://internshala.com/static/images/common/check_box_dark.svg" alt="">
+                    <p>Apply for free</p>
+                </div>
+            </div>
+        </div>
+        <div class="getWidth sliderImg2">
+            
+        </div>
+        <div class="getWidth sliderImg3">
+            <div class="sliderContentBox" style="color: white;">
+                <div>
+                    <h3>Introducing</h3>
+                </div>
+                <div style="display: flex; gap: 1%;">
+                    <h1>Fresher Jobs</h1> <span id="bgSpan" style="display: flex; justify-content: center; align-items: center; padding: 0 15px;">New</span>
+                </div>
+                <div>
+                    <h3>Apply to premium fresher jobs for free</h3>
+                </div>
+                <div class="sliderCheckMark" style="color: white;">
+                    <img src="https://internshala.com/static/images/common/check_box_white.svg" alt="">
+                    <p>100% verified</p>
+                </div>
+                <div class="sliderCheckMark" style="color: white;">
+                    <img src="https://internshala.com/static/images/common/check_box_white.svg" alt="">
+                    <p>Minimum CTC 3 LPA</p>
+                </div>
+                <div class="sliderCheckMark" style="color: white;">
+                    <img src="https://internshala.com/static/images/common/check_box_white.svg" alt="">
+                    <p>Apply for free</p>
+                </div>
+            </div>
+        </div>
+        <div class="getWidth sliderImg4">
+            
+        </div>
+    </div>
+    <!-- login Modal Pop-up-->
+    <div id="login_modal_popup">
+
+    </div>
+    <!-- Contentnt Body -->
     <div id="bigB">
         <div id="internships">
             <div class="headDiv">
@@ -28,44 +94,44 @@
                 </div>
                 <div>
                     <div class="anchor">
-                        <a href="/">View all internships &#8594;</a>
+                        <a href="#">View all internships &#8594;</a>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="header">Popular cities</div>
                 <div class="gridB">
-                    <div>
+                    <div class="getDatabaseValue">
                         <img src="https://internshala.com/static/images/home/internships/categories/work_from_home.svg">
-                        <p>Work from home</p>
+                        <p >Work From Home</p>
                     </div>
-                    <div>
+                    <div class="getDatabaseValue">
                         <img src="https://internshala.com/static/images/home/internships/categories/delhi_ncr.svg">
-                        <p>Delhi/NCR</p>
+                        <p >Delhi/NCR</p>
                     </div>
-                    <div>
+                    <div class="getDatabaseValue">
                         <img src="https://internshala.com/static/images/home/internships/categories/bangalore.svg">
                         <p>Bangalore</p>
                     </div>
-                    <div>
+                    <div class="getDatabaseValue">
                         <img src="https://internshala.com/static/images/home/internships/categories/mumbai.svg">
-                        <p>Mumbai</p>
+                        <p >Mumbai</p>
                     </div>
-                    <div>
+                    <div class="getDatabaseValue">
                         <img src="https://internshala.com/static/images/home/internships/categories/hyderabad.svg">
-                        <p>Hyderabad</p>
+                        <p >Hyderabad</p>
                     </div>
-                    <div>
+                    <div class="getDatabaseValue">
                         <img src="https://internshala.com/static/images/home/internships/categories/chennai.svg">
-                        <p>Chennai</p>
+                        <p >Chennai</p>
                     </div>
-                    <div>
+                    <div class="getDatabaseValue">
                         <img src="https://internshala.com/static/images/home/internships/categories/kolkata.svg">
-                        <p>Kolkata</p>
+                        <p >Kolkata</p>
                     </div>
-                    <div>
+                    <div class="getDatabaseValue">
                         <img src="https://internshala.com/static/images/home/internships/categories/international.svg">
-                        <p>International</p>
+                        <p >Patna</p>
                     </div>
                 </div>
             </div>
@@ -74,7 +140,7 @@
             <div class="gridB">
                 <div>
                     <img src="https://internshala.com/static/images/home/internships/categories/part_time.svg">
-                    <p>Part-time</p>
+                    <p>Part time</p>
                 </div>
                 <div>
                     <img src="https://internshala.com/static/images/home/internships/categories/engineering.svg">
@@ -110,7 +176,10 @@
     <div id="internT">
         <div class="headDiv">
             <div>
-                <h1 class="title">Internshala Trainings</h1>
+                <div class="offers_75">
+                    <h1 class="title">Internshala Trainings</h1>
+                    <img src="https://internshala.com/cached_uploads/offer_tags/618b6119251e41636524313.png" alt="offers_75%">
+                </div>
                 <p class="description">Learn new-age skills on the go</p>
             </div>
             <div>
@@ -120,7 +189,7 @@
             </div>
         </div>
         <div>
-            <div class="gridB">
+            <div class="gridC">
                 <div>
                     <img src="https://internshala.com/static/images/home/trainings/icons/programming_with_python.svg">
                     <p>Programming <br> with Python</p>
@@ -169,7 +238,7 @@
         </div>
     </div>
     <div>
-        <div class="gridB">
+        <div id="gridD">
             <div>
                 <img src="https://internshala.com/static/images/home/jobs/perks/ctc.svg">
                 <p>Minimum CTC of 3 LPA</p>
@@ -186,10 +255,14 @@
     </div>
 </div>
 </div>
-<div id="footer"></div>
+<!-- Footer -->
+<div id="footer">
+
+</div>
 </body>
 </html>
 <script type="module">
+    // nav-bar modal
     import {navbar, huberberg} from "./components/navbar.js";
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
@@ -202,8 +275,37 @@
         document.getElementById('navBar').innerHTML = null;
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
-
+    // login modal
+    import loginModal from "./components/login_modal.js";
+    import {core} from "./scripts/login.js";
+    document.getElementById("logIn_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+        core();
+    }
+    // document.getElementById("login_modal_popup").onclick = () => {
+    //     console.log("hi")
+    //     document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    //     document.getElementById("login_modal_popup").style.display = "none";
+    // }
+    // footer modal
     import {footer} from "./components/footer.js";
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
+    // register as student page change
+    document.getElementById("register_as_student").onclick = () => {
+        window.location.href = "./pages/register_student.html";
+    }
+    // register as employer page change
+    document.getElementById("register_as_employer").onclick = () => {
+        window.location.href = "./pages/register_employer.html";
+    }
+    // return to homepage onclick brand logo
+    document.getElementById("intershalaLogo").onclick = () => {
+        window.location.href = "./homepage.html";
+    }
 </script>
+<script src="./scripts/homepage.js"></script>
+<!-- <script src="./scripts/login.js"></script> -->

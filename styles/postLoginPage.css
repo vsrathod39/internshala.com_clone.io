@@ -1,0 +1,60 @@
+
+#container {
+    font-family: 'Inter var',sans-serif;
+    color: #333;
+    width: 60%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#container #picImg {
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#container .textCenter {
+    text-align: center;
+    margin-bottom: 10px;
+}
+#container h2 {
+    font-weight: 600;
+    font-size: 28px;
+}
+#container #folder {
+    margin: 45px 0;
+}
+#container button {
+    background-color: #008BDC;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 0;
+    cursor: pointer;
+}
+#container i {
+    font-size: 24px;
+    vertical-align: middle;
+    color: #008BDC;
+}
+#container span {
+    color: #008BDC;
+    cursor: pointer;
+}
+#container #count {
+    font-size: 20px;
+}
+#container h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+@media(max-width: 940px) {
+    #container {
+        width: 95%;
+    }
+}

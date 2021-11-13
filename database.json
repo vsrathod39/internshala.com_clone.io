@@ -1,0 +1,674 @@
+{
+"internships": [
+    {
+      "id": 1,
+      "employerId": "99",
+      "Role": "Architecture",
+      "skills": [
+        "Python",
+        ".NET",
+        "Javascript",
+        "Database Management"
+      ],
+      "experience": "7-9 years",
+      "min_salary": "200000",
+      "max_salary": "1000000",
+      "walk_in": "21/06/2021",
+      "job_title": "software engineer",
+      "job_type": "developer",
+      "company_name": "Microsoft",
+      "company_url": "https://vonq.io/3uCRIAO",
+      "location": [
+        "Pune",
+        "Bangalore",
+        "Hyderabad"
+      ],
+      "description": [
+        "Microsoft is empowering every person and every organization on the planet to do more and achieve more",
+        "We have set ourselves three bold ambitions",
+        "create more personal computing",
+        "reinvent productivity and business processes and build the intelligent cloud",
+        "Our culture is centered on embracing a growth mindset",
+        "The theme of inspiring excellence and encouraging teams and leaders to bring their best each day"
+      ],
+      "about": "Microsoft is empowering every person and every organization on the planet to do more and achieve more. We have set ourselves three bold ambitions: create more personal computing, reinvent productivity and business processes and build the intelligent cloud. Our culture is centered on embracing a growth mindset, a theme of inspiring excellence and encouraging teams and leaders to bring their best each day.",
+      "contact_hr": "4789574379",
+      "work_from_home": true
+    },
+    {
+      "id": 2,
+      "employerId": "99",
+      "Role": "UX/UI designer",
+      "skills": [
+        "Adobe Xd",
+        "Figma",
+        "HTML",
+        "CSS"
+      ],
+      "experience": "1-3 years",
+      "min_salary": "300000",
+      "max_salary": "700000",
+      "job_title": "software engineer",
+      "job_type": "designer",
+      "company_name": "OneLogin",
+      "company_url": "http://www.onelogin.com",
+      "location": [
+        "Mumbai",
+        "Pune"
+      ],
+      "description": [
+        "OneLogin needs an experienced software engineer and technical team lead to assume ownership of all things Automation",
+        "Join our close knit Quality Engineering team that is responsible for the quality of our product offerings from the beginning of the SDLC all the way through the release to",
+        "Having a strong grip on adobe XD ",
+        "willing to work at any condition"
+      ],
+      "contact_hr": "2182179598",
+      "work_from_home": false,
+      "about": "OneLogin brings business agility by supporting internal employees and millions of external users with the same ease. Our cloud infrastructure delivers unparalleled reliability to avoid major internet and datacenter outages, giving you the confidence to deploy new technologies across your organization at scale. Sandboxes help you test code before deploying to production for effective change management."
+    },
+    {
+      "id": 3,
+      "employerId": "99",
+      "Role": "data analyst",
+      "skills": [
+        "Database Management",
+        "Algoritims",
+        "Data Structure"
+      ],
+      "experience": "1-2 years",
+      "min_salary": "100000",
+      "max_salary": "500000",
+      "about": "We are a fintech company that provides fast, flexible, unsecured personal loans through a mobile application to young salaried millennials across India. CASHe was founded in 2016 by V. Raman Kumar, whose aim was to bring millions of young salaried millennials who were denied credit by conventional banks and financial institutions into the formal credit system. ",
+      "job_title": "Backend Engineer",
+      "job_type": "developer",
+      "company_name": "Cased",
+      "company_url": "https://cased.com",
+      "location": [
+        "Delhi",
+        "chennai"
+      ],
+      "description": [
+        " we create innovative solutions and workflows for the growing number of security, compliance, and productivity challenges that face software companies.",
+        "Having a strong grip on algorithim",
+        "The candidate should have exelent knowledge on mongo db"
+      ],
+      "contact_hr": "4115598876",
+      "work_from_home": true
+    },
+    {
+      "id": 4,
+      "employerId": "99",
+      "Role": "senior developer",
+      "skills": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "RESTful APIs",
+        "React"
+      ],
+      "experience": "3-7 years",
+      "min_salary": "400000",
+      "max_salary": "1200000",
+      "job_title": "Software Engineer",
+      "job_type": "developer",
+      "company_name": "Fluidra North",
+      "company_url": "https://www.fluidrausa.com/en",
+      "location": [
+        "Chennai",
+        "Bangalore"
+      ],
+      "description": [
+        "If you have significant experience in hands-on coding with high level languages",
+        "cloud-based technologies",
+        "RESTful APIs, micro services architecture",
+        "To join a global team that is passionate, hardworking, innovative, and FUN!",
+        "You might be the Staff Engineer, Cloud Platform we’ve been looking for!",
+        "This person will be the technical expert and team member that will design, develop and support IOT solutions in AWS for our backend cloud platform."
+      ],
+      "contact_hr": "9802299870",
+      "work_from_home": false,
+      "about": "We have a long legacy of innovation and a history of providing quality pool and spa products, and we're still at it today — all in an effort to exceed our customer's expectations and deliver the perfect pool and wellness experience."
+    },
+    {
+      "id": 5,
+      "employerId": "99",
+      "Role": "Ruby Developer",
+      "skills": [
+        "Ruby",
+        "Rail",
+        "Mongo DB"
+      ],
+      "experience": "5-7 years",
+      "min_salary": "300000",
+      "max_salary": "1500000",
+      "job_title": "software engineer",
+      "job_type": "developer",
+      "company_name": "BusPatrol",
+      "company_url": "https://www.buspatrol.com/careers/",
+      "location": [
+        "Kolkata",
+        "Hyderabad",
+        "Delhi"
+      ],
+      "description": [
+        "Software Development Lead, the successful candidates will be instrumental in executing and delivering well tested code",
+        "This position will require you to work in close concert",
+        "As part of a larger geographically distant team where you will be required to share your insights to drive a better process.",
+        "Having a strong grip on ruby rail "
+      ],
+      "contact_hr": "7142667754",
+      "work_from_home": true,
+      "about": "Our goal is to create a culture of responsibility and awareness on the road. We aim to make the journey to and from school safer. Join us on our 'Mission to Zero' campaign. Through educating drivers and correcting behavior through stop-arm enforcement, we can see a day where there are no illegal passings on the road."
+    },
+    {
+      "id": 6,
+      "employerId": "99",
+      "Role": "frontend developer",
+      "skills": [
+        "CSS",
+        "HTML",
+        "Javascript",
+        "React"
+      ],
+      "experience": "1-5 years",
+      "min_salary": "200000",
+      "max_salary": "600000",
+      "walk_in": "21/12/2021",
+      "job_title": "Software Engineer",
+      "job_type": "developer",
+      "company_name": "Bison Technologies",
+      "company_url": "https://vonq.io/2RbJ1PE",
+      "location": [
+        "Mumbai",
+        "Noida"
+      ],
+      "description": [
+        "As a Senior Software Engineer, you will bring technical expertise in full stack web development to deliver high-quality software solutions",
+        "You should embody a passion for continuous improvement, be comfortable working in an agile development environment",
+        "You must be familiar with standard testing methodologies"
+      ],
+      "contact_hr": "9672268527",
+      "work_from_home": true,
+      "about": "Bison Technologies is a rapidly growing SAAS company targeting the massive industrial energy supply chain and transportation sectors. We are creating an entirely new category within one of the oldest, largest and lowest-tech industries on earth, and we are looking for people who are passionate about solving system-wide problems ranging from efficiency to environmental impact. Interested individuals must be team-oriented, thrive in startup-like environments and share our passion for reimagining the way old industries work. Our most successful team members think differently, learn continuously, develop rapidly, and care deeply for the success of others over themselves."
+    },
+    {
+      "id": 7,
+      "employerId": "99",
+      "Role": "Senior iOS Developer",
+      "skills": [
+        "iOS 12",
+        "Swift"
+      ],
+      "experience": "1-2 years",
+      "min_salary": "500000",
+      "max_salary": "2000000",
+      "job_title": "iOS Developer",
+      "job_type": "developer",
+      "company_name": "Sharecare GmbH",
+      "company_url": "https://www.sharecare.com/",
+      "location": [
+        "Pune",
+        "chennai"
+      ],
+      "description": [
+        "Implement new features and maintain the iOS app of Sharecare",
+        "Having a strong grip on ios development ",
+        "You must have significant experience in hands-on coding with high level languages"
+      ],
+      "contact_hr": "2847887170",
+      "work_from_home": false,
+      "about": "Our culture is fast-paced, high-energy and continually growing! We are always looking for people that value the opportunity to work hard, have fun on the job, and make a difference in the lives of others through their work every day! Our work is interesting and fun, because our team members are unique, talented and dynamic. We provide a setting where enthusiastic team members work together and take joy in coming to work. Exciting career opportunities are available within multiple departments, and advancement is supported by leadership teams who are invested in the growth and development of you."
+    },
+    {
+      "id": 8,
+      "employerId": "99",
+      "Role": "Ruby Architecture",
+      "skills": [
+        "Ruby",
+        "RESTful APIs",
+        "Rail",
+        "Database Management",
+        ""
+      ],
+      "experience": "freshers",
+      "min_salary": "100000",
+      "max_salary": "400000",
+      "walk_in": "08/09/2021",
+      "job_title": "Software Developer",
+      "job_type": "Architecture",
+      "company_name": "universitytees",
+      "company_url": "https://universitytees.com/",
+      "location": [
+        "Delhi",
+        "Hyderabad",
+        "Kolkata"
+      ],
+      "description": [
+        "Strong expertise within Ruby on Rails and a deep understanding of web programming in general",
+        "Proficient in HTML, JavaScript, CSS, SQL, Git, CLIs, scripting, and Linux",
+        "Fully capable of taking substantial features from concept to shipping as the sole programmer alongside a designer."
+      ],
+      "contact_hr": "3979988191",
+      "work_from_home": true,
+      "about": "University Tees is not just clothes. It is the people inside them. It is you. It is us. Our team. Who we are. How we think. What we believe. That is what sets us apart. And brings us together. University Tees exists to Develop People and Change Lives™. It’s our company’s purpose, and the reason we are passionate about coming to work every day. DPCL™ means investing in our team members, community and customers so we can be the best versions of ourselves in everything we do. Over the next 10 years, University Tees will invest over $6.5 million to Develop People and Change Lives™"
+    },
+    {
+      "id": 9,
+      "employerId": "99",
+      "Role": "Senior Ruby on Rails Developer",
+      "skills": [
+        "Rail",
+        "Ruby",
+        "RESTful APIs",
+        "Data Structure"
+      ],
+      "experience": "5-7 years",
+      "min_salary": "50000",
+      "max_salary": "100000",
+      "about": "Netguru builds digital products that let people do things differently. Share your challenge with our team, and we’ll work with you to deliver a revolutionary digital product. Our clients have changed the way people do banking, listen to music, learn languages, and rent bikes. Their products have been featured in TechCrunch, Business Insider, and Product Hunt.",
+      "job_title": "fullstack developer",
+      "job_type": "developer",
+      "company_name": "Netguru S.A.",
+      "company_url": "https://www.netguru.com",
+      "location": [
+        "Mumbai",
+        "bangalore"
+      ],
+      "description": [
+        "Have at least 2 years' experience in Ruby on Rails",
+        "Able to advice a client/team to make better decisions based on experience",
+        "Providing guidance and expertise in your field",
+        "Our culture is centered on embracing a growth mindset",
+        "To join a global team that is passionate, hardworking, innovative, and FUN!"
+      ],
+      "contact_hr": "1714867600",
+      "work_from_home": true
+    },
+    {
+      "id": 10,
+      "employerId": "99",
+      "Role": "UX/UI designer",
+      "skills": [
+        "Adobe Xd",
+        "CSS",
+        "HTML",
+        "Figma",
+        "React"
+      ],
+      "experience": "2-3 years",
+      "min_salary": "300000",
+      "max_salary": "600000",
+      "job_title": "Software Developer",
+      "job_type": "designer",
+      "company_name": "Sticker Mule",
+      "company_url": "https://www.stickermule.com/careers",
+      "location": [
+        "Noida",
+        "Pune"
+      ],
+      "description": [
+        "Having a strong grip on adobe XD ",
+        "Software Development Lead, the successful candidates will be instrumental in executing and delivering well tested code",
+        "willing to work at any condition",
+        "You must be familiar with industry standard styling pattern"
+      ],
+      "contact_hr": "2439707800",
+      "work_from_home": true,
+      "about": "We aim to build an incredible experience for ordering custom products.Wasting time sucks. That’s why we relentlessly focus on making it fast and easy to order custom products. Order in seconds and get your products in days. Free proofs, free artwork help, free shipping and fast turnaround are why people love us."
+    },
+    {
+      "id": 11,
+      "employerId": "99",
+      "Role": "Program analyst",
+      "skills": [
+        "Data Structure",
+        "Algoritims",
+        "Database Management"
+      ],
+      "experience": "4-7 years",
+      "min_salary": "700000",
+      "max_salary": "1500000",
+      "walk_in": "03/06/20121",
+      "about": "In service design projects all over the world, we discovered that teams often struggle with similar issues: What to do after a workshop? How to process workshop results? How to work with geographically dispersed teams? How to create professional deliverables with limited time and budget?",
+      "job_title": "Software Developer",
+      "job_type": "program analyst",
+      "company_name": "Smaply",
+      "company_url": "https://www.smaply.com/careers",
+      "location": [
+        "Delhi",
+        "Hyderabad"
+      ],
+      "description": [
+        "Must have great problem solving skills",
+        "Having a strong grip on algorithim",
+        "You will be part of the entire lifecycle of new features, from the shitty first draft to the deployment of the finished feature",
+        "You design, build, and maintain efficient, reusable, and reliable Ruby code"
+      ],
+      "contact_hr": "7527428441",
+      "work_from_home": false
+    },
+    {
+      "id": 12,
+      "employerId": "99",
+      "Role": "frontend developer",
+      "skills": [
+        "CSS",
+        "HTML",
+        "Javascript",
+        "React"
+      ],
+      "experience": "8-10 years",
+      "min_salary": "700000",
+      "max_salary": "1600000",
+      "walk_in": "04/07/2021",
+      "about": "We launched Axios in January 2017 based on this shared belief: The world needed smarter, more efficient coverage of the topics shaping the fast-changing world. We pledged to put our audience first, always.We met our promise and offered an antidote to this madness. Now, we are focusing our minds and manpower on a much bigger problem faced by all consumers: the erosion of truth, trust, safety and sanity in news. This is an existential threat to our democracy. It will require extraordinary effort by us and others to correct. In this spirit, we offer the following Axios Bill of Rights, a list of promises to our readers, listeners and viewers. We urge you to hold us accountable for living up to our obligations to you. ",
+      "job_title": "Software Engineer",
+      "job_type": "developer",
+      "company_name": "Axios",
+      "company_url": "http://Axios",
+      "location": [
+        "Pune",
+        "Mumbai",
+        "bangalore"
+      ],
+      "description": [
+        "Worked in environments using Ruby, Python, Node and Javascript",
+        "Experience testing services and working with Docker containers",
+        "The ability to set up test environments, deploy code, use the command line",
+        "Experience working in a Continuous Integration environment"
+      ],
+      "contact_hr": "5827589082",
+      "work_from_home": true
+    },
+    {
+      "id": 13,
+      "employerId": "99",
+      "Role": "UX/UI designer",
+      "skills": [
+        "Figma",
+        "HTML",
+        "CSS",
+        "Adobe Xd"
+      ],
+      "experience": "3-5 years",
+      "min_salary": "600000",
+      "max_salary": "1000000",
+      "job_title": "Software Developer",
+      "job_type": "designer",
+      "company_name": "TELUS",
+      "company_url": "https://www.telus.com/en/",
+      "location": [
+        "chennai"
+      ],
+      "description": [
+        "This role is for a key position within our team as we enter a rapid growth phase",
+        "As a Sr. technical member of the team, you will design, develop, and help scale different features/services throughout the full application stack.",
+        "Having a strong grip on adobe XD ",
+        "willing to work at any condition",
+        "Proficient in HTML, JavaScript, CSS"
+      ],
+      "contact_hr": "9965489258",
+      "work_from_home": true,
+      "about": "At TELUS, we’re building a better future for all Canadians by using our technology for good and giving back to our communities. Our social purpose is at the heart of everything we do as a world-leading technology company and continues to set us apart. Together, let's make the future friendly."
+    },
+    {
+      "id": 14,
+      "employerId": "99",
+      "Role": "Senior Architecture",
+      "skills": [
+        "Algoritims",
+        "Data Structure",
+        "Database Management",
+        "Python"
+      ],
+      "experience": "3-8 years",
+      "min_salary": "300000",
+      "max_salary": "800000",
+      "walk_in": "12/06/2021",
+      "about": "AXOVISION is a pioneer in the application of Artificial Intelligence in Asset Management. Our model of cooperative Artificial Intelligences analyzes traditional as well as alternative data sets to generate precise trading signals in the data noise of financial markets. The systematic use of Artificial Intelligence allows us to recognize highly complex patterns in the data and to draw objective conclusions about the influencing variables of stock price movements. The result is a risk-adjusted share portfolio with an outstanding performance.",
+      "job_title": "Software Developer",
+      "job_type": "Architecture",
+      "company_name": "AXOVISION",
+      "company_url": "http://www.axovision.com",
+      "location": [
+        "Noida",
+        "bangalore",
+        "Hyderabad"
+      ],
+      "description": [
+        "We are looking for a Software Engineer to join our growing Software Tech Stack",
+        "AXOVISION is developing machine learning models that operate in a fully automated financial trading system",
+        "Hence, we need a highly talented and motivated Software Engineer, with experience in Data Engineering and the ability to deploy machine learning models in production",
+        "First experience in the field of software development within the financial domain would be desirable."
+      ],
+      "contact_hr": "2592666853",
+      "work_from_home": false
+    },
+    {
+      "id": 15,
+      "employerId": "99",
+      "Role": "Programmer Analyst",
+      "skills": [
+        "Data Structure",
+        "Algoritims",
+        "Database Management",
+        "Javascript"
+      ],
+      "experience": "6-9 years",
+      "min_salary": "500000",
+      "max_salary": "1600000",
+      "about": "We develop intelligent hardware and software for the digitization and automation of all types of buildings, especially in the fields: Co-working spaces, commercial and residential real estate and self storage. In addition to intelligent access systems, we equip buildings with a comprehensive digital infrastructure to provide users with the highest levels of security, comfort and productivity while enabling operators and owners to manage and utilize their buildings with maximum efficiency. ",
+      "job_title": "Software Developer",
+      "job_type": "program analyst",
+      "company_name": "Sensorberg",
+      "company_url": "https://sensorberg.com",
+      "location": [
+        "Mumbai",
+        "Secunderabad"
+      ],
+      "description": [
+        "We're looking for a Mid-Level+ Ruby Backend Developer who enjoys technical IoT challenges",
+        "You will work in a team with highly skilled developers and project managers under different IoT projects",
+        "We are probably the only company in the world running a ruby stack in the cloud and on our embedded linux based gateways",
+        "Sensorberg is committed to Ruby as a language to power our IoT solutions."
+      ],
+      "contact_hr": "2839391828",
+      "work_from_home": true
+    },
+    {
+      "id": 16,
+      "employerId": "99",
+      "Role": "Senior iOS Developer",
+      "skills": [
+        "iOS 12",
+        "Swift"
+      ],
+      "experience": "9-12 years",
+      "min_salary": "600000",
+      "max_salary": "900000",
+      "about": "Our mission is to help people make more meaningful connections in the easiest way possible. We live and breathe this mission every day at Brazen HQ.We believe that everyone deserves a job they love. Brazen was founded under this belief, and to this day our product and our culture are defined by this core value.",
+      "job_title": "Software Developer",
+      "job_type": "developer",
+      "company_name": "Brazen Technology",
+      "company_url": "http://www.brazen.com",
+      "location": [
+        "Noida",
+        "Kolkata",
+        "Delhi"
+      ],
+      "description": [
+        "We are looking for a Mid Level Java Developer to join our team",
+        "As part of a growing, fast-paced startup, you will have an opportunity to work collaboratively with our product management",
+        "User experience, marketing, and customer service specialists to help extend and enrich our products.",
+        "Proficient in HTML, JavaScript, CSS, SQL, Git, CLIs, scripting, and Linux",
+        "RESTful APIs, micro services architecture",
+        "The ability to set up test environments, deploy code, use the command line"
+      ],
+      "contact_hr": "7983025746",
+      "work_from_home": true
+    },
+    {
+      "id": 17,
+      "employerId": "99",
+      "Role": "Ruby on Rails Developer",
+      "skills": [
+        "Rail",
+        "Ruby",
+        "Database Management",
+        "Data Structure"
+      ],
+      "experience": "5-7 years",
+      "min_salary": "900000",
+      "max_salary": "1300000",
+      "walk_in": "02/08/2021",
+      "about": "Kinscape is a subscription service. Kinscape is now in development phase; all subscribers access services free-of-charge during this trial period. Length of free trial is subject to change at discretion of Kinscape; you will be notified in advance of subscription pricing when and if subscription fees are implemented",
+      "job_title": "fullstack developer",
+      "job_type": "developer",
+      "company_name": "Kinscape",
+      "company_url": "http://kinscape.com",
+      "location": [
+        "Bangalore",
+        "Noida",
+        "Secunderabad"
+      ],
+      "description": [
+        "We are looking for a Ruby on Rails Developer to help us develop an innovative new social network, that aims to enhance real-life communities through private, ad-free interaction",
+        "To apply you should have at least a few years of Ruby on Rails experience and have at least one consumer-focused Rails app that you can refer us to",
+        "You must be able to work effectively in Rails, including performing TDD. You will join a small, agile team. The team is remote, with members across the world",
+        "You should be passionate about the user experience and goal directed design."
+      ],
+      "contact_hr": "8071859660",
+      "work_from_home": true
+    },
+    {
+      "id": 18,
+      "employerId": "99",
+      "Role": "Senior backend Developer",
+      "skills": [
+        "Data Structure",
+        "Algoritims",
+        "Database Management"
+      ],
+      "experience": "3-5 years",
+      "min_salary": "500000",
+      "max_salary": "1000000",
+      "walk_in": "02/10/2021",
+      "about": "GOhiring provides a digital infrastructure for companies, HR IT-systems, job portals and agencies to enable a more direct and productive cooperation. That way, job postings can be published via an API and managed with transparency via digital processes.In doing so, we define our way of working in the way we like it: extremely digital, connected with the newest tools and most of all, remote first. We work on our product with all our fervor and enthusiasm, jointly facing the challenges of our unique market position every day.",
+      "job_title": "Backend Engineer",
+      "job_type": "developer",
+      "company_name": "GOhiring ",
+      "company_url": "https://www.gohiring.com/",
+      "location": [
+        "Bangalore",
+        "Hyderabad"
+      ],
+      "description": [
+        "Build smart",
+        "customer-driven front- and back-end solutions in extension of our product ecosystem",
+        "Solve exciting engineering challenges, starting with MVP’s and iterate from there",
+        "Work on complex frontend projects using React and other JS frameworks."
+      ],
+      "contact_hr": "9191719217",
+      "work_from_home": true
+    },
+    {
+      "id": 19,
+      "employerId": "99",
+      "Role": "Senior Architecture",
+      "skills": [
+        "Database Management",
+        "Data Structure",
+        "Algoritims"
+      ],
+      "experience": "8-9 years",
+      "min_salary": "1300000",
+      "max_salary": "1800000",
+      "walk_in": "12/12/2021",
+      "about": "We've had the opportunity to speak with thousands of workers over our decade of experience in the gig economy. Each person has their own story for why they're pursuing this dynamic style of work. While the stories are different, the themes are almost always the same; the flexibility is awesome, but the unpredictability is frustrating and anxiety inducing. You face tougher decisions around your work every day than the average worker - when, where and what job should you work on any given day of the week? Information and data is sparse for workers - and when you can't count on what you'll be paid or finding the resources you need, it makes planning your professional life nearly impossible.",
+      "job_title": "fullstack developer",
+      "job_type": "Architecture",
+      "company_name": "Solo Technologies",
+      "company_url": "https://worksolo.com",
+      "location": [
+        "Bangalore",
+        "Delhi",
+        "Pune"
+      ],
+      "description": [
+        "You will be a part of an early-stage team that is passionate about building products that truly improve people’s lives",
+        "You’re curious, resilient, an owner and a strong team player",
+        "You are always digging deeper into your code and solutions while collaborating with the team to create a best in class solution that leads to real, rapid results",
+        "You move quickly and tackle problems with technology - understanding that sometimes done is better than perfect."
+      ],
+      "contact_hr": "4641207115",
+      "work_from_home": true
+    },
+    {
+      "id": 20,
+      "employerId": "99",
+      "Role": "UX/UI designer",
+      "skills": [
+        "HTML",
+        "CSS",
+        "Adobe Xd",
+        "Figma"
+      ],
+      "experience": "3-5 years",
+      "min_salary": "800000",
+      "max_salary": "1000000",
+      "walk_in": "21/08/2021",
+      "about": "All branches of the Ben Kinney Companies have this same goal, because owning real estate provides security, safety and opportunity for individuals. The technology we build helps real estate agents become more efficient at their job and find more customers to deliver on that mission. Our training prepares agents to be even better by utilizing exceptional techniques and systems, and the Ben Kinney Teams constantly help families find and sell homes.",
+      "job_title": "Software Developer",
+      "job_type": "designer",
+      "company_name": "Ben Kinney Group Of Companies",
+      "company_url": "https://benkinneycompanies.com/who-we-are/",
+      "location": [
+        "Bangalore",
+        "Kolkata",
+        "chennai"
+      ],
+      "description": [
+        "The  candidate will be highly motivated, able to manage time to deliver without supervision, and has solid communication skills",
+        "They will be experienced with making recommendations to the technology and architecture in use",
+        "They will be adept at understanding, modifying, and rewriting code written by others",
+        "They will be an evangelist for clean, well-structured react code, and able to guide and mentor other team members in correct react development following industry standards"
+      ],
+      "contact_hr": "4769726585",
+      "work_from_home": true
+    },
+    {
+      "id": 21,
+      "employerId": "99",
+      "Role": "UX/UI designer",
+      "skills": [
+        "HTML",
+        "CSS",
+        "Adobe Xd",
+        "Figma"
+      ],
+      "experience": "3-5 years",
+      "min_salary": "800000",
+      "max_salary": "1000000",
+      "walk_in": "21/08/2021",
+      "about": "Hyperlink InfoSystem is one of India’s leading software development companies, with offices in the USA, Australia, and the UAE. The company offers custom software, web, and app development services, including AI solutions, Salesforce solutions, Big Data Solution, IoT development, AR/VR, Blockchain, CRM Solutions, and many more. Since 2011, the company has made almost 2300+ worldwide clients and delivered 3500+ apps/software and 1600+ website projects for custom requirements. They have a team of 250+ employees who are highly skilled and always ready to develop the most complex solutions.",
+      "job_title": "Software Developer",
+      "job_type": "designer",
+      "company_name": "Hyperlink InfoSystem",
+      "company_url": "https://www.hyperlinkinfosystem.com/",
+      "location": [
+        "Bangalore",
+        "Kolkata",
+        "chennai"
+      ],
+      "description": [
+        "The  candidate will be highly motivated, able to manage time to deliver without supervision, and has solid communication skills",
+        "They will be experienced with making recommendations to the technology and architecture in use",
+        "They will be adept at understanding, modifying, and rewriting code written by others",
+        "They will be an evangelist for clean, well-structured react code, and able to guide and mentor other team members in correct react development following industry standards"
+      ],
+      "contact_hr": "4769726585",
+      "work_from_home": true
+    }
+  ]
+}
+ 

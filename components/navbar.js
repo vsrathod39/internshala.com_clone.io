@@ -2,7 +2,7 @@ function navbar(){
     return `
     <section id="brandLogo">
             <img id="huberbergMenu" src="https://internshala.com/static/images/icons/hamburger-menu-key-new.svg" alt="menu">
-            <img src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="brandLogo">
+            <img id="intershalaLogo" src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="brandLogo">
         </section>
         <section id="services">
             <ul>
@@ -10,28 +10,28 @@ function navbar(){
                     <span>Internships<img id="upDownArrow" src="../images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
                     <ul>
                         <li>
-                            <p class="spanTag">Location</p>
+                            <p class="spanTag navbar_ul_ul_ul">Location</p>
                             <ul>
-                                <li>Work From Home</li>
-                                <li>Internship in Bangalore</li>
-                                <li>Internship in Delhi</li>
-                                <li>Internship in Pune</li>
+                                <li class=" navbar_ul_ul_ul">Work From Home</li>
+                                <li class=" navbar_ul_ul_ul">Internship in Bangalore</li>
+                                <li class=" navbar_ul_ul_ul">Internship in Delhi</li>
+                                <li class=" navbar_ul_ul_ul">Internship in Pune</li>
                             </ul>
                         </li>
                         <li>
-                            <p class="spanTag">Profile</p>
+                            <p class="spanTag navbar_ul_ul_ul">Profile</p>
                             <ul>
-                                <li>Computer Science Internship</li>
-                                <li>Marketing Internship</li>
-                                <li>Finance Internship</li>
+                                <li class=" navbar_ul_ul_ul">Computer Science Internship</li>
+                                <li class=" navbar_ul_ul_ul">Marketing Internship</li>
+                                <li class=" navbar_ul_ul_ul">Finance Internship</li>
                             </ul>
                         </li>
                         <li>
-                            <p class="spanTag">Category</p>
+                            <p class="spanTag navbar_ul_ul_ul">Category</p>
                             <ul>
-                                <li>Engineering Internship</li>
-                                <li>MBA Internship</li>
-                                <li>Part-Time Jobs/Internship</li>
+                                <li class=" navbar_ul_ul_ul">Engineering Internship</li>
+                                <li class=" navbar_ul_ul_ul">MBA Internship</li>
+                                <li class=" navbar_ul_ul_ul">Part-Time Jobs/Internship</li>
                             </ul>
                         </li>
                     </ul>
@@ -41,25 +41,25 @@ function navbar(){
                 <li>
                     <span>Online Trainings</span><span class="hotText">OFFER</span><img id="upDownArrow" src="../images/icons/down-arrow-solid-24.png" alt="dropDownArrow">
                     <ul>
-                        <li>Programming</li>
-                        <li>Businesss & Management</li>
-                        <li>Data Science</li>
-                        <li>Language</li>
+                        <li class=" navbar_ul_ul_ul">Programming</li>
+                        <li class=" navbar_ul_ul_ul">Businesss & Management</li>
+                        <li class=" navbar_ul_ul_ul">Data Science</li>
+                        <li class=" navbar_ul_ul_ul">Language</li>
                     </ul>
                 </li>
             </ul>
             <ul>
                 <li>Fresher Jobs</li>
             </ul>
-            <ul>
+            <ul id="login_btn">
                 <li><button id="logIn_button">Login</button></li>
             </ul>
-            <ul>
+            <ul id="register_btn">
                 <li>
                     <span id="register_button">Register<img id="upDownArrow" src="../images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
                     <ul>
-                        <li>As a student</li>
-                        <li>As an employer</li>
+                        <li class=" navbar_ul_ul_ul" id="register_as_student">As a student</li>
+                        <li class=" navbar_ul_ul_ul" id="register_as_employer">As an employer</li>
                     </ul>
                 </li>
             </ul>
