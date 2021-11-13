@@ -194,7 +194,6 @@ a{
     padding-left: 3%;
 }
 #searchGlass {
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
