@@ -12,12 +12,10 @@
     text-align: center;
 }
 #wrapper{
-    /* border: 1px solid blue; */
     width: 90%;
     margin: auto;
 }
 .content{
-    /* border: 1px solid yellowgreen; */
     margin: 2%;
     display: grid;
     grid-template-columns: 25% 65% 10%;
