@@ -194,6 +194,10 @@ a{
     padding-left: 3%;
 }
 #searchGlass {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 10%;
     background-color: #008bdc;
     color: white;
@@ -203,8 +207,6 @@ a{
 }
 #searchGlass i {
     font-size: 24px;
-    margin-top: 25%;
-    margin-left: 25%;
 }
 @media (max-width: 1250px) {
     .headDiv{
@@ -226,13 +228,22 @@ a{
         gap: 0;
         overflow: unset;
     }
+    #searchbar {
+        width: 50%;
+    }
 }
 @media (max-width: 940px) {
+    #searchbar {
+        width: 75%;
+    }
     #gridD{
         flex-direction: column;
     }
 }
 @media (max-width: 760px) {
+    #searchbar {
+        width: 90%;
+    }
     #scrollSlider{
         grid-template-columns: 97% 97% 97% 97%;
         gap: 1%;
