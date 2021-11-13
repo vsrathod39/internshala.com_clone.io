@@ -6,9 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link href="../styles/register_employer.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/login.css">
     <title>Hire interns | Find interns | Hiring intern | Post internships- Intershala</title>
 </head>
 <body>
+    <!-- Navbar  -->
+    <div id="navBar">
+        
+    </div>
+    <nav>
+        
+    </nav>
+    <!-- login Modal Pop-up-->
+    <div id="login_modal_popup">
+
+    </div>
+    <!-- register as employer -->
     <div id="regStd">
         <div id="poster">
             <div>
@@ -97,4 +111,39 @@
     </div>
 </body>
 </html>
+<script type="module">
+    // nav-bar modal
+    import {navbar, huberberg} from "../components/navbar.js";
+    document.getElementsByTagName('nav')[0].innerHTML =  navbar();
+    document.getElementById('navBar').addEventListener('click', hidehuberberg);
+    document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+    function showHuberberg(){
+        document.getElementById('navBar').innerHTML =  huberberg();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+    }
+    function hidehuberberg(){
+        document.getElementById('navBar').innerHTML = null;
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    }
+    // login modal
+    import loginModal from "../components/login_modal.js";
+    document.getElementById("logIn_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+    }
+    document.getElementById("login_modal_popup").onclick = () => {
+        console.log("hi")
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+        document.getElementById("login_modal_popup").style.display = "none";
+    }
+    document.getElementById("register_as_student").onclick = () => {
+        window.location.href = "../pages/register_student.html";
+    }
+    // register as employer page change
+    document.getElementById("register_as_employer").onclick = () => {
+        window.location.href = "../pages/register_employer.html";
+    }
+</script>
 <script src="../scripts/register_employer.js"></script>
+<script src="../scripts/login.js"></script>

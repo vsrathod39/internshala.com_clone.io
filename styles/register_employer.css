@@ -13,10 +13,10 @@
     background-size: contain;
 }
 #poster {
-    flex-basis: 65%;
+    flex-basis: 62%;
 }
 #signupSec {
-    flex-basis: 33%;
+    flex-basis: 36%;
 }
 #poster > div {
     margin-top: 5.5vh;
