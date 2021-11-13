@@ -7,9 +7,11 @@
 </head>
 <body>
     internshipsDetails
+
     <div id="internshipsDetails">
 
-    </div>   
+    </div>
+
 </body>
 </html>
 
@@ -28,8 +30,14 @@
 
         const res = await fetch(`http://localhost:5000/api/internships/${id}`);
 		const resData = await res.json();
-		console.log("ResData" , resData);	
-        
+		console.log("ResData" , resData);
+
+        displayDD( resData );
+    }
+
+    function displayDD(pp){
+        internshipsDetails.innerHTML = null;
+
     }
 
 </script>
