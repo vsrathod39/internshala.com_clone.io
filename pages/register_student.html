@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/register_student.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/login.css">
     <title>Internships | Summer Internship 2021</title>
 </head>
-<link href="./register_student.css" rel="stylesheet"/>
 <body>
+    <!-- Navbar  -->
+    <div id="navBar">
+        
+    </div>
+    <nav>
+        
+    </nav>
+    <!-- login Modal Pop-up-->
+    <div id="login_modal_popup">
+
+    </div>
+    <!-- register as student -->
     <div id="regStd">
         <div id="poster">
             <div>
@@ -65,6 +80,42 @@
             </div>
         </div>
     </div>
-    <script src="./register_student.js"></script>
+    <!-- Footer -->
+<div id="footer">
+    
+</div>
 </body>
 </html>
+<script type="module">
+    // nav bar
+    import {navbar, huberberg} from "../components/navbar.js";
+    document.getElementsByTagName('nav')[0].innerHTML =  navbar();
+    document.getElementById('navBar').addEventListener('click', hidehuberberg);
+    document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+    function showHuberberg(){
+        document.getElementById('navBar').innerHTML =  huberberg();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+    }
+    function hidehuberberg(){
+        document.getElementById('navBar').innerHTML = null;
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    }
+    // login modal
+    import loginModal from "/./components/login_modal.js";
+    document.getElementById("logIn_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+    }
+    document.getElementById("login_modal_popup").onclick = () => {
+        console.log("hi")
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+        document.getElementById("login_modal_popup").style.display = "none";
+    }
+    // footer modal
+    import {footer} from "../components/footer.js";
+    let foot = document.getElementById("footer");
+    foot.innerHTML = footer();
+</script>
+<script src="../scripts/register_student.js"></script>
+<script src="../scripts/login.js"></script>
