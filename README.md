@@ -20,6 +20,16 @@ Languages used to develop the project are listed below:
 - CSS3
 - Javascript
 - DOM
+![Screenshot (161)](https://user-images.githubusercontent.com/91534659/141656228-738f8875-0c12-4f37-aa42-91097b182c15.png)
+                    Home page
+![Screenshot (162)](https://user-images.githubusercontent.com/91534659/141656249-bc2bed2a-5a17-4266-9cc7-a2182423a0eb.png)
+                    Home page
+![Screenshot (163)](https://user-images.githubusercontent.com/91534659/141656256-876798bc-e5b3-422e-b63b-a3167fdcd9f2.png)
+                    Restiter as an employer page
+![Screenshot (![Screenshot (173)](https://user-images.githubusercontent.com/91534659/141656277-5cdcf554-355f-422a-9ff7-b3dc953eac4a.png)
+                    Intersgip listing page
+167)](https://user-images.githubusercontent.com/91534659/141656266-d89b8f85-ff83-4f64-a7de-56fb5add32aa.png)
+                    Student dashboard
 
 How to Run Project:
 Step I: Fetch the project from the GitHub repo(Link is provided above).
