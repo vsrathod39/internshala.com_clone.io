@@ -36,7 +36,7 @@ function getvalueData(p){
     localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
     dataList.push(p);
     localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
-    window.location.href = "./Frontend/filter.html";
+    window.location.href = "pages/filter.html";
 }
 // search box
 document.getElementById('searchInput').onfocus = () => {
