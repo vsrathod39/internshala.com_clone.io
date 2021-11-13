@@ -37,5 +37,5 @@ function getvalueData(p){
 }
 // search box
 document.getElementById('searchInput').onfocus = () => {
-    window.location.href = "searchSec.html"
+    window.location.href = "../pages/searchSec.html"
 }
