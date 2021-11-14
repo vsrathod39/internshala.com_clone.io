@@ -22,13 +22,15 @@ const internshipsDetails = document.getElementById("internshipsDetails");
 
     function displayJD(jobDesc){
         let heading = document.getElementById("heading");
-        if(jobDesc.internships_with_job == "")
+        if(jobDesc.internships_with_job == "" && jobDesc.work_form_home == "No")
         heading.innerHTML = `${jobDesc.role} internship at ${jobDesc.company_name}`;
-        else if(jobDesc.internships_with_job != "" || jobDesc.work_form_home == "Yes")
+        if(jobDesc.internships_with_job == "" && jobDesc.work_form_home == "Yes")
+        heading.innerHTML = `${jobDesc.role} work from home internship at ${jobDesc.company_name}`;
+        else if(jobDesc.internships_with_job != "" && jobDesc.work_form_home == "Yes")
         {
             heading.innerHTML = `${jobDesc.role} work from home job/internship at ${jobDesc.company_name}`;
         }
-        else if(jobDesc.internships_with_job != "" || jobDesc.work_form_home == "No")
+        else if(jobDesc.internships_with_job != "" && jobDesc.work_form_home == "No")
         heading.innerHTML = `${jobDesc.role} job/internship at ${jobDesc.company_name}`;
         let role = document.getElementById("Role");
         role.innerText = jobDesc.role;
