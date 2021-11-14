@@ -24,18 +24,18 @@ const internshipsDetails = document.getElementById("internshipsDetails");
         let heading = document.getElementById("heading");
         if(jobDesc.internships_with_job == "")
         heading.innerHTML = `${jobDesc.role} internship at ${jobDesc.company_name}`;
-        else if(jobDesc.internships_with_job != "" || jobDesc.work_from_home == "Yes")
+        else if(jobDesc.internships_with_job != "" || jobDesc.work_form_home == "Yes")
         {
             heading.innerHTML = `${jobDesc.role} work from home job/internship at ${jobDesc.company_name}`;
         }
-        else if(jobDesc.internships_with_job != "" || jobDesc.work_from_home == "No")
+        else if(jobDesc.internships_with_job != "" || jobDesc.work_form_home == "No")
         heading.innerHTML = `${jobDesc.role} job/internship at ${jobDesc.company_name}`;
         let role = document.getElementById("Role");
         role.innerText = jobDesc.role;
         let companyName = document.getElementById("companyName");
         companyName.innerText = jobDesc.company_name;
         let wfh = document.getElementById("wfh")
-        if(jobDesc.work_from_home == "Yes")
+        if(jobDesc.work_form_home == "Yes")
         {
             wfh.innerText = "Work From Home"
         }
