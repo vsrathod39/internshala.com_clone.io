@@ -46,3 +46,25 @@
     border-radius: 5px;
     cursor: pointer;
 }
+#internshipsDetails #brief {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 15px 0;
+}
+#internshipsDetails #skills {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+#internshipsDetails #perks {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+#internshipsDetails #skills div, #internshipsDetails #perks div {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #eee;
+}
+
