@@ -1,3 +1,6 @@
+* {
+    font-family: "Inter var", sans-serif;
+}
 #heading{
     text-align: center;
     margin-top: 40px;
@@ -23,7 +26,7 @@
 #internshipsDetails p {
     color: #555;
 }
-#internshipsDetails h3 {
+#internshipsDetails h3, #internshipsDetails h5 {
     margin-bottom: 4px;
     margin-top: 12px;
 }
@@ -41,8 +44,35 @@
     border: none;
     outline: none;
     align-items: center;
+    margin: 20px 0;
     margin-left: 42.5%;
-    margin-bottom: 15px;
     border-radius: 5px;
     cursor: pointer;
 }
+#internshipsDetails #brief {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 15px 0;
+}
+#internshipsDetails #skills {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+#internshipsDetails #perks {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+#internshipsDetails #skills div, #internshipsDetails #perks div {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #eee;
+}
+#internshipsDetails #wfh {
+    margin: 20px 0;
+    color: #333;
+    font-weight: 600;
+}
+
