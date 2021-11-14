@@ -23,7 +23,7 @@
 #internshipsDetails p {
     color: #555;
 }
-#internshipsDetails h3 {
+#internshipsDetails h3, #internshipsDetails h5 {
     margin-bottom: 4px;
     margin-top: 12px;
 }
