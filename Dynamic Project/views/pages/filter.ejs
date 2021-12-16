@@ -273,14 +273,17 @@
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+
     function showHuberberg(){
         document.getElementById('navBar').innerHTML =  huberberg();
         document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
     }
+
     function hidehuberberg(){
         document.getElementById('navBar').innerHTML = null;
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
+    
     // login modal
     import loginModal from "../components/login_modal.js";
     import {core} from "../scripts/login.js";
