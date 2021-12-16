@@ -268,7 +268,8 @@
 </html>
 <script type="module">
     // nav-bar modal
-    import {navbar, huberberg} from "../components/navbar.js";
+
+    import {navbar, huberberg} from "../../public/js/navbar.js";
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
@@ -307,6 +308,7 @@
         window.location.href = "../homepage.html";
     }
 </script>
+
 <script>
 
     let internships_div = document.getElementById('list_container1');
