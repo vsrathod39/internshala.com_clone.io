@@ -1,4 +1,4 @@
-const PORT = 5000
+const PORT = 5200
 
 const path = require('path');
 

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Internshala | Summer Internship 2021</title>
+    <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+        select {
+            height: 35px;
+            width: 120px;
+            margin: 0 5px;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+        #top {
+            width: 100%;
+        }
+        #top i {
+            font-size: 28px;
+            float: right;
+            color: #555;
+        }
+        #outerBox {
+            width: 50%;
+            margin: auto;
+            font-size: 18px;
+            margin-top: 7%;
+        }
+        #searchbar {
+            width: 100%;
+            display: flex;
+            margin: 15px 0;
+        }
+        input {
+            width: 90%;
+            height: 42px;
+            outline: none;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border: 1px solid #ccc;
+            padding-left: 3%;
+        }
+        #searchGlass {
+            width: 10%;
+            background-color: #008bdc;
+            color: white;
+            height: 46px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        #searchGlass i {
+            font-size: 24px;
+            margin-top: 21%;
+            margin-left: 32%;
+        }
+        #cities, #categories {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 15px 0;
+        }
+        #outerBox .textCenter {
+            padding: 5px 15px;
+            border: 1px solid rgb(224, 224, 224);
+            border-radius: 15px;
+            color: #333;
+            cursor: pointer;
+        }
+        #popCities {
+            margin:  35px 0;
+        }
+        @media(max-width: 940px) {
+            #outerBox {
+            width: 95%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="outerBox">
+        <div id="top">
+            I am looking for
+            <select>
+                <option value="intern">Internship</option>
+            </select>
+            in
+            <i id="closingSeacrBar" style="cursor: pointer;" class='bx bx-x'></i>
+        </div>
+        <div id="searchbar">
+            <input placeholder="e.g. Design, Mumbai, Infosys" type="text"  id="searchInput">
+            <div id="searchGlass">
+                <i class='bx bx-search'></i>
+            </div>
+        </div>
+        <div id="popCities">
+            <div>POPULAR CITIES</div>
+            <div id="cities">
+                <div class="textCenter getDatabaseValue">Work From Home</div>
+                <div class="textCenter getDatabaseValue">Patna</div>
+                <div class="textCenter getDatabaseValue">Pune</div>
+                <div class="textCenter getDatabaseValue">Bangalore</div>
+                <div class="textCenter getDatabaseValue">Mumbai</div>
+            </div>
+        </div>
+        <div id="popCat">
+            <div>POPULAR CATEGORIES</div>
+            <div id="categories">
+                <div class="textCenter">Part-time</div>
+                <div class="textCenter">Design</div>
+                <div class="textCenter">Internship with job offer</div>
+                <div class="textCenter">Internship</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+let searchValue = document.getElementById('searchInput');
+
+document.getElementById('searchGlass').onclick = function(){
+    console.log("searchValue:" , searchValue.value);
+    getvalueData(searchValue.value); 
+}
+
+const dataName = document.getElementsByClassName('getDatabaseValue');
+
+for(let i=0; i<dataName.length; i++){
+    dataName[i].onclick = function () {         
+          getvalueData(dataName[i].innerText); 
+    }
+}
+if(localStorage.getItem("internshipDatabase") == null){
+    localStorage.setItem("internshipDatabase" , JSON.stringify([]));
+}
+// Adding ID in LocalStorage
+function getvalueData(p){
+
+    let dataList = JSON.parse(localStorage.getItem("internshipDatabase"));
+    localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
+    dataList.push(p);
+    localStorage.setItem("internshipDatabase" , JSON.stringify(dataList));
+    window.location.href = "./filter.html";
+}
+// close search bar and redirec to home page
+document.getElementById("closingSeacrBar").onclick = () => {
+    console.log("hii");
+    window.location.href = "../homepage.html";
+}
+</script>
