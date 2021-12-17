@@ -87,20 +87,19 @@
     <div id="footer">   
 
     </div>
+    <p id="yy" style="display:none"><%= product %></p>
 </body>
 </html>
 
 <script src="/js/navbar.js"></script>
-<!-- <script src="/js/login_modal.js"></script> -->
-<!-- <script src="/js/login.js"></script> -->
 <script src="/js/footer.js"></script>
 
 <script src="/js/internshipDetails.js"></script>
 
 <script type="module">
-    
     // nav-bar modal
-    // import {navbar, huberberg} from "../components/navbar.js";
+    let parsedData = document.getElementById("yy").innerText;
+    displayJD(parsedData);
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
@@ -113,12 +112,11 @@
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
     // footer modal
-    // import {footer} from "../components/footer.js";
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
     // return to homepage onclick brand logo
-    // document.getElementById("intershalaLogo").onclick = () => {
-    //     window.location.href = "../homepage.html";
-    // }
+    document.getElementById("intershalaLogo").onclick = () => {
+        window.location.href = "/";
+    }
 
 </script>
