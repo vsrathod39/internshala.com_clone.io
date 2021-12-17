@@ -7,10 +7,10 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Internshala | Summer Internship 2021</title>
     <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
-    <link rel="stylesheet" href="../../public/css/internshipDetails.css">
-    <link rel="stylesheet" href="../../public/css/navbar.css">
-    <link rel="stylesheet" href="../../public/css/footer.css">
-    <link rel="stylesheet" href="../../public/css/login.css">
+    <link rel="stylesheet" href="/css/internshipDetails.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
@@ -27,7 +27,8 @@
     </div>
 
     <!-- Job Details -->
-    
+    <!-- <h1> <%= product.role %> </h1> -->
+
     <h1 id="heading"></h1>
     <div id="internshipsDetails">
         <h3 id="Role"></h3>
@@ -89,9 +90,17 @@
 </body>
 </html>
 
+<script src="/js/navbar.js"></script>
+<!-- <script src="/js/login_modal.js"></script> -->
+<!-- <script src="/js/login.js"></script> -->
+<script src="/js/footer.js"></script>
+
+<script src="/js/internshipDetails.js"></script>
+
 <script type="module">
+    
     // nav-bar modal
-    import {navbar, huberberg} from "../components/navbar.js";
+    // import {navbar, huberberg} from "../components/navbar.js";
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
@@ -104,13 +113,12 @@
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
     // footer modal
-    import {footer} from "../components/footer.js";
+    // import {footer} from "../components/footer.js";
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
     // return to homepage onclick brand logo
-    document.getElementById("intershalaLogo").onclick = () => {
-        window.location.href = "../homepage.html";
-    }
-</script>
+    // document.getElementById("intershalaLogo").onclick = () => {
+    //     window.location.href = "../homepage.html";
+    // }
 
-<!-- <script src="../../public/js/internshipDetails.js"></script> -->
+</script>

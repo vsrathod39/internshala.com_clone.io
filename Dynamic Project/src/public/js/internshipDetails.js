@@ -3,58 +3,58 @@ button[0].onclick = function() {
     window.location.href = "../pages/resume.html";
 }
 
-const internshipsDetails = document.getElementById("internshipsDetails");
-    let internshipsList = JSON.parse(localStorage.getItem("internshipDatabaseList"));
-    console.log("Internship Database" , internshipsList);
+// const internshipsDetails = document.getElementById("internshipsDetails");
+//     let internshipsList = JSON.parse(localStorage.getItem("internshipDatabaseList"));
+//     console.log("Internship Database" , internshipsList);
     
-    showInternships();
-    async function showInternships(){
+    // showInternships();
+    // async function showInternships(){
         
-        internshipsDetails.innerHeight = null;
-        const id = internshipsList[internshipsList.length - 1];
+    //     internshipsDetails.innerHeight = null;
+    //     // const id = internshipsList[internshipsList.length - 1];
 
-        const res = await fetch(`http://localhost:5000/api/internships/${id}`);
-		const resData = await res.json();
-		console.log("ResData" , resData);
+    //     // const res = await fetch(`http://localhost:5000/api/internships/${id}`);
+	// 	// const resData = await res.json();
+	// 	// console.log("ResData" , resData);
+        
+    //     displayJD( resData );
+    // }
 
-        displayJD( resData );
-    }
-
-    function displayJD(jobDesc){
+    function displayJD(product){
         let heading = document.getElementById("heading");
-        if(jobDesc.internships_with_job == "" && jobDesc.work_form_home == "No")
-        heading.innerHTML = `${jobDesc.role} internship at ${jobDesc.company_name}`;
-        if(jobDesc.internships_with_job == "" && jobDesc.work_form_home == "Yes")
-        heading.innerHTML = `${jobDesc.role} work from home internship at ${jobDesc.company_name}`;
-        else if(jobDesc.internships_with_job != "" && jobDesc.work_form_home == "Yes")
+        if( product.internships_with_job == "" && product.work_form_home == "No")
+        heading.innerHTML = `${product.role} internship at ${product.company_name}`;
+        if(product.internships_with_job == "" && product.work_form_home == "Yes")
+        heading.innerHTML = `${product.role} work from home internship at ${product.company_name}`;
+        else if(product.internships_with_job != "" && product.work_form_home == "Yes")
         {
-            heading.innerHTML = `${jobDesc.role} work from home job/internship at ${jobDesc.company_name}`;
+            heading.innerHTML = `${product.role} work from home job/internship at ${product.company_name}`;
         }
-        else if(jobDesc.internships_with_job != "" && jobDesc.work_form_home == "No")
-        heading.innerHTML = `${jobDesc.role} job/internship at ${jobDesc.company_name}`;
+        else if(product.internships_with_job != "" && product.work_form_home == "No")
+        heading.innerHTML = `${product.role} job/internship at ${product.company_name}`;
         let role = document.getElementById("Role");
-        role.innerText = jobDesc.role;
+        role.innerText = product.role;
         let companyName = document.getElementById("companyName");
-        companyName.innerText = jobDesc.company_name;
+        companyName.innerText = product.company_name;
         let wfh = document.getElementById("wfh")
-        if(jobDesc.work_form_home == "Yes")
+        if(product.work_form_home == "Yes")
         {
             wfh.innerText = "Work From Home"
         }
         else
         wfh.style.display = "none";
         let briefDesc = document.querySelectorAll(".detailOfIntern > p")
-        briefDesc[1].innerText = `${jobDesc.duration} months`
-        briefDesc[2].innerText = `${jobDesc.stipend} /month`
-        briefDesc[3].innerText = jobDesc.applyby;
+        briefDesc[1].innerText = `${product.duration} months`
+        briefDesc[2].innerText = `${product.stipend} /month`
+        briefDesc[3].innerText = product.applyby;
         let applicants = document.getElementById("applicants");
-        applicants.innerText = `${jobDesc.total_applied} applicants`;
+        applicants.innerText = `${product.total_applied} applicants`;
         let aboutHead = document.getElementById("about");
-        aboutHead.innerText = `About ${jobDesc.company_name}`
+        aboutHead.innerText = `About ${product.company_name}`
         let aboutComp = document.getElementById("aboutCompany");
-        aboutComp.innerHTML = jobDesc.company_about;
+        aboutComp.innerHTML = product.company_about;
         let aboutWorkHead = document.getElementById("aboutWork");
-        if(jobDesc.work_from_home == "Yes")
+        if(product.work_from_home == "Yes")
         {
             aboutWorkHead.innerText = "About the work from home job/internship";
         }
@@ -65,36 +65,36 @@ const internshipsDetails = document.getElementById("internshipsDetails");
         
         let workDescription = document.getElementById("workDes");
         let workDesList = document.querySelector("#workDes > ol")
-        for(let i = 0; i<jobDesc.about_internship.length; i++)
+        for(let i = 0; i<product.about_internship.length; i++)
         {
             let list = document.createElement("li");
-            list.innerText = jobDesc.about_internship[i];
+            list.innerText = product.about_internship[i];
             workDesList.appendChild(list);
         }
         let skills = document.getElementById("skills");
-        for(let j = 0; j<jobDesc.skills.length; j++)
+        for(let j = 0; j<product.skills.length; j++)
         {
             let skill = document.createElement("div");
-            skill.innerText = jobDesc.skills[j];
+            skill.innerText = product.skills[j];
             skills.appendChild(skill);
         }
         let whoCanApply = document.getElementById("whoApply");
         let whoCanApplyList = document.querySelector("#whoApply > ol")
-        for(let i = 0; i<jobDesc.who_can_apply.length; i++)
+        for(let i = 0; i<product.who_can_apply.length; i++)
         {
             let list = document.createElement("li");
-            list.innerText = jobDesc.who_can_apply[i];
+            list.innerText = product.who_can_apply[i];
             whoCanApplyList.appendChild(list);
         }
         let perks = document.getElementById("perks");
-        for(let j = 0; j<jobDesc.perks.length; j++)
+        for(let j = 0; j<product.perks.length; j++)
         {
             let perk = document.createElement("div");
-            perk.innerText = jobDesc.perks[j];
+            perk.innerText = product.perks[j];
             perks.appendChild(perk);
         }
         let openings = document.getElementById("openings");
-        openings.innerHTML = jobDesc.number_of_openings;
+        openings.innerHTML = product.number_of_openings;
         let icon = document.querySelector("#icon > img");
-        icon.src = jobDesc.company_icon;
+        icon.src = product.company_icon;
     }

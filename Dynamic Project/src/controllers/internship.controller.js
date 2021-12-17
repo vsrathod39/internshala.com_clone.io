@@ -23,7 +23,7 @@ router.get('/internships', async function (req, res) {
 
 router.get('/internships/:id',  async function (req, res) {
     const product = await Interns.findById(req.params.id).lean().exec();
-    return res.render('pages/all' , {
+    return res.render('pages/internshipsDetails' , {
         product,
     });
 });
