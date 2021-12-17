@@ -21,6 +21,7 @@ button[0].onclick = function() {
     // }
 
     function displayJD(product){
+        product = JSON.parse(product);
         let heading = document.getElementById("heading");
         if( product.internships_with_job == "" && product.work_form_home == "No")
         heading.innerHTML = `${product.role} internship at ${product.company_name}`;
