@@ -83,4 +83,3 @@ function huberberg(){
     </ul>
 </div>`
 }
-export  {navbar, huberberg};
