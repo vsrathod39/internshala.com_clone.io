@@ -6,9 +6,9 @@
     <title>Internshala | Summer Internship 2021</title>
     <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../../public/css/navbar.css">
-    <link rel="stylesheet" href="../../public/css/footer.css">
-    <link rel="stylesheet" href="../../public/css/login.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/login.css">
     <title>Index</title>
 <style>
     section{
@@ -187,7 +187,7 @@
 <body>
     <!-- Navbar  -->
     <div id="navBar">
-        
+
     </div>
     <nav>
         
@@ -266,10 +266,12 @@
 </div>
 </body>
 </html>
+<script src="/js/navbar.js"></script>
+<script src="/js/login_modal.js"></script>
+<script src="/js/login.js"></script>
+<script src="/js/footer.js"></script>
 <script type="module">
     // nav-bar modal
-
-    import {navbar, huberberg} from "../../public/js/navbar.js";
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
@@ -285,8 +287,6 @@
     }
 
     // login modal
-    import loginModal from "../components/login_modal.js";
-    import {core} from "../scripts/login.js";
     document.getElementById("logIn_button").onclick = () => {
         document.getElementById('login_modal_popup').style.display = "block";
         document.getElementById('login_modal_popup').innerHTML = loginModal();
@@ -295,7 +295,6 @@
         core();
     }
     // footer modal
-    import {footer} from "../components/footer.js";
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
     // register as student page change
