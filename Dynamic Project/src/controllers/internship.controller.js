@@ -4,6 +4,11 @@ const Interns = require("../models/internship.model");
 
 const router = express.Router();
 
+router.get('/register', async function (req, res) {
+    return res.render('pages/register_student');
+});
+
+
 router.get('/', async function (req, res) {
     return res.render('pages/homepage');
 });
