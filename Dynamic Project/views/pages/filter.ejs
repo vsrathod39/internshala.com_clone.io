@@ -312,7 +312,8 @@
     }
 </script>
 
-<script>
+
+<!-- <script>
 
     let internships_div = document.getElementById('list_container1');
     let totalInternships_div = document.getElementById('total-internships');
@@ -320,88 +321,88 @@
     var data = null;
     
     // Search Internships
-    async function searchInternships(){
-        try{
-        let respose = await fetch(`http://localhost:5000/api/internships`,{
-            method:"GET",
-            headers:{
-                "Content-Type":"application/json",
-            },
-        });
-        data =await respose.json();
-        display_internships(data);
+    // async function searchInternships(){
+    //     try{
+    //     let respose = await fetch(`http://localhost:5000/api/internships`,{
+    //         method:"GET",
+    //         headers:{
+    //             "Content-Type":"application/json",
+    //         },
+    //     });
+    //     data =await respose.json();
+    //     display_internships(data);
        
-        }catch(e){ console.log("e", e); }
-    }
+    //     }catch(e){ console.log("e", e); }
+    // }
     
     // Display internships
-    function display_internships(array){
+    // function display_internships(array){
 
-        internships_div.innerHTML = null;
-        totalInternships_div.innerHTML = `<span>${array.length} Internships</span>`;
+    //     internships_div.innerHTML = null;
+    //     totalInternships_div.innerHTML = `<span>${array.length} Internships</span>`;
 
-        array.forEach( element => {
-        let {id, role , company_name , company_icon, location , work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
-        let inside_div = document.createElement('div');
+    //     array.forEach( element => {
+    //     let {id, role , company_name , company_icon, location , work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
+    //     let inside_div = document.createElement('div');
         
-        let x = "";
-        for (let i = 0; i < job_type.length; i++) {
-            x += "<div class='button_container1'>" + job_type[i] +"</div>";
-        }
-        let loc = "";
-        if(work_form_home === "Yes"){
-            loc = "Work From Home";
-        }
-        else{
-            loc = "<span>" + location + "</span>";
-        }
+    //     let x = "";
+    //     for (let i = 0; i < job_type.length; i++) {
+    //         x += "<div class='button_container1'>" + job_type[i] +"</div>";
+    //     }
+    //     let loc = "";
+    //     if(work_form_home === "Yes"){
+    //         loc = "Work From Home";
+    //     }
+    //     else{
+    //         loc = "<span>" + location + "</span>";
+    //     }
 
-        inside_div.innerHTML = `
-        <div class="list_container1">
-            <div class="individual_internship_header">
-                <div class="company">
-                    <div class="company_1">${role}</div>
-                    <div class="company_2" style="font-size: 14px;">${company_name}</div>
-                </div>
-                <div class="internship_logo">
-                    <img src = "${company_icon}">
-                </div>
-            </div>
-            <div class="individual_internship_details">
-                <div id="location_names">
-                    <span><i class="material-icons">add_location</i></span>
-                    ${loc}
-                </div>
-                <div class="internship_other_details_container">
-                    <div class="">
-                        <p><i></i>START DATE</p>
-                        <p>${startDate}</p>
-                    </div>
-                    <div class="">
-                        <p><i></i>DURATION</p>
-                        <p>${duration} Months</p>
-                    </div>
-                    <div class="">
-                        <p><i></i>STIPEND</p>
-                        <p>&#8377; ${stipend}/month</p>
-                    </div>
-                    <div class="">
-                        <p><i></i>APPLY BY</p>
-                        <p>${applyby}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="button_container" >
+    //     inside_div.innerHTML = `
+    //     <div class="list_container1">
+    //         <div class="individual_internship_header">
+    //             <div class="company">
+    //                 <div class="company_1">${role}</div>
+    //                 <div class="company_2" style="font-size: 14px;">${company_name}</div>
+    //             </div>
+    //             <div class="internship_logo">
+    //                 <img src = "${company_icon}">
+    //             </div>
+    //         </div>
+    //         <div class="individual_internship_details">
+    //             <div id="location_names">
+    //                 <span><i class="material-icons">add_location</i></span>
+    //                 ${loc}
+    //             </div>
+    //             <div class="internship_other_details_container">
+    //                 <div class="">
+    //                     <p><i></i>START DATE</p>
+    //                     <p>${startDate}</p>
+    //                 </div>
+    //                 <div class="">
+    //                     <p><i></i>DURATION</p>
+    //                     <p>${duration} Months</p>
+    //                 </div>
+    //                 <div class="">
+    //                     <p><i></i>STIPEND</p>
+    //                     <p>&#8377; ${stipend}/month</p>
+    //                 </div>
+    //                 <div class="">
+    //                     <p><i></i>APPLY BY</p>
+    //                     <p>${applyby}</p>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //         <div class="button_container" >
 
-                <div class="button_container11">${x}</div>
+    //             <div class="button_container11">${x}</div>
                 
-                <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
-            </div>
-            </div>
-                `;
-        internships_div.appendChild(inside_div);
-        });
-    }
+    //             <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
+    //         </div>
+    //         </div>
+    //             `;
+    //     internships_div.appendChild(inside_div);
+    //     });
+    // }
      
     let checkedbrand = null;
     let rangeValue = null;
@@ -1196,4 +1197,4 @@
     }  
     //----End--- For Displaying Details of Internships  
 
-</script>
+</script> -->
