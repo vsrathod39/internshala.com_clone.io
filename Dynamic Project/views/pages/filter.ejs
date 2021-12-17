@@ -216,7 +216,7 @@
             <div class="fixed_on_scroll">
 
                 <div id="filters">
-
+                    
                     <label class="switch">Include work from home also
                         <input type="checkbox" id="messageCheckbox" value="Yes" onclick="onChecked()">
                         <span class="slider round"></span>
@@ -307,7 +307,7 @@
                                     <% } %>
                                 </div>
                                 
-                                <a class="button_container2" href=/internships/<%= product._id %>>View details</a>
+                                <a class="button_container2" href=/internships/<%= product._id %> >View details</a>
                             </div>
                             </div>
                         
@@ -332,6 +332,9 @@
 <script src="/js/login_modal.js"></script>
 <script src="/js/login.js"></script>
 <script src="/js/footer.js"></script>
+
+<script src="/js/testing.js"> </script>
+
 
 <script type="module">
     // nav-bar modal
@@ -372,4 +375,7 @@
     document.getElementById("intershalaLogo").onclick = () => {
         window.location.href = "../homepage.html";
     }
+
 </script>
+
+
