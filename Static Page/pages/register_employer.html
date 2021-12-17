@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internshala | Summer Internship 2021</title>
+    <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../styles/register_employer.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <title>Hire interns | Find interns | Hiring intern | Post internships- Intershala</title>
+</head>
+<body>
+    <!-- Navbar  -->
+    <div id="navBar">
+        
+    </div>
+    <nav>
+        
+    </nav>
+    <!-- login Modal Pop-up-->
+    <div id="login_modal_popup">
+
+    </div>
+    <!-- register as employer -->
+    <div id="regStd">
+        <div id="poster">
+            <div>
+                <div>Hire the best interns</div>
+                <h3>Register and post your internship for free now!</h3>
+                <h4>12 Mn+ internships seekers from 30,000+ colleges across India</h4>
+            </div>
+        </div>
+        <div id="signupSec">
+            <div id="signupDiv">
+                <form onsubmit="signup(event)">
+                    <div class="details1">
+                        <label>Official Email Id</label>
+                        <input placeholder="name@company_name.com"/>
+                    </div>
+                    <div class="details1">
+                        <label>Password</label>
+                        <input placeholder="Minimum 6 characters" type="password"/>
+                    </div>
+                    <div id="name">
+                        <div class="details1">
+                            <label>First Name</label>
+                            <input placeholder="Your First Name"/>
+                        </div>
+                        <div class="details1">
+                            <label>Last Name</label>
+                            <input placeholder="Your Last Name"/>
+                        </div>
+                    </div>
+                    <div class="details2">
+                        <label>Mobile Number</label><br/>
+                        <input value="+91" id="code"/>
+                        <input type="number" placeholder="10 digit mobile number" id="mob"/>
+                    </div>
+                    <p id="tc">By signing up, you agree to our <span>Terms and Conditions</span>.</p>
+                    <button class="textCenter" type="submit">Register Now</button>
+                </form>
+                <p id="msg_regEmployer"><span>Have a question?</span></p>
+            </div>
+        </div>
+    </div>
+    <h1 class="textCenter">Hire interns in 3 simple steps</h1>
+    <div id="stepsToFollow">
+        <div class="steps">
+            <img src="https://internshala.com/static/images/registration/employer/registration_new/internship/illustrations/1_register.png"/>
+            <h3 class="textCenter">1. Register</h3>
+            <p class="textCenter">Get started by creating your account</p>
+        </div>
+        <div class="steps">
+            <img src="https://internshala.com/static/images/registration/employer/registration_new/internship/illustrations/2_post.png"/>
+            <h3 class="textCenter">2. Post</h3>
+            <p class="textCenter">Post internships for any profile and location</p>
+        </div>
+        <div class="steps">
+            <img src="https://internshala.com/static/images/registration/employer/registration_new/internship/illustrations/3_hire.png"/>
+            <h3 class="textCenter">3. Hire</h3>
+            <p class="textCenter">Screen and hire using our world class ATS</p>
+        </div>
+    </div>
+    <h1 class="textCenter" id="noOfComp">2,84,686 companies trust us</h1>
+    <button class="textCenter" id="regBtn">Register Now</button>
+    <div id="knowMore">
+        <div>
+            <h2>Now also post fresher jobs on Internshala</h2>
+            <h6>Hire the best freshers <span>faster</span></h6>
+            <div class="textCenter">Know More</div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer_pageLinks">
+            <div>About us</div>
+            <div>We’re hiring</div>
+            <div>Employer resources</div>
+            <div>Our services</div>
+            <div>Terms & conditions</div>
+            <div>Privacy</div>
+            <div>Refund policy</div>
+            <div>Contact us</div>
+        </div>
+        <div id="social">
+            <div>
+                <i class='bx bx-copyright' id="crIcon"></i>
+                <p>Copyright 2021 Internshala</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="module">
+    // nav bar
+    import {navbar, huberberg} from "../components/navbar.js";
+    document.getElementsByTagName('nav')[0].innerHTML =  navbar();
+    document.getElementById('navBar').addEventListener('click', hidehuberberg);
+    document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+    function showHuberberg(){
+        document.getElementById('navBar').innerHTML =  huberberg();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+    }
+    function hidehuberberg(){
+        document.getElementById('navBar').innerHTML = null;
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    }
+    // login modal
+    import loginModal from "../components/login_modal.js";
+    import {core} from "../scripts/login.js";
+    document.getElementById("logIn_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+        core();
+    }
+    // register as student page change
+    document.getElementById("register_as_student").onclick = () => {
+        window.location.href = "../pages/register_student.html";
+    }
+    // register as employer page change
+    document.getElementById("register_as_employer").onclick = () => {
+        window.location.href = "../pages/register_employer.html";
+    }
+    // return to homepage onclick brand logo
+    document.getElementById("intershalaLogo").onclick = () => {
+        window.location.href = "../homepage.html";
+    }
+</script>
+<script src="../scripts/register_employer.js"></script>

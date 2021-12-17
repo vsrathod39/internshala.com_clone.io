@@ -1,0 +1,534 @@
+{
+    "internships": [
+
+      {
+        "id": 1,
+        "role": "Architecture",
+        "company_name": "Microsoft",
+        "company_icon":"https://internshala.com/cached_uploads/logo%2F5e311f012fcb31580277505.jpg",
+        "location": [
+          "Pune",
+          "Bangalore",
+          "Hyderabad",
+          "Mumbai"
+        ],
+        "work_form_home":"Yes",
+        "startDate":"Immediately",
+        "duration":4,
+        "stipend":5400,
+        "applyby":"6 Dec'21",
+        "close_aplication":6,
+        "job_type": [
+          "Internship",
+          "Internship with job offer"
+        ],
+        "parttime":"",
+        "internships_with_job":"Internship with job offer",
+        "total_applied": 256,
+        
+        "company_website": "",
+        "company_about": "Internshala is a dot com business with the heart of dot org. We are a technology company on a mission to equip students with relevant skills & practical exposure through internships and online training. Imagine a world full of freedom and possibilities. A world where you can discover your passion and turn it into your career. A world where your practical skills matter more than your university degree. A world where you do not have to wait till 21 to taste your first work experience (and get a rude shock that it is nothing like you had to imagine it to be). A world where you graduate fully assured, fully confident, and fully prepared to stake a claim on your place in the world. At Internshala, we are making this dream a reality. Join us!",        
+        "about_internship":[
+          "Work on planning, executing, and following-up for conducting events for promotions, marketing, and brand building",
+          "Interact with customers and brief them about the games",
+          "Manage birthday parties, corporate events, and gatherings that come to Breakout"
+        ],
+        "skills": [
+          "Python",
+          ".NET",
+          "Javascript",
+          "Database Management"
+        ],
+        "who_can_apply":[
+          "are available for full time (in-office) internship",
+          "can start the internship between 28th Oct'21 and 2nd Dec'21",
+          "are available for duration of 3 months",
+            "are from Delhi and neighboring cities",
+            "have relevant skills and interests"
+        ],
+        "perks":[
+          "Certificate",
+          "Flexible work hours",
+          "Informal dress code"
+        ],
+        "additional_Information":"Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also be paid a performance-linked incentive (30% of each sale after target).",
+        "number_of_openings":"20"
+      },
+
+      {
+        "id": 2,
+        "role": "Architecture",
+        "company_name": "Apple",
+        "company_icon":"https://internshala.com/cached_uploads/logo%2F5e311f012fcb31580277505.jpg",
+        "location": [
+          "Pune",
+          "Bangalore",
+          "Hyderabad"
+        ],
+        "work_form_home":"No",
+        "startDate":"Immediately",
+        "duration":3,
+        "stipend":4100,
+        "applyby":"6 Dec'21",
+        "close_aplication":6,
+        "job_type": [
+          "Internship",
+          "Part time allowed"
+        ],
+        "parttime":"parttime",
+        "internships_with_job":"",
+        "total_applied": 256,
+        
+        "company_website": "",
+        "company_about": "Internshala is a dot com business with the heart of dot org. We are a technology company on a mission to equip students with relevant skills & practical exposure through internships and online training. Imagine a world full of freedom and possibilities. A world where you can discover your passion and turn it into your career. A world where your practical skills matter more than your university degree. A world where you do not have to wait till 21 to taste your first work experience (and get a rude shock that it is nothing like you had to imagine it to be). A world where you graduate fully assured, fully confident, and fully prepared to stake a claim on your place in the world. At Internshala, we are making this dream a reality. Join us!",        
+        "about_internship":[
+          "Work on planning, executing, and following-up for conducting events for promotions, marketing, and brand building",
+          "Interact with customers and brief them about the games",
+          "Manage birthday parties, corporate events, and gatherings that come to Breakout"
+        ],
+        "skills": [
+          "Python",
+          ".NET",
+          "Javascript",
+          "Database Management"
+        ],
+        "who_can_apply":[
+          "are available for full time (in-office) internship",
+          "can start the internship between 28th Oct'21 and 2nd Dec'21",
+          "are available for duration of 3 months",
+           "are from Delhi and neighboring cities",
+           "have relevant skills and interests"
+        ],
+        "perks":[
+          "Certificate",
+          "Flexible work hours",
+          "Informal dress code"
+        ],
+        "additional_Information":"Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also be paid a performance-linked incentive (30% of each sale after target).",
+        "number_of_openings":"20"
+      },
+
+      {
+        "id": 3,
+        "role": "Architecture",
+        "company_name": "Microsoft",
+        "company_icon":"https://internshala.com/cached_uploads/logo%2F5e311f012fcb31580277505.jpg",
+        "location": [
+          "Pune",
+          "Bangalore",
+          "Patna"
+        ],
+        "work_form_home":"No",
+        "startDate":"Immediately",
+        "duration":2,
+        "stipend":3400,
+        "applyby":"6 Dec'21",
+        "close_aplication":6,
+        "job_type": [
+          "Internship",
+          "Part time allowed"
+        ],
+        "parttime":"parttime",
+        "internships_with_job":"",
+        "total_applied": 256,
+        
+        "company_website": "",
+        "company_about": "Internshala is a dot com business with the heart of dot org. We are a technology company on a mission to equip students with relevant skills & practical exposure through internships and online training. Imagine a world full of freedom and possibilities. A world where you can discover your passion and turn it into your career. A world where your practical skills matter more than your university degree. A world where you do not have to wait till 21 to taste your first work experience (and get a rude shock that it is nothing like you had to imagine it to be). A world where you graduate fully assured, fully confident, and fully prepared to stake a claim on your place in the world. At Internshala, we are making this dream a reality. Join us!",        
+        "about_internship":[
+          "Work on planning, executing, and following-up for conducting events for promotions, marketing, and brand building",
+          "Interact with customers and brief them about the games",
+          "Manage birthday parties, corporate events, and gatherings that come to Breakout"
+        ],
+        "skills": [
+          "Python",
+          ".NET",
+          "Javascript",
+          "Database Management"
+        ],
+        "who_can_apply":[
+          "are available for full time (in-office) internship",
+          "can start the internship between 28th Oct'21 and 2nd Dec'21",
+          "are available for duration of 3 months",
+           "are from Delhi and neighboring cities",
+           "have relevant skills and interests"
+        ],
+        "perks":[
+          "Certificate",
+          "Flexible work hours",
+          "Informal dress code"
+        ],
+        "additional_Information":"Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also be paid a performance-linked incentive (30% of each sale after target).",
+        "number_of_openings":"20"
+      },
+
+      {
+        "id": 4,
+        "role": "Architecture",
+        "company_name": "Microsoft",
+        "company_icon":"https://internshala.com/cached_uploads/logo%2F5e311f012fcb31580277505.jpg",
+        "location": [
+          "Patna",
+          "Bangalore",
+          "Hyderabad"
+        ],
+        "work_form_home":"Yes",
+        "startDate":"Immediately",
+        "duration":6,
+        "stipend":1000,
+        "applyby":"6 Dec'21",
+        "close_aplication":6,
+        "job_type": [
+          "Internship",
+          "Internship with job offer"
+        ],
+        "parttime":"",
+        "internships_with_job":"Internship with job offer",
+        "total_applied": 256,
+        
+        "company_website": "",
+        "company_about": "Internshala is a dot com business with the heart of dot org. We are a technology company on a mission to equip students with relevant skills & practical exposure through internships and online training. Imagine a world full of freedom and possibilities. A world where you can discover your passion and turn it into your career. A world where your practical skills matter more than your university degree. A world where you do not have to wait till 21 to taste your first work experience (and get a rude shock that it is nothing like you had to imagine it to be). A world where you graduate fully assured, fully confident, and fully prepared to stake a claim on your place in the world. At Internshala, we are making this dream a reality. Join us!",        
+        "about_internship":[
+          "Work on planning, executing, and following-up for conducting events for promotions, marketing, and brand building",
+          "Interact with customers and brief them about the games",
+          "Manage birthday parties, corporate events, and gatherings that come to Breakout"
+        ],
+        "skills": [
+          "Python",
+          ".NET",
+          "Javascript",
+          "Database Management"
+        ],
+        "who_can_apply":[
+          "are available for full time (in-office) internship",
+          "can start the internship between 28th Oct'21 and 2nd Dec'21",
+          "are available for duration of 3 months",
+           "are from Delhi and neighboring cities",
+           "have relevant skills and interests"
+        ],
+        "perks":[
+          "Certificate",
+          "Flexible work hours",
+          "Informal dress code"
+        ],
+        "additional_Information":"Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also be paid a performance-linked incentive (30% of each sale after target).",
+        "number_of_openings":"20"
+      },
+
+      {
+        "id": 5,
+        "role": "Architecture",
+        "company_name": "Microsoft",
+        "company_icon":"https://internshala.com/cached_uploads/logo%2F5e311f012fcb31580277505.jpg",
+        "location": [
+          "Pune",
+          "Bangalore",
+          "Hyderabad"
+        ],
+        "work_form_home":"Yes",
+        "startDate":"Immediately",
+        "duration":4,
+        "stipend":7000,
+        "applyby":"6 Dec'21",
+        "close_aplication":6,
+        "job_type": [
+          "Internship"
+        ],
+        "parttime":"",
+        "internships_with_job":"",
+        "total_applied": 256,
+        
+        "company_website": "",
+        "company_about": "Internshala is a dot com business with the heart of dot org. We are a technology company on a mission to equip students with relevant skills & practical exposure through internships and online training. Imagine a world full of freedom and possibilities. A world where you can discover your passion and turn it into your career. A world where your practical skills matter more than your university degree. A world where you do not have to wait till 21 to taste your first work experience (and get a rude shock that it is nothing like you had to imagine it to be). A world where you graduate fully assured, fully confident, and fully prepared to stake a claim on your place in the world. At Internshala, we are making this dream a reality. Join us!",        
+        "about_internship":[
+          "Work on planning, executing, and following-up for conducting events for promotions, marketing, and brand building",
+          "Interact with customers and brief them about the games",
+          "Manage birthday parties, corporate events, and gatherings that come to Breakout"
+        ],
+        "skills": [
+          "Python",
+          ".NET",
+          "Javascript",
+          "Database Management"
+        ],
+        "who_can_apply":[
+          "are available for full time (in-office) internship",
+          "can start the internship between 28th Oct'21 and 2nd Dec'21",
+          "are available for duration of 3 months",
+           "are from Delhi and neighboring cities",
+           "have relevant skills and interests"
+        ],
+        "perks":[
+          "Certificate",
+          "Flexible work hours",
+          "Informal dress code"
+        ],
+        "additional_Information":"Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also be paid a performance-linked incentive (30% of each sale after target).",
+        "number_of_openings":"20"
+      },
+
+      {
+        "id": 6,
+        "role": "Architecture",
+        "company_name": "Microsoft",
+        "company_icon":"https://internshala.com/cached_uploads/logo%2F5e311f012fcb31580277505.jpg",
+        "location": [
+          "Pune",
+          "Bangalore",
+          "Hyderabad"
+        ],
+        "work_form_home":"No",
+        "startDate":"Immediately",
+        "duration":5,
+        "stipend":8000,
+        "applyby":"6 Dec'21",
+        "close_aplication":6,
+        "job_type": [
+          "Internship"
+        ],
+        "parttime":"",
+        "internships_with_job":"",
+        "total_applied": 100,
+        
+        "company_website": "",
+        "company_about": "Internshala is a dot com business with the heart of dot org. We are a technology company on a mission to equip students with relevant skills & practical exposure through internships and online training. Imagine a world full of freedom and possibilities. A world where you can discover your passion and turn it into your career. A world where your practical skills matter more than your university degree. A world where you do not have to wait till 21 to taste your first work experience (and get a rude shock that it is nothing like you had to imagine it to be). A world where you graduate fully assured, fully confident, and fully prepared to stake a claim on your place in the world. At Internshala, we are making this dream a reality. Join us!",        
+        "about_internship":[
+          "Work on planning, executing, and following-up for conducting events for promotions, marketing, and brand building",
+          "Interact with customers and brief them about the games",
+          "Manage birthday parties, corporate events, and gatherings that come to Breakout"
+        ],
+        "skills": [
+          "Python",
+          ".NET",
+          "Javascript",
+          "Database Management"
+        ],
+        "who_can_apply":[
+          "are available for full time (in-office) internship",
+          "can start the internship between 28th Oct'21 and 2nd Dec'21",
+          "are available for duration of 3 months",
+           "are from Delhi and neighboring cities",
+           "have relevant skills and interests"
+        ],
+        "perks":[
+          "Certificate",
+          "Flexible work hours",
+          "Informal dress code"
+        ],
+        "additional_Information":"Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also be paid a performance-linked incentive (30% of each sale after target).",
+        "number_of_openings":"20"
+      },
+
+      {
+        "id": 7,
+        "role": "Architecture",
+        "company_name": "Microsoft",
+        "company_icon":"https://internshala.com/cached_uploads/logo%2F5e311f012fcb31580277505.jpg",
+        "location": [
+          "Pune",
+          "Bangalore",
+          "Hyderabad"
+        ],
+        "work_form_home":"Yes",     
+        "startDate":"Immediately",
+        "duration":5,
+        "stipend":4000,
+        "applyby":"6 Dec'21",
+        "close_aplication":6,
+        "job_type": [
+          "Internship",
+          "Part time allowed"
+        ],
+        "parttime":"parttime",
+        "internships_with_job":"",
+        "total_applied": 40,
+        
+        "company_website": "",
+        "company_about": "Internshala is a dot com business with the heart of dot org. We are a technology company on a mission to equip students with relevant skills & practical exposure through internships and online training. Imagine a world full of freedom and possibilities. A world where you can discover your passion and turn it into your career. A world where your practical skills matter more than your university degree. A world where you do not have to wait till 21 to taste your first work experience (and get a rude shock that it is nothing like you had to imagine it to be). A world where you graduate fully assured, fully confident, and fully prepared to stake a claim on your place in the world. At Internshala, we are making this dream a reality. Join us!",        
+        "about_internship":[
+          "Work on planning, executing, and following-up for conducting events for promotions, marketing, and brand building",
+          "Interact with customers and brief them about the games",
+          "Manage birthday parties, corporate events, and gatherings that come to Breakout"
+        ],
+        "skills": [
+          "Python",
+          ".NET",
+          "Javascript",
+          "Database Management"
+        ],
+        "who_can_apply":[
+          "are available for full time (in-office) internship",
+          "can start the internship between 28th Oct'21 and 2nd Dec'21",
+          "are available for duration of 3 months",
+           "are from Delhi and neighboring cities",
+           "have relevant skills and interests"
+        ],
+        "perks":[
+          "Certificate",
+          "Flexible work hours",
+          "Informal dress code"
+        ],
+        "additional_Information":"Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also be paid a performance-linked incentive (30% of each sale after target).",
+        "number_of_openings":"20"
+      },
+
+      {
+        "id": 8,
+        "role": "Design",
+        "company_name": "Microsoft",
+        "company_icon":"https://internshala.com/cached_uploads/logo%2F5e311f012fcb31580277505.jpg",
+        "location": [
+          "Pune",
+          "Bangalore",
+          "Hyderabad"
+        ],
+        "work_form_home":"No",
+        "startDate":"Immediately",
+        "duration":4,
+        "stipend":9000,
+        "applyby":"6 Dec'21",
+        "close_aplication":6,
+        "job_type": [
+          "Internship",
+          "Part time allowed"
+        ],
+        "parttime":"parttime",
+        "internships_with_job":"",
+        "total_applied": 100,
+        
+        "company_website": "",
+        "company_about": "Internshala is a dot com business with the heart of dot org. We are a technology company on a mission to equip students with relevant skills & practical exposure through internships and online training. Imagine a world full of freedom and possibilities. A world where you can discover your passion and turn it into your career. A world where your practical skills matter more than your university degree. A world where you do not have to wait till 21 to taste your first work experience (and get a rude shock that it is nothing like you had to imagine it to be). A world where you graduate fully assured, fully confident, and fully prepared to stake a claim on your place in the world. At Internshala, we are making this dream a reality. Join us!",        
+        "about_internship":[
+          "Work on planning, executing, and following-up for conducting events for promotions, marketing, and brand building",
+          "Interact with customers and brief them about the games",
+          "Manage birthday parties, corporate events, and gatherings that come to Breakout"
+        ],
+        "skills": [
+          "Python",
+          ".NET",
+          "Javascript",
+          "Database Management"
+        ],
+        "who_can_apply":[
+          "are available for full time (in-office) internship",
+          "can start the internship between 28th Oct'21 and 2nd Dec'21",
+          "are available for duration of 3 months",
+           "are from Delhi and neighboring cities",
+           "have relevant skills and interests"
+        ],
+        "perks":[
+          "Certificate",
+          "Flexible work hours",
+          "Informal dress code"
+        ],
+        "additional_Information":"Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also be paid a performance-linked incentive (30% of each sale after target).",
+        "number_of_openings":"20"
+      },
+
+      {
+        "id": 9,
+        "role": "Design",
+        "company_name": "Microsoft",
+        "company_icon":"https://internshala.com/cached_uploads/logo%2F5e311f012fcb31580277505.jpg",
+        "location": [
+          "Mumbai",
+          "Chennai",
+          "Hyderabad"
+        ],
+        "work_form_home":"No",
+        "startDate":"Immediately",
+        "duration":4,
+        "stipend":1000,
+        "applyby":"6 Dec'21",
+        "close_aplication":6,
+        "job_type": [
+          "Internship",
+          "Part time allowed"
+        ],
+        "parttime":"parttime",
+        "internships_with_job":"",
+        "total_applied": 100,
+        
+        "company_website": "",
+        "company_about": "Internshala is a dot com business with the heart of dot org. We are a technology company on a mission to equip students with relevant skills & practical exposure through internships and online training. Imagine a world full of freedom and possibilities. A world where you can discover your passion and turn it into your career. A world where your practical skills matter more than your university degree. A world where you do not have to wait till 21 to taste your first work experience (and get a rude shock that it is nothing like you had to imagine it to be). A world where you graduate fully assured, fully confident, and fully prepared to stake a claim on your place in the world. At Internshala, we are making this dream a reality. Join us!",        
+        "about_internship":[
+          "Work on planning, executing, and following-up for conducting events for promotions, marketing, and brand building",
+          "Interact with customers and brief them about the games",
+          "Manage birthday parties, corporate events, and gatherings that come to Breakout"
+        ],
+        "skills": [
+          "Python",
+          ".NET",
+          "Javascript",
+          "Database Management"
+        ],
+        "who_can_apply":[
+          "are available for full time (in-office) internship",
+          "can start the internship between 28th Oct'21 and 2nd Dec'21",
+          "are available for duration of 3 months",
+           "are from Delhi and neighboring cities",
+           "have relevant skills and interests"
+        ],
+        "perks":[
+          "Certificate",
+          "Flexible work hours",
+          "Informal dress code"
+        ],
+        "additional_Information":"Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also be paid a performance-linked incentive (30% of each sale after target).",
+        "number_of_openings":"20"
+      },
+
+      {
+        "id": 10,
+        "role": "Design",
+        "company_name": "Microsoft",
+        "company_icon":"https://internshala.com/cached_uploads/logo%2F5e311f012fcb31580277505.jpg",
+        "location": [
+          "Kolkata",
+          "Delhi/NCR",
+          "Patna"
+        ],
+        "work_form_home":"No",
+        "startDate":"Immediately",
+        "duration":4,
+        "stipend":1900,
+        "applyby":"6 Dec'21",
+        "close_aplication":6,
+        "job_type": [
+          "Internship",
+          "Part time allowed"
+        ],
+        "parttime":"parttime",
+        "internships_with_job":"",
+        "total_applied": 100,
+        
+        "company_website": "",
+        "company_about": "Internshala is a dot com business with the heart of dot org. We are a technology company on a mission to equip students with relevant skills & practical exposure through internships and online training. Imagine a world full of freedom and possibilities. A world where you can discover your passion and turn it into your career. A world where your practical skills matter more than your university degree. A world where you do not have to wait till 21 to taste your first work experience (and get a rude shock that it is nothing like you had to imagine it to be). A world where you graduate fully assured, fully confident, and fully prepared to stake a claim on your place in the world. At Internshala, we are making this dream a reality. Join us!",        
+        "about_internship":[
+          "Work on planning, executing, and following-up for conducting events for promotions, marketing, and brand building",
+          "Interact with customers and brief them about the games",
+          "Manage birthday parties, corporate events, and gatherings that come to Breakout"
+        ],
+        "skills": [
+          "Python",
+          ".NET",
+          "Javascript",
+          "Database Management"
+        ],
+        "who_can_apply":[
+          "are available for full time (in-office) internship",
+          "can start the internship between 28th Oct'21 and 2nd Dec'21",
+          "are available for duration of 3 months",
+           "are from Delhi and neighboring cities",
+           "have relevant skills and interests"
+        ],
+        "perks":[
+          "Certificate",
+          "Flexible work hours",
+          "Informal dress code"
+        ],
+        "additional_Information":"Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also be paid a performance-linked incentive (30% of each sale after target).",
+        "number_of_openings":"20"
+      }
+    ]
+}
+     

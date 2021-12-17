@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <% products.forEach( product => { %>
+
+        <div class="list_container1">
+            <div class="individual_internship_header">
+                <div class="company">
+                    <div class="company_1"><%= product.role %></div>
+                    <div class="company_2" style="font-size: 14px;"><%= product.company_name %></div>
+                </div>
+                <div class="internship_logo">
+                    <img src = "${company_icon}">
+                </div>
+            </div>
+            <div class="individual_internship_details">
+                <div id="location_names">
+                    <span><i class="material-icons">add_location</i></span>
+                    
+                </div>
+                <div class="internship_other_details_container">
+                    <div class="">
+                        <p><i></i>START DATE</p>
+                        <p>${startDate}</p>
+                    </div>
+                    <div class="">
+                        <p><i></i>DURATION</p>
+                        <p>${duration} Months</p>
+                    </div>
+                    <div class="">
+                        <p><i></i>STIPEND</p>
+                        <p>&#8377; ${stipend}/month</p>
+                    </div>
+                    <div class="">
+                        <p><i></i>APPLY BY</p>
+                        <p>${applyby}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button_container" >
+
+                <div class="button_container11">${x}</div>
+                
+                <a class="button_container2">View details</a>
+            </div>
+            </div>
+
+    <% }) %>
+
+</body>
+</html>
