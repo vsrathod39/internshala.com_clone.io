@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    border-bottom: 2px solid rgb(221, 221, 221);
+    width: 100%;
+    height: 75px;
+    display: flex;
+    font-family: "Inter var", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    z-index: -1;
+}
+#brandLogo{
+    width: 25%;
+    height: 55px;
+    line-height: 65px;
+    display: flex;
+    align-items: center;
+}
+#brandLogo img:nth-child(1){
+    margin-left: 5%;
+    margin-top: 17px;
+    display: none;
+    cursor: pointer;
+}
+#brandLogo img:nth-child(2){
+    margin-left: 5%;
+    width: 120px;
+    cursor: pointer;
+}
+#services{
+    width: 73%;
+    height: 100%;
+    line-height: 75px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5%;
+}
+#services ul{
+    list-style: none;
+    cursor: pointer;
+}
+#services ul li:hover{
+    color: #00a5ec;
+}
+#services ul li:hover #upDownArrow{
+    transform: rotate(180deg);
+}
+#services ul ul{
+    display: none;
+    line-height: 35px;
+    margin-top: -2px;
+    position: relative;
+    width: 240%;
+    background-color: white;
+    height: 200px;
+    color: black;
+    z-index: 50;
+}
+.navbar_ul_ul_ul{
+    padding-left: 8px;
+}
+#services ul li:hover > ul{
+    display: block;
+}
+.spanTag:hover{
+    background-color: #e7f5fc;
+    border-radius: 8px;
+    width: 90%;
+}
+#services ul ul ul{
+    margin-left: 100%;
+    line-height: 35px;
+    width: 150%;
+    top: 0px;
+    position: absolute;
+    border-left: 1px solid rgb(230, 230, 230);
+    overflow: auto;
+}
+.hotText{
+    padding: 3px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+    color: white;
+    background-color: #ff8c00;
+    border-radius: 3px;
+}
+#logIn_button{
+    outline: none;
+    border: 1px solid #00a5ec;
+    padding: 7px 20px;
+    background-color: white;
+    border-radius: 3px;
+    color: #00a5ec;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: Arial;
+    cursor: pointer;
+}
+#register_button{
+    background-color: #00a5ec;
+    padding: 8px 20px;
+    color: white;
+    height: 35px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: Arial;
+}
+#upDownArrow{
+    width: 13px;
+    margin-left: 5px;
+}
+#huberberg{
+    font-family: "Inter var", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 30px 0;
+    height: 100vh;
+    width: 320px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+#huberberg div{
+    border-top: 1px solid rgb(224, 224, 224);
+    margin-bottom: 25px;
+}
+#huberberg ul{
+    display: block;
+    list-style: none;
+    cursor: pointer;
+}
+#huberberg ul li{
+    margin-bottom: 25px;
+    margin-left: 6%;
+}
+#huberbergLogin_button{
+    outline: none;
+    border: none;
+    font-family: "Inter var", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: white;
+}
+#navBar{
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(109, 109, 109, 0.5);
+    z-index: 1;
+}
+#fixedBody{
+    position: fixed;
+}
+@media (max-width:940px) {
+    #brandLogo img:nth-child(1){
+        display: block;
+    }
+    #services ul:first-child, ul:nth-child(2), ul:nth-child(3), ul:nth-child(4){
+        display: none;
+    }
+    #register_button{
+        padding: 13px 20px;
+    }
+    #navBar{
+        display: block;
+    }
+}

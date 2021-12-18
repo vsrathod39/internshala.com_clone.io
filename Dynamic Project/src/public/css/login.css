@@ -1,0 +1,140 @@
+nav{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter var',sans-serif;
+}
+#login_modal_popup{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 13;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(182, 182, 182, 0.3);
+}
+#loginSec {
+width: 31%;
+margin: auto;
+margin-top: 10vh;
+background-color: white;
+border-radius: 5px;
+box-shadow: 25px 25px 1000px grey;
+padding: 0.1px;
+}
+#loginDiv {
+background-color: white;
+width: 80%;
+margin: auto;
+margin-top: 4.5vh;
+padding: 16px;
+}
+.textCenter {
+text-align: center;
+}
+#loginDiv img {
+width: 16px;
+vertical-align: top;
+}
+#loginDiv h4 {
+color: #484848;
+display: inline;
+font-weight: 500;
+color: #333;
+font-size: 14px;
+}
+#horStroke {
+border-bottom: 2px solid #dee2e6;
+margin-top: 3.5vh;
+}
+#loginGoogle {
+padding: 10px 0;
+border: 1px solid #eeeeee;
+cursor: pointer;
+}
+#opt {
+position: relative;
+bottom: 1.8vh;
+margin-bottom: -10px;
+}
+#opt p {
+background-color: white;
+display: inline;
+padding: 0 0.8vw;
+font-size: 14px;
+font-weight: 500;
+color: #666;
+}
+.details1 input {
+width: 95%;
+height: 6vh;
+padding-left: 3%;
+margin-top: 1vh;
+}
+input {
+outline: none;
+border: 1px solid #dddddd;
+}
+.details1 {
+margin-top: 3vh;
+}
+button {
+width: 100%;
+background-color: #008bdc;
+height: 40px;
+color: white;
+font-weight: 700;
+border: none;
+border-radius: 3px;
+margin-bottom: 20px;
+cursor: pointer;
+}
+::placeholder {
+color: #998aa8;
+}
+#tc {
+font-size: 14px;
+line-height: 19px;
+margin: 20px 0;
+float: right;
+font-weight: 600;
+}
+#loginDiv span {
+color: #186bc2;
+font-weight: 500;
+line-height: 14px;
+cursor: pointer;
+}
+#msg {
+margin: 0;
+font-size: 15px;
+}
+#loginDiv i {
+float: right;
+font-size: 24px;
+color: #666;
+cursor: pointer;
+}
+#userCat {
+display: flex;
+margin-bottom: 10px;
+margin-top: 35px;
+}
+#userCat > div {
+flex-basis: 50%;
+padding-top: 5px;
+padding-bottom: 10px;
+font-weight: 550;
+color: #444;
+cursor: pointer;
+}
+#userCat > div:nth-child(1) {
+color: #008bdc;
+border-bottom: 2px solid #008bdc;
+}
+
+@media(max-width: 940px) {
+    #loginSec {
+        width: 85%;
+    }
+}
