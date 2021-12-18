@@ -12,7 +12,7 @@ function navbar(){
                         <li>
                             <p class="spanTag navbar_ul_ul_ul">Location</p>
                             <ul>
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?work_form_home=No&location=Mumbai">Work From Home</a></li>
+                                <li class=" navbar_ul_ul_ul">Work From Home</li>
                                 <li class=" navbar_ul_ul_ul">Internship in Bangalore</li>
                                 <li class=" navbar_ul_ul_ul">Internship in Delhi</li>
                                 <li class=" navbar_ul_ul_ul">Internship in Pune</li>
