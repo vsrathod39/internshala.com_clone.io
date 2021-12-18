@@ -16,19 +16,24 @@ router.get('/', async function (req, res) {
 router.get('/internships', async function (req, res) {
     const location = req?.query?.location || true;
     const wfh = req?.query?.work_form_home || true;
-    let products;
-    if(location && wfh) {
-        products = await Interns.find({$and: [{location: {$in: [location]}}, {work_form_home: {$eq: wfh}}]});
-    }
-    if(location || wfh) {
-        products = await Interns.find({$or: [{location: {$in: [location]}}, {work_form_home: {$eq: wfh}}]});
-    }
-    if(!location || wfh){
-        products = await Interns.find().lean().exec();
-    }
-    return res.render('pages/filter' , {
+    try {
+        let products;
+        if(location && wfh) {
+            products = await Interns.find({$and: [{location: {$in: [location]}}, {work_form_home: {$eq: wfh}}]});
+        }
+        if(location || wfh) {
+            products = await Interns.find({$or: [{location: {$in: [location]}}, {work_form_home: {$eq: wfh}}]});
+        }
+        if(!location || wfh){
+            products = await Interns.find().lean().exec();
+        }
+        // res.status(201).send(products);
+        return res.render('pages/filter' , {
         products,
     });
+    } catch (error) {
+        return res.status(500).send({error: error.message, status: "failed to load data"});
+    }
 });
 
 
