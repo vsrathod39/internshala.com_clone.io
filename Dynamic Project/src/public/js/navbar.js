@@ -7,12 +7,12 @@ function navbar(){
         <section id="services">
             <ul>
                 <li>
-                    <span>Internships<img id="upDownArrow" src="../../public/images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
+                    <span>Internships<img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
                     <ul>
                         <li>
                             <p class="spanTag navbar_ul_ul_ul">Location</p>
                             <ul>
-                                <li class=" navbar_ul_ul_ul">Work From Home</li>
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?work_form_home=No&location=Mumbai">Work From Home</a></li>
                                 <li class=" navbar_ul_ul_ul">Internship in Bangalore</li>
                                 <li class=" navbar_ul_ul_ul">Internship in Delhi</li>
                                 <li class=" navbar_ul_ul_ul">Internship in Pune</li>
@@ -39,7 +39,7 @@ function navbar(){
             </ul>
             <ul>
                 <li>
-                    <span>Online Trainings</span><span class="hotText">OFFER</span><img id="upDownArrow" src="../../public/images/icons/down-arrow-solid-24.png" alt="dropDownArrow">
+                    <span>Online Trainings</span><span class="hotText">OFFER</span><img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow">
                     <ul>
                         <li class=" navbar_ul_ul_ul">Programming</li>
                         <li class=" navbar_ul_ul_ul">Businesss & Management</li>
@@ -56,7 +56,7 @@ function navbar(){
             </ul>
             <ul id="register_btn">
                 <li>
-                    <span id="register_button">Register<img id="upDownArrow" src="../../public/images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
+                    <span id="register_button">Register<img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
                     <ul>
                         <li class=" navbar_ul_ul_ul" id="register_as_student">As a student</li>
                         <li class=" navbar_ul_ul_ul" id="register_as_employer">As an employer</li>
@@ -83,4 +83,3 @@ function huberberg(){
     </ul>
 </div>`
 }
-export  {navbar, huberberg};

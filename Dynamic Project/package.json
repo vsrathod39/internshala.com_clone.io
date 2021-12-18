@@ -1,7 +1,6 @@
 {
   "name": "internshala-project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,5 +21,6 @@
     "nodemailer": "^6.7.2",
     "passport": "^0.5.0",
     "passport-google-oauth2": "^0.2.0"
-  }
+  },
+  "description": ""
 }
