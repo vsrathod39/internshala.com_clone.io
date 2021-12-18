@@ -49,9 +49,9 @@ passport.serializeUser(function({user, token}, done) {
     {
         throw new Error("Password should be of format alphanumeric + special character + numeric");
     }
-    if(value.length < 8)
+    if(value.length < 6)
     {
-        throw new Error("Password should be of atleast 8 characters");
+        throw new Error("Password should be of atleast 6 characters");
     }
     return true;
   }), register);
