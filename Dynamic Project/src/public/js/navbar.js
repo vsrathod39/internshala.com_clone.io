@@ -72,17 +72,23 @@ function navbar(){
             <ul>
                 <li>Fresher Jobs</li>
             </ul>
+            <ul>
+                <li><img src="https://img.icons8.com/fluency-systems-regular/22/000000/bookmark-ribbon--v2.png"/></li>
+            </ul>
             <ul id="login_btn">
                 <li><button id="logIn_button">Login</button></li>
             </ul>
             <ul id="register_btn">
                 <li>
-                    <span id="register_button">Register<img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
+                    <span id="register_button"><img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
                     <ul>
                         <li class=" navbar_ul_ul_ul" id="register_as_student">As a student</li>
                         <li class=" navbar_ul_ul_ul" id="register_as_employer">As an employer</li>
                     </ul>
                 </li>
+            </ul>
+            <ul id="register_btn_li_2">
+                <p> V </p>
             </ul>
         </section>
 `
@@ -92,15 +98,15 @@ function huberberg(){
     <ul>
         <li>Internships</li>
         <li>Online Trainings<span class="hotText">OFFER</span></li>
-        <li>WFH Internships</li>
+        <li><a href="http://localhost:2345/internships?work_form_home=work_form_home">WFH Internships</a></li>
         <li>Fressher Jobs</li>
         <li>Contact US</li>
     </ul>
     <div></div>
-    <ul>
+    <ul id="register_btn">
         <li>Register - As a Student</li>
         <li>Register - As an Employer</li>
-        <li><button id="huberbergLogin_button">Login</button></li>
+        <li><button id="logIn_button">Login</button></li>
     </ul>
 </div>`
 }

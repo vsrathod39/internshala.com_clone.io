@@ -153,6 +153,10 @@ nav{
     font-weight: 500;
     font-size: 14px;
     background-color: white;
+    color: black;
+    width: 0;
+    border-radius: none;
+    margin-bottom: none;
 }
 #navBar{
     /* display: none; */
@@ -166,6 +170,18 @@ nav{
 #fixedBody{
     position: fixed;
 }
+
+#register_btn_li_2{
+    border-radius: 50%;
+    border: 1px solid grey;
+    color: rgb(90, 90, 90);
+    height: 35px;
+    line-height: 35px;
+    margin-top: 20px;
+    width: 2vw;
+    text-align: center;
+}
+
 @media (max-width:940px) {
     #brandLogo img:nth-child(1){
         display: block;

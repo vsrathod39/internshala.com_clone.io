@@ -357,6 +357,14 @@
         // core
         core();
     }
+
+    document.getElementById("huberbergLogin_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+        core();
+    }
     // footer modal
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
