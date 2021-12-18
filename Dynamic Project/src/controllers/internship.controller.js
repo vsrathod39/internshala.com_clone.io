@@ -13,9 +13,19 @@ router.get('/', async function (req, res) {
     return res.render('pages/homepage');
 });
 
-
 router.get('/internships', async function (req, res) {
-    const products = await Interns.find().lean().exec();  
+    const location = req?.query?.location || true;
+    const wfh = req?.query?.work_form_home || true;
+    let products;
+    if(location && wfh) {
+        products = await Interns.find({$and: [{location: {$in: [location]}}, {work_form_home: {$eq: wfh}}]});
+    }
+    if(location || wfh) {
+        products = await Interns.find({$or: [{location: {$in: [location]}}, {work_form_home: {$eq: wfh}}]});
+    }
+    if(!location || wfh){
+        products = await Interns.find().lean().exec();
+    }
     return res.render('pages/filter' , {
         products,
     });
