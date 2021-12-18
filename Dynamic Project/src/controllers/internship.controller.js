@@ -10,31 +10,10 @@ router.get('/', async function (req, res) {
 
 
 router.get('/internships', async function (req, res) {
-<<<<<<< HEAD
-    const location = req?.query?.location || true;
-    const wfh = req?.query?.work_form_home || true;
-    try {
-        let products;
-        if(location && wfh) {
-            products = await Interns.find({$and: [{location: {$in: [location]}}, {work_form_home: {$eq: wfh}}]});
-        }
-        if(location || wfh) {
-            products = await Interns.find({$or: [{location: {$in: [location]}}, {work_form_home: {$eq: wfh}}]});
-        }
-        if(!location || wfh){
-            products = await Interns.find().lean().exec();
-        }
-        // res.status(201).send(products);
-        return res.render('pages/filter' , {
-=======
     const products = await Interns.find().lean().exec();  
     return res.render('pages/filter' , {
->>>>>>> parent of 15d72ea (Merge pull request #100 from vsrathod39/tirthesh)
         products,
     });
-    } catch (error) {
-        return res.status(500).send({error: error.message, status: "failed to load data"});
-    }
 });
 
 // router.get('/internships/:id',  async function (req, res) {
