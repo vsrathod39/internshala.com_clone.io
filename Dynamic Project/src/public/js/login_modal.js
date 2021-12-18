@@ -37,4 +37,3 @@ function loginModal(){
         </div>
     </div>`
 }
-export default loginModal;

@@ -120,4 +120,3 @@ async function login(event) {
 function exp2(){
 
 }
-export {core};
