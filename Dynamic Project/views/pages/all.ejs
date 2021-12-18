@@ -8,8 +8,14 @@
 
 <body>
  
-<p><%= product.role %> </p>
-<p><%= product.id %> </p>
+<form action="/dashboard" enctype="multipart/form-data" method="post">
+    <input type="text" name="first_name" placeholder="First Name">
+    <input type="text" name="Last_name" placeholder="L Name">
+    <input type="text" name="email" placeholder="ema">
+    <input type="password" name="password" placeholder="pass">
+    <input type="number" name="mobile" placeholder="mobile">
+    <input type="submit">
+</form>
 
 </body>
 </html>
