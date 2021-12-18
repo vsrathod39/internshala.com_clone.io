@@ -12,10 +12,10 @@ function navbar(){
                         <li>
                             <p class="spanTag navbar_ul_ul_ul">Location</p>
                             <ul>
-                                <li class=" navbar_ul_ul_ul">Work From Home</li>
-                                <li class=" navbar_ul_ul_ul">Internship in Bangalore</li>
-                                <li class=" navbar_ul_ul_ul">Internship in Delhi</li>
-                                <li class=" navbar_ul_ul_ul">Internship in Pune</li>
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?work_form_home=work_form_home">Work From Home</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Bangalore">Internship in Bangalore</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Delhi">Internship in Delhi</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Pune">Internship in Pune</a></li>
                             </ul>
                         </li>
                         <li>
@@ -31,7 +31,7 @@ function navbar(){
                             <ul>
                                 <li class=" navbar_ul_ul_ul">Engineering Internship</li>
                                 <li class=" navbar_ul_ul_ul">MBA Internship</li>
-                                <li class=" navbar_ul_ul_ul">Part-Time Jobs/Internship</li>
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?part_time=true">Part-Time Jobs/Internship</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -41,10 +41,31 @@ function navbar(){
                 <li>
                     <span>Online Trainings</span><span class="hotText">OFFER</span><img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow">
                     <ul>
-                        <li class=" navbar_ul_ul_ul">Programming</li>
-                        <li class=" navbar_ul_ul_ul">Businesss & Management</li>
-                        <li class=" navbar_ul_ul_ul">Data Science</li>
-                        <li class=" navbar_ul_ul_ul">Language</li>
+                        <li>
+                            <p class="spanTag navbar_ul_ul_ul">Programming</p>
+                            <ul id="navbar_nested_dropDown">
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?work_form_home=work_form_home">Web Development</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Bangalore">Ethical Hacking</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Delhi">Core Java</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Pune">Blockchain</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="spanTag navbar_ul_ul_ul">Business & Management</p>
+                            <ul>
+                                <li class=" navbar_ul_ul_ul">Digital Marketing</li>
+                                <li class=" navbar_ul_ul_ul">Advance Excel</li>
+                                <li class=" navbar_ul_ul_ul">Business Communication Skills</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="spanTag navbar_ul_ul_ul">Core Engineering</p>
+                            <ul>
+                                <li class=" navbar_ul_ul_ul">AutoCAD</li>
+                                <li class=" navbar_ul_ul_ul">Autocad 3D</li>
+                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?part_time=true">Fusion 360</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
