@@ -1,5 +1,5 @@
-function navbar(){
-    return `
+function navbar() {
+  return `
         <section id="brandLogo">
             <img id="huberbergMenu" src="https://internshala.com/static/images/icons/hamburger-menu-key-new.svg" alt="menu">
             <img id="intershalaLogo" src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="brandLogo">
@@ -63,11 +63,10 @@ function navbar(){
                     </ul>
                 </li>
             </ul>
-        </section>
-`
+        </section>`;
 }
-function huberberg(){
-    return `<div id="huberberg">
+function huberberg() {
+  return `<div id="huberberg">
     <ul>
         <li>Internships</li>
         <li>Online Trainings<span class="hotText">OFFER</span></li>
@@ -81,5 +80,5 @@ function huberberg(){
         <li>Register - As an Employer</li>
         <li><button id="huberbergLogin_button">Login</button></li>
     </ul>
-</div>`
+</div>`;
 }
