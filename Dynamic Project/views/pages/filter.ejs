@@ -836,7 +836,9 @@ function clearFilter() {
     totalInternships_div.innerHTML = `<span>${array.length} Internships</span>`;
 
     array.forEach( element => {
-    let {_id, id, role , company_name , company_icon, location , work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
+
+    let {_id,id, role , company_name , company_icon, location , work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
+
     let inside_div = document.createElement('div');
 
     let x = "";
@@ -925,7 +927,9 @@ function display_search(){
     productData.forEach( element => {
         if(element.role == search_id || element.company_name == search_id ) {
             totalInternships_div.innerHTML = `<span>${++roleCount} ${search_id}/Internships</span>`;
-            let {_id, id, role , company_name , location , work_form_home , company_icon, parttime, startDate , duration, stipend, applyby, job_type} = element;
+
+            let {_id,id, role , company_name , location , work_form_home , company_icon, parttime, startDate , duration, stipend, applyby, job_type} = element;
+
             let inside_div = document.createElement('div');
             let x = "";
             for (let i = 0; i < job_type.length; i++) {
@@ -990,7 +994,7 @@ function display_search(){
                 
                 if(search_id == loc ){
                     totalInternships_div.innerHTML = `<span>${++locationCount} ${search_id}/Internships</span>`;
-                    let {id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
+                    let {_id,id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
                     let inside_div = document.createElement('div');
                     let x = "";
                     for (let i = 0; i < job_type.length; i++) {
