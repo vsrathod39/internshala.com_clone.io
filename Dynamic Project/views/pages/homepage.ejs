@@ -276,14 +276,17 @@
     function showHuberberg(){
         document.getElementById('navBar').innerHTML =  huberberg();
         document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
-
-        document.getElementById("logIn_button").onclick = () => {
+        // login modal for hamburger
+        document.getElementById("hamburger_login").onclick = () => {
             document.getElementById('login_modal_popup').style.display = "block";
             document.getElementById('login_modal_popup').innerHTML = loginModal();
             document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
         // core
             core();
         }
+
+        document.getElementById("hamburger_logout").style.display = "none";
+        // document.getElementById("hamburger_login").style.display = "none";
     }
     function hidehuberberg(){
         document.getElementById('navBar').innerHTML = null;
@@ -314,22 +317,12 @@
     document.getElementById("intershalaLogo").onclick = () => {
         window.location.href = "/";
     }
-
-    // if(true){
-    //     document.getElementById("register_btn").style.display = "none";
-    //     document.getElementById("logIn_button").style.display = "none";
-    // }
-    // document.getElementById("register_btn").innerHTML = null;
-    // document.getElementById("register_btn").innerText = "V";
-    // document.getElementById("register_btn").setAttribute("class", "after_login");
-
+    
+    
+    document.getElementById("bookmark_icon").style.display = "none";
+    document.getElementById("message_icon").style.display = "none";
+    document.getElementById("post_login_views").style.display = "none";
+    // document.getElementById("login_btn").style.display = "none";
     // document.getElementById("register_btn").style.display = "none";
-    document.getElementById("register_btn_li_2").style.display = "none";
-
-    document.getElementById("logIn_button").innerHTML = null;
-    let img = document.createElement("img");
-    img.src = "https://img.icons8.com/external-dreamstale-lineal-dreamstale/20/000000/external-message-interface-dreamstale-lineal-dreamstale.png";
-    document.getElementById("logIn_button").append(img);
-    document.getElementById("logIn_button").style.border = "none";
 
 </script>
