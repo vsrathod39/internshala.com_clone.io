@@ -40,7 +40,7 @@ passport.serializeUser(function({user, token}, done) {
   );
   
   app.get("/auth/google/failure", (req, res) => {
-    alert("something went wrong");
+    res.send({error: "something went wrong"});
   })
   
   app.post("/register", body("first_name").notEmpty().withMessage("Name field can't be empty"), body("email").notEmpty().withMessage("Email field can't be empty").bail().isEmail().withMessage("Invalid email"), body("password").notEmpty().withMessage("Password field can't be empty").bail().custom((value) => {
