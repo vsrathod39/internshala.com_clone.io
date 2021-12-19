@@ -81,7 +81,7 @@ function navbar(){
             
             <ul id="post_login_views">
                 <li>
-                    <span id="nameLogo_icon">V</span>
+                    <span id="nameLogo_icon"></span>
                 </li>
                 <li>
                     <img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow">
@@ -112,7 +112,7 @@ function navbar(){
 function huberberg(){
     return `<div id="hamburger_useer_details">
         <div>
-            <p>V</p>
+            <p id="chal">V</p>
         </div>
         <div>
             <p>Vikas</p>
