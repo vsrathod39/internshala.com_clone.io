@@ -282,11 +282,16 @@
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
     // login modal
+    function loginWithGoogle() {
+        console.log("go");
+        window.location.href = "http://localhost:2345/auth/google";
+    }
     
     document.getElementById("logIn_button").onclick = () => {
         document.getElementById('login_modal_popup').style.display = "block";
         document.getElementById('login_modal_popup').innerHTML = loginModal();
         document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
         // core
         core();
     }

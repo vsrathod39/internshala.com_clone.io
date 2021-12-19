@@ -98,7 +98,6 @@
 
 <script type="module">
     // nav bar
-    // import {navbar, huberberg} from "../components/navbar.js";
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
@@ -110,27 +109,31 @@
         document.getElementById('navBar').innerHTML = null;
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
+    function loginWithGoogle() {
+        console.log("go");
+        window.location.href = "http://localhost:2345/auth/google";
+    }
     // login modal
-    // import loginModal from "../components/login_modal.js";
-    // import {core} from "../scripts/login.js";
+
     document.getElementById("logIn_button").onclick = () => {
         document.getElementById('login_modal_popup').style.display = "block";
         document.getElementById('login_modal_popup').innerHTML = loginModal();
         document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
         // core
         core();
     }
     // footer modal
-    // import {footer} from "../components/footer.js";
+
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
     // register as student page change
     document.getElementById("register_as_student").onclick = () => {
-        window.location.href = "../pages/register_student.html";
+        window.location.href = "/register_students";
     }
     // register as employer page change
     document.getElementById("register_as_employer").onclick = () => {
-        window.location.href = "../pages/register_employer.html";
+        window.location.href = "/register_students";
     }
     // return to homepage onclick brand logo
     document.getElementById("intershalaLogo").onclick = () => {

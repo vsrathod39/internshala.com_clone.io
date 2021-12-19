@@ -1,6 +1,7 @@
 const express = require("express");
 
 const Interns = require("../models/internship.model");
+const User = require("../models/user.model");
 
 const router = express.Router();
 
@@ -33,6 +34,15 @@ router.get('/internships', async function (req, res) {
 });
 
 
+
+// router.get('/internships/:id',  async function (req, res) {
+//     const product = await Interns.findById(req.params.id).lean().exec();
+//     return res.render('pages/internshipsDetails' , {
+//         product,
+//     });
+// });
+
+
 router.get('/internships/:id',  async function (req, res) {
     const product = await Interns.findById(req.params.id).lean().exec();
     return res.render('pages/internshipsDetails' , { product: JSON.stringify(product) });
@@ -45,6 +55,7 @@ router.get('/internships/:id',  async function (req, res) {
 //     });
 
 // });
+
 
 
 module.exports = router;
