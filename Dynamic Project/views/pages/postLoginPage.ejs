@@ -5,21 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internshala | Summer Internship 2021</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://internshala.com/favicon.ico"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
-    />
-    <link rel="stylesheet" href="/css/navbar.css" />
-    <link rel="stylesheet" href="/css/postLoginPage.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/login.css" />
-  </head>
-  <body>
+
+    <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
+    <link  rel='stylesheet' href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/postLoginPage.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
     <!-- Navbar  -->
     <div id="navBar"></div>
     <nav></nav>
@@ -43,32 +37,40 @@
       <button class="textCenter">Browse jobs</button>
     </div>
     <!-- Footer -->
-    <div id="footer"></div>
-  </body>
+    <div id="footer">   
+    </div>
+    <p id="localToken" style="display: none;"><%=token%></p>
+</body>
 </html>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/footer.js"></script>
+
 <script type="module">
-  // nav-bar modal
-  import { navbar, huberberg } from "../components/navbar.js";
-  document.getElementsByTagName("nav")[0].innerHTML = navbar();
-  document.getElementById("navBar").addEventListener("click", hidehuberberg);
-  document
-    .getElementById("huberbergMenu")
-    .addEventListener("click", showHuberberg);
-  function showHuberberg() {
-    document.getElementById("navBar").innerHTML = huberberg();
-    document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
-  }
-  function hidehuberberg() {
-    document.getElementById("navBar").innerHTML = null;
-    document.getElementsByTagName("body")[0].removeAttribute("id", "fixedBody");
-  }
-  // footer modal
-  import { footer } from "../components/footer.js";
-  let foot = document.getElementById("footer");
-  foot.innerHTML = footer();
-  // return to homepage onclick brand logo
-  document.getElementById("intershalaLogo").onclick = () => {
-    window.location.href = "/";
-  };
+
+    let token = document.getElementById("localToken").innerText;
+    token = `Bearer ${token}`;
+    localStorage.setItem("bearerToken", token);
+    // nav-bar modal
+  //  import {navbar, huberberg} from "../components/navbar.js";
+    document.getElementsByTagName('nav')[0].innerHTML =  navbar();
+    document.getElementById('navBar').addEventListener('click', hidehuberberg);
+    document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+    function showHuberberg(){
+        document.getElementById('navBar').innerHTML =  huberberg();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+    }
+    function hidehuberberg(){
+        document.getElementById('navBar').innerHTML = null;
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    }
+    // footer modal
+ //   import {footer} from "../components/footer.js";
+    let foot = document.getElementById("footer");
+    foot.innerHTML = footer();
+    // return to homepage onclick brand logo
+    document.getElementById("intershalaLogo").onclick = () => {
+        window.location.href = "/";
+    }
 </script>
 <script src="/js/postLoginPage.js"></script>

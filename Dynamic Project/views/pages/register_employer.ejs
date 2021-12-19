@@ -5,23 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internshala | Summer Internship 2021</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://internshala.com/favicon.ico"
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/register_employer.css" />
-    <link rel="stylesheet" href="/css/navbar.css" />
-    <link rel="stylesheet" href="/css/login.css" />
-    <title>
-      Hire interns | Find interns | Hiring intern | Post internships- Intershala
-    </title>
-  </head>
-  <body>
+    <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/register_employer.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Hire interns | Find interns | Hiring intern | Post internships- Intershala</title>
+</head>
+<body>
     <!-- Navbar  -->
     <div id="navBar"></div>
     <nav></nav>
@@ -35,13 +26,38 @@
           <h3>Register and post your internship for free now!</h3>
           <h4>12 Mn+ internships seekers from 30,000+ colleges across India</h4>
         </div>
-      </div>
-      <div id="signupSec">
-        <div id="signupDiv">
-          <form onsubmit="signup(event)">
-            <div class="details1">
-              <label>Official Email Id</label>
-              <input placeholder="name@company_name.com" />
+
+        <div id="signupSec">
+            <div id="signupDiv">
+                <form action="/register"
+                 method="post">
+                    <div class="details1">
+                        <label>Official Email Id</label>
+                        <input type="text" name="email" placeholder="name@company_name.com"/>
+                    </div>
+                    <div class="details1">
+                        <label>Password</label>
+                        <input name="password" placeholder="Minimum 6 characters" type="password"/>
+                    </div>
+                    <div id="name">
+                        <div class="details1">
+                            <label>First Name</label>
+                            <input type="text" name="first_name" placeholder="Your First Name"/>
+                        </div>
+                        <div class="details1">
+                            <label>Last Name</label>
+                            <input type="text" name="last_name" placeholder="Your Last Name"/>
+                        </div>
+                    </div>
+                    <div class="details2">
+                        <label>Mobile Number</label><br/>
+                        <input value="+91" id="code"/>
+                        <input name="mobile" type="number" placeholder="10 digit mobile number" id="mob"/>
+                    </div>
+                    <p id="tc">By signing up, you agree to our <span>Terms and Conditions</span>.</p>
+                    <button class="textCenter" type="submit">Register Now</button>
+                </form>
+                <p id="msg_regEmployer"><span>Have a question?</span></p>
             </div>
             <div class="details1">
               <label>Password</label>
@@ -128,43 +144,49 @@
     </div>
   </body>
 </html>
+<script src="/js/navbar.js"></script>
+<script src="/js/login_modal.js"></script>
+<script src="/js/login.js"></script>
 <script type="module">
-  // nav bar
-  import { navbar, huberberg } from "../components/navbar.js";
-  document.getElementsByTagName("nav")[0].innerHTML = navbar();
-  document.getElementById("navBar").addEventListener("click", hidehuberberg);
-  document
-    .getElementById("huberbergMenu")
-    .addEventListener("click", showHuberberg);
-  function showHuberberg() {
-    document.getElementById("navBar").innerHTML = huberberg();
-    document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
-  }
-  function hidehuberberg() {
-    document.getElementById("navBar").innerHTML = null;
-    document.getElementsByTagName("body")[0].removeAttribute("id", "fixedBody");
-  }
-  // login modal
-  import loginModal from "../components/login_modal.js";
-  import { core } from "../scripts/login.js";
-  document.getElementById("logIn_button").onclick = () => {
-    document.getElementById("login_modal_popup").style.display = "block";
-    document.getElementById("login_modal_popup").innerHTML = loginModal();
-    document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
-    // core
-    core();
-  };
-  // register as student page change
-  document.getElementById("register_as_student").onclick = () => {
-    window.location.href = "/register_student";
-  };
-  // register as employer page change
-  document.getElementById("register_as_employer").onclick = () => {
-    window.location.href = "/register_employer";
-  };
-  // return to homepage onclick brand logo
-  document.getElementById("intershalaLogo").onclick = () => {
-    window.location.href = "/";
-  };
+    // nav bar
+  //  import {navbar, huberberg} from "../components/navbar.js";
+    document.getElementsByTagName('nav')[0].innerHTML =  navbar();
+    document.getElementById('navBar').addEventListener('click', hidehuberberg);
+    document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+    
+    function showHuberberg(){
+        document.getElementById('navBar').innerHTML =  huberberg();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+    }
+    function hidehuberberg(){
+        document.getElementById('navBar').innerHTML = null;
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    }
+    function loginWithGoogle() {
+        console.log("go");
+        window.location.href = "http://localhost:2345/auth/google";
+    }
+    // login modal
+   // import loginModal from "../components/login_modal.js";
+   // import {core} from "../scripts/login.js";
+    document.getElementById("logIn_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
+        // core
+        core();
+    }
+    // register as student page change
+    document.getElementById("register_as_student").onclick = () => {
+        window.location.href = "/register_students";
+    }
+    // register as employer page change
+    document.getElementById("register_as_employer").onclick = () => {
+        window.location.href = "/register_employer";
+    }
+    // return to homepage onclick brand logo
+    document.getElementById("intershalaLogo").onclick = () => {
+        window.location.href = "/";
+    }
 </script>
-<script src="/js/register_employer.js"></script>

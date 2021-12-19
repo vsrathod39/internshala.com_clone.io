@@ -21,14 +21,14 @@ function loginModal(){
             <div class="textCenter" id="opt">
                 <p>OR</p>
             </div>
-            <form id="logInForm">
+            <form id="logInForm" method="post" action="/login">
                 <div class="details1">
                     <label>Email</label>
-                    <input placeholder="vivek@example.com"/>
+                    <input name="email" type="text" placeholder="vivek@example.com"/>
                 </div>
                 <div class="details1">
                     <label>Password</label>
-                    <input placeholder="Must be at least 6 characters" type="password"/>
+                    <input name="password" placeholder="Must be at least 6 characters" type="password"/>
                 </div>
                 <p id="tc"><span>Forgot password?</span></p>
                 <button class="textCenter" type="submit">Login</button>
