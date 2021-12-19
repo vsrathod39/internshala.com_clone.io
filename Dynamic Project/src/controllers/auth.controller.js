@@ -19,7 +19,7 @@ const register = async(req, res) => {
         let user = await User.findOne({email : req.body.email}).lean().exec();
         if(user)
         {
-            return res.send("User already exist");
+            return res.send({error: "User already exist"});
         }
         user = await User.create(req.body); 
         const token = jwt.sign({ user : user }, process.env.TOKEN_KEY);
@@ -35,12 +35,12 @@ const login = async(req, res) => {
         let user = await User.findOne({email : req.body.email});
         if(!user)
         {
-            return res.send("Please provide a correct email and password");
+            return res.send({error: "Please provide a correct email and password"});
         }
         const match = await user.checkPassword(req.body.password);
         if(!match)
         {
-            return res.send("Please provide a correct email and password");
+            return res.send({error: "Please provide a correct email and password"});
         }
         const token = jwt.sign({ user : user }, process.env.TOKEN_KEY);
         res.render("pages/postLoginPage", {token: JSON.stringify(token)});
