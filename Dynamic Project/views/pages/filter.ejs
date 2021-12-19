@@ -4,6 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internshala | Summer Internship 2021</title>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/navbar.css">
@@ -365,13 +369,6 @@
         core();
     }
 
-    document.getElementById("huberbergLogin_button").onclick = () => {
-        document.getElementById('login_modal_popup').style.display = "block";
-        document.getElementById('login_modal_popup').innerHTML = loginModal();
-        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
-        // core
-        core();
-    }
     // footer modal
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
@@ -415,7 +412,7 @@ function onChecked() {
                     productData.forEach(function(word) {
                         if(word.work_form_home == checkedbrand && ( word.parttime == checkedbrand  || word.stipend >= rangeValue || word.internships_with_job == checkedbrand ) ){
 
-                            let {id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type ,internships_with_job} = word;
+                            let {_id, id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type ,internships_with_job} = word;
                             totalInternships_div.innerHTML = null;
                             
                             totalInternships_div.innerHTML = `<span>${++Product_count} Work from home/Internships</span>`;
@@ -473,14 +470,14 @@ function onChecked() {
 
                                     <div class="button_container11">${x}</div>
                                     
-                                    <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
+                                    <a class="button_container2" href=/internships/${_id}>View details</a>
                                 </div>
                             </div>`;
                         internships_div.appendChild(inside_div);
                         }
                         else if(word.parttime == checkedbrand && ( word.work_form_home == checkedbrand  || word.stipend >= rangeValue || word.internships_with_job == checkedbrand ) ){
 
-                            let {id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
+                            let {_id, id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
                             totalInternships_div.innerHTML = null;
 
                             totalInternships_div.innerHTML = `<span>${++Product_count} Part time/Internships</span>`;
@@ -536,7 +533,7 @@ function onChecked() {
 
                                     <div class="button_container11">${x}</div>
                                     
-                                    <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
+                                    <a class="button_container2" href=/internships/${_id}>View details</a>
                                 </div>
                                 </div>                                      
                                 `;
@@ -544,7 +541,7 @@ function onChecked() {
                         }
                         else if(word.stipend == checkedbrand && (  word.work_form_home >= rangeValue || word.parttime == checkedbrand || word.internships_with_job == checkedbrand ) ){
 
-                            let {id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
+                            let {_id, id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
                             totalInternships_div.innerHTML = null;
 
                             totalInternships_div.innerHTML = `<span>${++Product_count} Stipend/Internships</span>`;
@@ -600,7 +597,7 @@ function onChecked() {
 
                                     <div class="button_container11">${x}</div>
                                     
-                                    <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
+                                    <a class="button_container2" href=/internships/${_id}>View details</a>
                                 </div>
                                 </div>                                        
                                 `;
@@ -608,7 +605,7 @@ function onChecked() {
                         }
                         else if(word.internships_with_job == checkedbrand && ( word.parttime == checkedbrand  || word.stipend >= rangeValue || word.work_form_home == checkedbrand ) ){
 
-                            let {id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
+                            let {_id, id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
                             totalInternships_div.innerHTML = null;
 
                             totalInternships_div.innerHTML = `<span>${++Product_count} Internships with Job/Internships</span>`;
@@ -664,7 +661,7 @@ function onChecked() {
 
                                     <div class="button_container11">${x}</div>
                                     
-                                    <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
+                                    <a class="button_container2" href=/internships/${_id}>View details</a>
                                 </div>
                                 </div>                                        
                                 `;
@@ -684,7 +681,7 @@ function onChecked() {
             productData.forEach(function(word) {
                 if( word.stipend >= rangeValue){
                     totalInternships_div.innerHTML = `<span>${++Product_count} Stipend/Internships</span>`;
-                    let {id, role , company_name , location , company_icon, work_form_home,internships_with_job ,parttime, startDate , duration, stipend, applyby, job_type} = word;
+                    let {_id, id, role , company_name , location , company_icon, work_form_home,internships_with_job ,parttime, startDate , duration, stipend, applyby, job_type} = word;
                     let inside_div = document.createElement('div');
 
                     let x = "";
@@ -738,7 +735,7 @@ function onChecked() {
 
                             <div class="button_container11">${x}</div>
                             
-                            <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
+                            <a class="button_container2" href=/internships/${_id}>View details</a>
                         </div>
                         </div>
                         `;
@@ -752,7 +749,7 @@ function onChecked() {
             productData.forEach(function(word) {
                 if( word.stipend >= rangeValue){
                     totalInternships_div.innerHTML = `<span>${++Product_count} Internships</span>`;
-                    let {id, role , company_name , location , company_icon, work_form_home,internships_with_job ,parttime, startDate , duration, stipend, applyby, job_type} = word;
+                    let {_id, id, role , company_name , location , company_icon, work_form_home,internships_with_job ,parttime, startDate , duration, stipend, applyby, job_type} = word;
                     let inside_div = document.createElement('div');
                     let x = "";
                     for (let i = 0; i < job_type.length; i++) {
@@ -805,7 +802,7 @@ function onChecked() {
 
                             <div class="button_container11">${x}</div>
                             
-                            <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
+                            <a class="button_container2" href=/internships/${_id}>View details</a>
                         </div>
                         </div>
                         `;
@@ -837,7 +834,7 @@ function clearFilter() {
 
     array.forEach( element => {
 
-    let {_id,id, role , company_name , company_icon, location , work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
+    let {_id, id, role , company_name , company_icon, location , work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
 
     let inside_div = document.createElement('div');
 
@@ -892,7 +889,7 @@ function clearFilter() {
 
             <div class="button_container11">${x}</div>
             
-            <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
+            <a class="button_container2" href=/internships/${_id}>View details</a>
         </div>
         </div>
             `;
@@ -928,7 +925,7 @@ function display_search(){
         if(element.role == search_id || element.company_name == search_id ) {
             totalInternships_div.innerHTML = `<span>${++roleCount} ${search_id}/Internships</span>`;
 
-            let {_id,id, role , company_name , location , work_form_home , company_icon, parttime, startDate , duration, stipend, applyby, job_type} = element;
+            let {_id, id, role , company_name , location , work_form_home , company_icon, parttime, startDate , duration, stipend, applyby, job_type} = element;
 
             let inside_div = document.createElement('div');
             let x = "";
@@ -982,7 +979,7 @@ function display_search(){
 
                     <div class="button_container11">${x}</div>
                     
-                    <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
+                    <a class="button_container2" href=/internships/${_id}>View details</a>
                 </div>
                 </div>
                     `;
@@ -994,7 +991,7 @@ function display_search(){
                 
                 if(search_id == loc ){
                     totalInternships_div.innerHTML = `<span>${++locationCount} ${search_id}/Internships</span>`;
-                    let {_id,id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
+                    let {_id, id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
                     let inside_div = document.createElement('div');
                     let x = "";
                     for (let i = 0; i < job_type.length; i++) {
@@ -1047,7 +1044,7 @@ function display_search(){
 
                             <div class="button_container11">${x}</div>
                             
-                            <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
+                            <a class="button_container2" href=/internships/${_id}>View details</a>
                         </div>
                         </div>
                             `;
@@ -1062,10 +1059,4 @@ function display_search(){
     roleCount = 0;
     }
 }
-
-function getViewDetails(id) {
-    console.log(id);
-    window.location.href = `/internships/${id}`;
-}
-
 </script>
