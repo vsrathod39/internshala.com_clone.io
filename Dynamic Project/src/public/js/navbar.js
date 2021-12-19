@@ -1,5 +1,5 @@
-function navbar(){
-    return `
+function navbar() {
+  return `
         <section id="brandLogo">
             <img id="huberbergMenu" src="https://internshala.com/static/images/icons/hamburger-menu-key-new.svg" alt="menu">
             <img id="intershalaLogo" src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="brandLogo">
@@ -103,12 +103,12 @@ function navbar(){
                     </ul>
                 </li>
             </ul>
-        </section>
-`
+        </section>`;
 }
-// <ul id="nameLogo_icon">
-//     <li><p> V </p></li>
-// </ul>
+
+// function huberberg() {
+//   return `<div id="huberberg">
+
 function huberberg(){
     return `<div id="hamburger_useer_details">
         <div>
@@ -134,6 +134,7 @@ function huberberg(){
         </div>
     </div>
     <div id="huberberg">
+
     <ul>
         <li>Internships</li>
         <li>Online Trainings<span class="hotText">OFFER</span></li>
@@ -148,19 +149,6 @@ function huberberg(){
         <li id="hamburger_login">Login</li>
         <li id="hamburger_logout">Logout</li>
     </ul>
+
 </div>`
 }
-
-/*{ <ul>
-        <li>    
-            <div id="hamburger_useer_details">
-                <div>
-                    <p>V</p>
-                </div>
-                <div>
-                    <p>Vikas</p>
-                    <p>vsrathod39@gmail.com</p>
-                </div>
-            </div>
-        </li>
-</ul>}*/
