@@ -276,17 +276,34 @@
     function showHuberberg(){
         document.getElementById('navBar').innerHTML =  huberberg();
         document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // login modal for hamburger
+        document.getElementById("hamburger_login").onclick = () => {
+            document.getElementById('login_modal_popup').style.display = "block";
+            document.getElementById('login_modal_popup').innerHTML = loginModal();
+            document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+            core();
+        }
+
+        document.getElementById("hamburger_logout").style.display = "none";
+        // document.getElementById("hamburger_login").style.display = "none";
+        document.getElementById("chal").innerText="K";
     }
     function hidehuberberg(){
         document.getElementById('navBar').innerHTML = null;
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
     // login modal
+    function loginWithGoogle() {
+        console.log("go");
+        window.location.href = "http://localhost:2345/auth/google";
+    }
     
     document.getElementById("logIn_button").onclick = () => {
         document.getElementById('login_modal_popup').style.display = "block";
         document.getElementById('login_modal_popup').innerHTML = loginModal();
         document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
         // core
         core();
     }
@@ -306,4 +323,23 @@
     document.getElementById("intershalaLogo").onclick = () => {
         window.location.href = "/";
     }
+    
+    
+    // document.getElementById("bookmark_icon").style.display = "none";
+    // document.getElementById("message_icon").style.display = "none";
+    // document.getElementById("post_login_views").style.display = "none";
+    document.getElementById("login_btn").style.display = "none";
+    document.getElementById("register_btn").style.display = "none";
+
+    if(localStorage.getItem("bearerToken")){
+        const bearerToken = JSON.parse(localStorage.getItem("bearerToken"));
+    bearerToken.split(" ")[1];
+    try {
+        var user = jwt.verify(token, process.env.TOKEN_KEY);
+        
+    } catch(err) {
+        // return res.status(400).send("Please provide a valid token");
+    }
+    }
+    document.getElementById("nameLogo_icon").innerText = "k";
 </script>

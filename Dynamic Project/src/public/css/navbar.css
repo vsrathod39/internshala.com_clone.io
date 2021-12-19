@@ -47,16 +47,15 @@ nav{
     color: #00a5ec;
 }
 #services ul li:hover #upDownArrow{
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
 }
 #services ul ul{
     display: none;
     line-height: 35px;
     margin-top: -2px;
     position: relative;
-    width: 240%;
+    width: 100%;
     background-color: white;
-    height: 200px;
     color: black;
     z-index: 50;
 }
@@ -65,6 +64,15 @@ nav{
 }
 #services ul li:hover > ul{
     display: block;
+}
+/* #post_login_views li:nth-child(2):hover > ul{
+    display: block;
+} */
+#services ul li > ul #navbar_nested_dropDown{
+    width: 90%;
+}
+#services ul li > ul{
+    width: 135%;
 }
 .spanTag:hover{
     background-color: #e7f5fc;
@@ -78,6 +86,7 @@ nav{
     top: 0px;
     position: absolute;
     border-left: 1px solid rgb(230, 230, 230);
+    border-right: 1px solid rgb(230, 230, 230);
     overflow: auto;
 }
 .hotText{
@@ -146,9 +155,12 @@ nav{
     font-weight: 500;
     font-size: 14px;
     background-color: white;
+    color: black;
+    width: 0;
+    border-radius: none;
+    margin-bottom: none;
 }
 #navBar{
-    /* display: none; */
     position: absolute;
     top: 0;
     left: 0;
@@ -159,11 +171,108 @@ nav{
 #fixedBody{
     position: fixed;
 }
+
+#nameLogo_icon{
+    border-radius: 50%;
+    border: 1px solid grey;
+    color: rgb(90, 90, 90);
+    height: 35px;
+    margin-top: 2.5%;
+    width: 3vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nameLogo_icon:hover{
+    border: 1px solid #00a5ec;
+    color: #00a5ec;
+}
+#message_icon{
+    height: 35px;
+    margin-top: 3.5%;
+    width: 2vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bookmark_icon{
+    height: 35px;
+    margin-top: 3%;
+    width: 2vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#post_login_views{
+    display: flex;
+    align-items: center;
+    margin-right: 5vw;
+}
+#post_login_views_details{
+    top: 36px;
+}
+
+#hamburger_useer_details{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    background-color: white;
+    padding : 30px 0;
+    max-width: 320px;
+    padding-left: 20px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+#hamburger_useer_details div:first-child{
+    border-radius: 50%;
+    border: 1px solid grey;
+    color: rgb(90, 90, 90);
+    height: 35px;
+    margin-top: 2.5%;
+    width: 35px;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hamburger_useer_details div:nth-child(2) > p:first-child{
+    font-weight: 500;
+    color: rgb(59, 59, 59);
+    font-size: 16px;
+}
+#hamburger_useer_details div:nth-child(2) > p:nth-child(2){
+    color: rgb(94, 94, 94);
+    font-size: 13px;
+}
+
+#hamburger_rating{
+    display: flex;
+    gap: 10px;
+    gap: 2vw;
+    align-items: center;
+    background-color: white;
+    padding-top : 18px;
+    padding-bottom : 18px;
+    max-width: 320px;
+    color: rgb(59, 59, 59);
+    padding-left: 20px;
+    font-size: 14px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+#hamburger_rating div:first-child >div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 @media (max-width:940px) {
     #brandLogo img:nth-child(1){
         display: block;
     }
-    #services ul:first-child, ul:nth-child(2), ul:nth-child(3), ul:nth-child(4){
+    #services ul:first-child, ul:nth-child(2), ul:nth-child(3), ul:nth-child(6), ul:nth-child(7){
         display: none;
     }
     #register_button{

@@ -216,9 +216,11 @@
             <div class="fixed_on_scroll">
 
                 <div id="filters">
-                    
+
                     <label class="switch">Include work from home also
+<<<<<<< shakib-
                         <input type="checkbox" id="messageCheckbox" value="work_form_home" onclick="onChecked()">
+
                         <span class="slider round"></span>
                     </label><br>
                       
@@ -256,6 +258,7 @@
 
                     <% products.forEach( product => { %>
                         
+
                         <div class="list_container1">
                             <div class="individual_internship_header">
                                 <div class="company">
@@ -306,12 +309,12 @@
                                     <% } %>
                                 </div>
                                 
-                                <a class="button_container2" href=/internships/<%= product._id %> >View details</a>
+                                <a class="button_container2" href=/internships/<%= product._id %>>View details</a>
                             </div>
                             </div>
                         
                     <% }) %>
-                   
+
 
                 </div>
 
@@ -324,6 +327,7 @@
 
 <!-- Footer -->
 <div id="footer"></div>
+
 
 <p id="yy" style="display:none"><%= newProduct %></p>
 
@@ -361,6 +365,14 @@
         // core
         core();
     }
+
+    document.getElementById("huberbergLogin_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+        core();
+    }
     // footer modal
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
@@ -376,7 +388,6 @@
     document.getElementById("intershalaLogo").onclick = () => {
         window.location.href = "../homepage.html";
     }
-
 </script>
 
 <script>
@@ -1054,4 +1065,3 @@ function getViewDetails(id) {
 }
 
 </script>
-
