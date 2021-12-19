@@ -1,284 +1,288 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-nav{
-    border-bottom: 2px solid rgb(221, 221, 221);
-    width: 100%;
-    height: 75px;
-    display: flex;
-    font-family: "Inter var", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    z-index: -1;
+nav {
+  border-bottom: 2px solid rgb(221, 221, 221);
+  width: 100%;
+  height: 75px;
+  display: flex;
+  font-family: "Inter var", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  z-index: -1;
 }
-#brandLogo{
-    width: 25%;
-    height: 55px;
-    line-height: 65px;
-    display: flex;
-    align-items: center;
+#brandLogo {
+  width: 25%;
+  height: 55px;
+  line-height: 65px;
+  display: flex;
+  align-items: center;
 }
-#brandLogo img:nth-child(1){
-    margin-left: 5%;
-    margin-top: 17px;
-    display: none;
-    cursor: pointer;
+#brandLogo img:nth-child(1) {
+  margin-left: 5%;
+  margin-top: 17px;
+  display: none;
+  cursor: pointer;
 }
-#brandLogo img:nth-child(2){
-    margin-left: 5%;
-    width: 120px;
-    cursor: pointer;
+#brandLogo img:nth-child(2) {
+  margin-left: 5%;
+  width: 120px;
+  cursor: pointer;
 }
-#services{
-    width: 73%;
-    height: 100%;
-    line-height: 75px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 5%;
+#services {
+  width: 73%;
+  height: 100%;
+  line-height: 75px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5%;
 }
-#services ul{
-    list-style: none;
-    cursor: pointer;
+#services ul {
+  list-style: none;
+  cursor: pointer;
 }
-#services ul li:hover{
-    color: #00a5ec;
+#services ul li:hover {
+  color: #00a5ec;
 }
-#services ul li:hover #upDownArrow{
-    /* transform: rotate(180deg); */
+#services ul li:hover #upDownArrow {
+  /* transform: rotate(180deg); */
 }
-#services ul ul{
-    display: none;
-    line-height: 35px;
-    margin-top: -2px;
-    position: relative;
-    width: 100%;
-    background-color: white;
-    color: black;
-    z-index: 50;
+#services ul ul {
+  display: none;
+  line-height: 35px;
+  margin-top: -2px;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  color: black;
+  z-index: 50;
 }
-.navbar_ul_ul_ul{
-    padding-left: 8px;
+.navbar_ul_ul_ul {
+  padding-left: 8px;
 }
-#services ul li:hover > ul{
-    display: block;
+#services ul li:hover > ul {
+  display: block;
 }
 /* #post_login_views li:nth-child(2):hover > ul{
     display: block;
 } */
-#services ul li > ul #navbar_nested_dropDown{
-    width: 90%;
+#services ul li > ul #navbar_nested_dropDown {
+  width: 90%;
 }
-#services ul li > ul{
-    width: 135%;
+#services ul li > ul {
+  width: 135%;
 }
-.spanTag:hover{
-    background-color: #e7f5fc;
-    border-radius: 8px;
-    width: 90%;
+.spanTag:hover {
+  background-color: #e7f5fc;
+  border-radius: 8px;
+  width: 90%;
 }
-#services ul ul ul{
-    margin-left: 100%;
-    line-height: 35px;
-    width: 150%;
-    top: 0px;
-    position: absolute;
-    border-left: 1px solid rgb(230, 230, 230);
-    border-right: 1px solid rgb(230, 230, 230);
-    overflow: auto;
+#services ul ul ul {
+  margin-left: 100%;
+  line-height: 35px;
+  width: 150%;
+  top: 0px;
+  position: absolute;
+  border-left: 1px solid rgb(230, 230, 230);
+  border-right: 1px solid rgb(230, 230, 230);
+  overflow: auto;
 }
-.hotText{
-    padding: 3px 6px;
-    font-size: 12px;
-    margin-left: 5px;
-    color: white;
-    background-color: #ff8c00;
-    border-radius: 3px;
+.hotText {
+  padding: 3px 6px;
+  font-size: 12px;
+  margin-left: 5px;
+  color: white;
+  background-color: #ff8c00;
+  border-radius: 3px;
 }
-#logIn_button{
-    outline: none;
-    border: 1px solid #00a5ec;
-    padding: 7px 20px;
-    background-color: white;
-    border-radius: 3px;
-    color: #00a5ec;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: Arial;
-    cursor: pointer;
+#logIn_button {
+  outline: none;
+  border: 1px solid #00a5ec;
+  padding: 7px 20px;
+  background-color: white;
+  border-radius: 3px;
+  color: #00a5ec;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: Arial;
+  cursor: pointer;
 }
-#register_button{
-    background-color: #00a5ec;
-    padding: 8px 20px;
-    color: white;
-    height: 35px;
-    border-radius: 3px;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: Arial;
+#register_button {
+  background-color: #00a5ec;
+  padding: 8px 20px;
+  color: white;
+  height: 35px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: Arial;
 }
-#upDownArrow{
-    width: 13px;
-    margin-left: 5px;
+#upDownArrow {
+  width: 13px;
+  margin-left: 5px;
 }
-#huberberg{
-    font-family: "Inter var", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    padding: 30px 0;
-    height: 100vh;
-    width: 320px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
+#huberberg {
+  font-family: "Inter var", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 30px 0;
+  height: 100vh;
+  width: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
-#huberberg div{
-    border-top: 1px solid rgb(224, 224, 224);
-    margin-bottom: 25px;
+#huberberg div {
+  border-top: 1px solid rgb(224, 224, 224);
+  margin-bottom: 25px;
 }
-#huberberg ul{
+#huberberg ul {
+  display: block;
+  list-style: none;
+  cursor: pointer;
+}
+#huberberg ul li {
+  margin-bottom: 25px;
+  margin-left: 6%;
+}
+#huberbergLogin_button {
+  outline: none;
+  border: none;
+  font-family: "Inter var", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  width: 0;
+  border-radius: none;
+  margin-bottom: none;
+}
+#navBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: rgba(109, 109, 109, 0.5);
+  z-index: 1;
+}
+#fixedBody {
+  position: fixed;
+}
+
+#nameLogo_icon {
+  border-radius: 50%;
+  border: 1px solid grey;
+  color: rgb(90, 90, 90);
+  height: 35px;
+  margin-top: 2.5%;
+  width: 3vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nameLogo_icon:hover {
+  border: 1px solid #00a5ec;
+  color: #00a5ec;
+}
+#message_icon {
+  height: 35px;
+  margin-top: 3.5%;
+  width: 2vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bookmark_icon {
+  height: 35px;
+  margin-top: 3%;
+  width: 2vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#post_login_views {
+  display: flex;
+  align-items: center;
+  margin-right: 5vw;
+}
+#post_login_views_details {
+  top: 36px;
+}
+
+#hamburger_useer_details {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  background-color: white;
+  padding: 30px 0;
+  max-width: 320px;
+  padding-left: 20px;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+#hamburger_useer_details div:first-child {
+  border-radius: 50%;
+  border: 1px solid grey;
+  color: rgb(90, 90, 90);
+  height: 35px;
+  margin-top: 2.5%;
+  width: 35px;
+  font-size: 24px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hamburger_useer_details div:nth-child(2) > p:first-child {
+  font-weight: 500;
+  color: rgb(59, 59, 59);
+  font-size: 16px;
+}
+#hamburger_useer_details div:nth-child(2) > p:nth-child(2) {
+  color: rgb(94, 94, 94);
+  font-size: 13px;
+}
+
+#hamburger_rating {
+  display: flex;
+  gap: 10px;
+  gap: 2vw;
+  align-items: center;
+  background-color: white;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  max-width: 320px;
+  color: rgb(59, 59, 59);
+  padding-left: 20px;
+  font-size: 14px;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+#hamburger_rating div:first-child > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 940px) {
+  #brandLogo img:nth-child(1) {
     display: block;
-    list-style: none;
-    cursor: pointer;
-}
-#huberberg ul li{
-    margin-bottom: 25px;
-    margin-left: 6%;
-}
-#huberbergLogin_button{
-    outline: none;
-    border: none;
-    font-family: "Inter var", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    background-color: white;
-    color: black;
-    width: 0;
-    border-radius: none;
-    margin-bottom: none;
-}
-#navBar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background-color: rgba(109, 109, 109, 0.5);
-    z-index: 1;
-}
-#fixedBody{
-    position: fixed;
-}
-
-#nameLogo_icon{
-    border-radius: 50%;
-    border: 1px solid grey;
-    color: rgb(90, 90, 90);
-    height: 35px;
-    margin-top: 2.5%;
-    width: 3vw;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#nameLogo_icon:hover{
-    border: 1px solid #00a5ec;
-    color: #00a5ec;
-}
-#message_icon{
-    height: 35px;
-    margin-top: 3.5%;
-    width: 2vw;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#bookmark_icon{
-    height: 35px;
-    margin-top: 3%;
-    width: 2vw;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#post_login_views{
-    display: flex;
-    align-items: center;
-    margin-right: 5vw;
-}
-#post_login_views_details{
-    top: 36px;
-}
-
-#hamburger_useer_details{
-    display: flex;
-    gap: 2vw;
-    align-items: center;
-    background-color: white;
-    padding : 30px 0;
-    max-width: 320px;
-    padding-left: 20px;
-    border-bottom: 1px solid rgb(211, 211, 211);
-}
-#hamburger_useer_details div:first-child{
-    border-radius: 50%;
-    border: 1px solid grey;
-    color: rgb(90, 90, 90);
-    height: 35px;
-    margin-top: 2.5%;
-    width: 35px;
-    font-size: 24px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#hamburger_useer_details div:nth-child(2) > p:first-child{
-    font-weight: 500;
-    color: rgb(59, 59, 59);
-    font-size: 16px;
-}
-#hamburger_useer_details div:nth-child(2) > p:nth-child(2){
-    color: rgb(94, 94, 94);
-    font-size: 13px;
-}
-
-#hamburger_rating{
-    display: flex;
-    gap: 10px;
-    gap: 2vw;
-    align-items: center;
-    background-color: white;
-    padding-top : 18px;
-    padding-bottom : 18px;
-    max-width: 320px;
-    color: rgb(59, 59, 59);
-    padding-left: 20px;
-    font-size: 14px;
-    border-bottom: 1px solid rgb(211, 211, 211);
-}
-#hamburger_rating div:first-child >div:first-child{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-@media (max-width:940px) {
-    #brandLogo img:nth-child(1){
-        display: block;
-    }
-    #services ul:first-child, ul:nth-child(2), ul:nth-child(3), ul:nth-child(6), ul:nth-child(7){
-        display: none;
-    }
-    #register_button{
-        padding: 13px 20px;
-    }
-    #navBar{
-        display: block;
-    }
+  }
+  #services ul:first-child,
+  ul:nth-child(2),
+  ul:nth-child(3),
+  ul:nth-child(6),
+  ul:nth-child(7) {
+    display: none;
+  }
+  #register_button {
+    padding: 13px 20px;
+  }
+  #navBar {
+    display: block;
+  }
 }

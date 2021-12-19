@@ -1,0 +1,7 @@
+{
+    "C_Cpp.vcFormat.space.withinExpressionParentheses": true,
+    "C_Cpp.vcFormat.space.betweenEmptySquareBrackets": true,
+    "html.format.templating": true,
+    "html.format.endWithNewline": true,
+    "editor.formatOnSave": true
+}
