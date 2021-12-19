@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/login.css">
     <title>Internships | Summer Internship 2021</title>
 </head>
+
 <body>
     <!-- Navbar  -->
     <div id="navBar">
@@ -97,7 +98,6 @@
 
 <script type="module">
     // nav bar
- //   import {navbar, huberberg} from "../components/navbar.js";
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
@@ -114,8 +114,7 @@
         window.location.href = "http://localhost:2345/auth/google";
     }
     // login modal
-  //  import loginModal from "../components/login_modal.js";
-  //  import {core} from "../scripts/login.js";
+
     document.getElementById("logIn_button").onclick = () => {
         document.getElementById('login_modal_popup').style.display = "block";
         document.getElementById('login_modal_popup').innerHTML = loginModal();
@@ -125,7 +124,7 @@
         core();
     }
     // footer modal
-  //  import {footer} from "../components/footer.js";
+
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
     // register as student page change
@@ -141,4 +140,5 @@
         window.location.href = "/";
     }
 </script>
-<script src="../../public/js/register_student.js"></script>
+
+<script src="/js/register_student.js"></script>
