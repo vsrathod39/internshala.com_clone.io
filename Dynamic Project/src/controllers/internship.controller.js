@@ -11,6 +11,7 @@ router.get('/', async function (req, res) {
 
 
 router.get('/internships', async function (req, res) {
+
     const location = req?.query?.location || null; 
     const wfh = req?.query?.work_form_home || null;
     const part_time = req?.query?.part_time || false;
@@ -19,23 +20,27 @@ router.get('/internships', async function (req, res) {
         const products = await Interns.find({$and: [{location: {$in: [location]}}, {work_form_home: {$eq: wfh}}]});
         return res.render('pages/filter' , {
             products,
+            newProduct: JSON.stringify(products)
         });
     }
     if(((location !== null)  && (wfh === null)) || ((location === null)  && (wfh !== null))) {
         const products = await Interns.find({$or: [{location: {$in: [location]}}, {work_form_home: {$eq: wfh}}]});
         return res.render('pages/filter' , {
             products,
+            newProduct: JSON.stringify(products)
         });
     }
     if(part_time === "true") {
         const products = await Interns.find({job_type: {$in: ["Part time allowed"]}});
         return res.render('pages/filter' , {
             products,
+            newProduct: JSON.stringify(products)
         });
     }
     const products = await Interns.find().lean().exec();
     return res.render('pages/filter' , {
         products,
+        newProduct: JSON.stringify(products)
     });
 });
 
