@@ -218,7 +218,6 @@
                 <div id="filters">
 
                     <label class="switch">Include work from home also
-<<<<<<< shakib-
                         <input type="checkbox" id="messageCheckbox" value="work_form_home" onclick="onChecked()">
 
                         <span class="slider round"></span>
@@ -474,7 +473,7 @@ function onChecked() {
 
                                     <div class="button_container11">${x}</div>
                                     
-                                    <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
+                                    <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
                                 </div>
                             </div>`;
                         internships_div.appendChild(inside_div);
@@ -537,7 +536,7 @@ function onChecked() {
 
                                     <div class="button_container11">${x}</div>
                                     
-                                    <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
+                                    <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
                                 </div>
                                 </div>                                      
                                 `;
@@ -601,7 +600,7 @@ function onChecked() {
 
                                     <div class="button_container11">${x}</div>
                                     
-                                    <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
+                                    <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
                                 </div>
                                 </div>                                        
                                 `;
@@ -665,7 +664,7 @@ function onChecked() {
 
                                     <div class="button_container11">${x}</div>
                                     
-                                    <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
+                                    <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
                                 </div>
                                 </div>                                        
                                 `;
@@ -739,7 +738,7 @@ function onChecked() {
 
                             <div class="button_container11">${x}</div>
                             
-                            <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
+                            <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
                         </div>
                         </div>
                         `;
@@ -806,7 +805,7 @@ function onChecked() {
 
                             <div class="button_container11">${x}</div>
                             
-                            <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
+                            <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
                         </div>
                         </div>
                         `;
@@ -837,7 +836,7 @@ function clearFilter() {
     totalInternships_div.innerHTML = `<span>${array.length} Internships</span>`;
 
     array.forEach( element => {
-    let {id, role , company_name , company_icon, location , work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
+    let {_id, id, role , company_name , company_icon, location , work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
     let inside_div = document.createElement('div');
 
     let x = "";
@@ -891,7 +890,7 @@ function clearFilter() {
 
             <div class="button_container11">${x}</div>
             
-            <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
+            <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
         </div>
         </div>
             `;
@@ -926,7 +925,7 @@ function display_search(){
     productData.forEach( element => {
         if(element.role == search_id || element.company_name == search_id ) {
             totalInternships_div.innerHTML = `<span>${++roleCount} ${search_id}/Internships</span>`;
-            let {id, role , company_name , location , work_form_home , company_icon, parttime, startDate , duration, stipend, applyby, job_type} = element;
+            let {_id, id, role , company_name , location , work_form_home , company_icon, parttime, startDate , duration, stipend, applyby, job_type} = element;
             let inside_div = document.createElement('div');
             let x = "";
             for (let i = 0; i < job_type.length; i++) {
@@ -979,7 +978,7 @@ function display_search(){
 
                     <div class="button_container11">${x}</div>
                     
-                    <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
+                    <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
                 </div>
                 </div>
                     `;
@@ -1044,7 +1043,7 @@ function display_search(){
 
                             <div class="button_container11">${x}</div>
                             
-                            <a class="button_container2" onclick="getViewDetails(${id})">View details</a>
+                            <a class="button_container2" onclick="getViewDetails(${_id})">View details</a>
                         </div>
                         </div>
                             `;
@@ -1061,7 +1060,8 @@ function display_search(){
 }
 
 function getViewDetails(id) {
-    window.location.href = /internships/id;
+    console.log(id);
+    window.location.href = `/internships/${id}`;
 }
 
 </script>
