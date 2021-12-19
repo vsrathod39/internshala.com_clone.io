@@ -43,6 +43,7 @@
 
 <script type="module">
     let token = document.getElementById("localToken").innerText;
+    token = `Bearer ${token}`;
     localStorage.setItem("bearerToken", token);
     // nav-bar modal
   //  import {navbar, huberberg} from "../components/navbar.js";
