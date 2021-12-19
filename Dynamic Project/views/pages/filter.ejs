@@ -216,9 +216,9 @@
             <div class="fixed_on_scroll">
 
                 <div id="filters">
-                    
+
                     <label class="switch">Include work from home also
-                        <input type="checkbox" id="messageCheckbox" value="work_from_home" onclick="onChecked()">
+                        <input type="checkbox" id="messageCheckbox" value="Yes" onclick="onChecked()">
                         <span class="slider round"></span>
                     </label><br>
                       
@@ -253,10 +253,10 @@
             <div id="list_container">
 
                 <div id="list_container1">
-                    <% onCheckedData() %>
-                    <% function onCheckedData() { %>
+
                     <% products.forEach( product => { %>
                         
+
                         <div class="list_container1">
                             <div class="individual_internship_header">
                                 <div class="company">
@@ -307,12 +307,11 @@
                                     <% } %>
                                 </div>
                                 
-                                <a class="button_container2" href=/internships/<%= product._id %> >View details</a>
+                                <a class="button_container2" href=/internships/<%= product._id %>>View details</a>
                             </div>
                             </div>
                         
                     <% }) %>
-                    <% } %>
 
                 </div>
 
@@ -326,7 +325,6 @@
 <!-- Footer -->
 <div id="footer"></div>
 
-
 </body>
 </html>
 
@@ -334,8 +332,6 @@
 <script src="/js/login_modal.js"></script>
 <script src="/js/login.js"></script>
 <script src="/js/footer.js"></script>
-
-<script src="/js/filter.js"></script>
 
 <script type="module">
     // nav-bar modal
@@ -361,6 +357,14 @@
         // core
         core();
     }
+
+    document.getElementById("huberbergLogin_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+        core();
+    }
     // footer modal
     let foot = document.getElementById("footer");
     foot.innerHTML = footer();
@@ -376,68 +380,4 @@
     document.getElementById("intershalaLogo").onclick = () => {
         window.location.href = "../homepage.html";
     }
-
 </script>
-
-
-
-<!-- <script>
-                       <% products.forEach( product => { %>
-                        
-                        <div class="list_container1">
-                            <div class="individual_internship_header">
-                                <div class="company">
-                                    <div class="company_1"></div>
-                                    <div class="company_2" style="font-size: 14px;"><%= product.role%></div>
-                                </div>
-                                <div class="internship_logo">
-                                    <img src = <%= product.company_icon %> >
-                                </div>
-                            </div>
-
-                            <div class="individual_internship_details">
-                                <div id="location_names">
-                                    <span><i class="material-icons">add_location</i></span>
-
-                                        <%  if(product.work_form_home === "Yes"){ %>
-                                            <p style="opacity:0.8;"> Work From Home</p>
-                                        <% } else { %>
-                                            <span> <%= product.location %>  </span>
-                                        <% } %>
-                                </div>
-                                <div class="internship_other_details_container">
-                                    <div class="">
-                                        <p><i></i>START DATE</p>
-                                        <p><%= product.startDate %></p>
-                                    </div>
-                                    <div class="">
-                                        <p><i></i>DURATION</p>
-                                        <p><%= product.duration %> Months</p>
-                                    </div>
-                                    <div class="">
-                                        <p><i></i>STIPEND</p>
-                                        <p>&#8377; <%= product.stipend%> /month</p>
-                                    </div>
-                                    <div class="">
-                                        <p><i></i>APPLY BY</p>
-                                        <p><%= product.applyby%></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button_container" >
-                
-                                <div class="button_container11">
-                                    <% for( let i = 0; i < product.job_type.length; i++ ) { %>
-                                        <div class='button_container1'>
-                                            <%= product.job_type[i] %>
-                                        </div>
-                                    <% } %>
-                                </div>
-                                
-                                <a class="button_container2" href=/internships/<%= product._id %> >View details</a>
-                            </div>
-                            </div>
-                        
-                    <% }) %>
-</script> -->
-

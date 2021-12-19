@@ -7,13 +7,12 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Internshala | Summer Internship 2021</title>
     <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
-    <link href="/css/register_student.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/login.css">
+    <link href="../../public/css/register_student.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../public/css/navbar.css">
+    <link rel="stylesheet" href="../../public/css/footer.css">
+    <link rel="stylesheet" href="../../public/css/login.css">
     <title>Internships | Summer Internship 2021</title>
 </head>
-
 <body>
     <!-- Navbar  -->
     <div id="navBar">
@@ -90,14 +89,9 @@
 </div>
 </body>
 </html>
-
-<script src="/js/navbar.js"></script>
-<script src="/js/login_modal.js"></script>
-<script src="/js/login.js"></script>
-<script src="/js/footer.js"></script>
-
 <script type="module">
     // nav bar
+
     document.getElementsByTagName('nav')[0].innerHTML =  navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
@@ -137,8 +131,7 @@
     }
     // return to homepage onclick brand logo
     document.getElementById("intershalaLogo").onclick = () => {
-        window.location.href = "/";
+        window.location.href = "../homepage.html";
     }
 </script>
-
-<script src="/js/register_student.js"></script>
+<script src="../../public/js/register_student.js"></script>
