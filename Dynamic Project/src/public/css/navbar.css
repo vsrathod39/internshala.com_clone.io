@@ -267,7 +267,16 @@ nav {
   align-items: center;
   gap: 5px;
 }
-
+a,
+a:hover,
+a:visited,
+a:active,
+a:link {
+  color: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  text-decoration: none;
+}
 @media (max-width: 940px) {
   #brandLogo img:nth-child(1) {
     display: block;

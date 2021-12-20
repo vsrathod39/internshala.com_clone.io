@@ -83,13 +83,7 @@ function navbar(){
                 <li>
                     <span id="nameLogo_icon"></span>
                 </li>
-                <li>
-                    <img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow">
-                    <ul>
-                        <li class=" navbar_ul_ul_ul">Logout</li>
-                        <li class=" navbar_ul_ul_ul">Help Center</li>
-                    </ul>
-                </li>
+
             </ul>
             <ul id="login_btn">
                 <li><button id="logIn_button">Login</button></li>

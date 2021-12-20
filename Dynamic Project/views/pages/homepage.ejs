@@ -364,51 +364,32 @@
 <script type="module">
   // nav-bar modal
 
-        document.getElementById("hamburger_logout").style.display = "none";
-        // document.getElementById("hamburger_login").style.display = "none";
-        document.getElementById("chal").innerText="K";
-    }
-    function hidehuberberg(){
-        document.getElementById('navBar').innerHTML = null;
-        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
-    }
-    // login modal
-    function loginWithGoogle() {
-        console.log("go");
-        window.location.href = "http://localhost:2345/auth/google";
-    }
-    
-    document.getElementById("logIn_button").onclick = () => {
-        document.getElementById('login_modal_popup').style.display = "block";
-        document.getElementById('login_modal_popup').innerHTML = loginModal();
-        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
-        document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
-        // core
-        core();
-    }
-    // footer modal
-    
-    let foot = document.getElementById("footer");
-    foot.innerHTML = footer();
-    // register as student page change
-    document.getElementById("register_as_student").onclick = () => {
-        window.location.href = "./register_student.html";
-    }
-    // register as employer page change
-    document.getElementById("register_as_employer").onclick = () => {
-        window.location.href = "/register_employer";
-    }
-    // return to homepage onclick brand logo
-    document.getElementById("intershalaLogo").onclick = () => {
-        window.location.href = "/";
-    }
-    
-    
-    // document.getElementById("bookmark_icon").style.display = "none";
-    // document.getElementById("message_icon").style.display = "none";
-    // document.getElementById("post_login_views").style.display = "none";
-    document.getElementById("login_btn").style.display = "none";
-    document.getElementById("register_btn").style.display = "none";
+  document.getElementsByTagName("nav")[0].innerHTML = navbar();
+  document.getElementById("navBar").addEventListener("click", hidehuberberg);
+  document
+    .getElementById("huberbergMenu")
+    .addEventListener("click", showHuberberg);
+  function showHuberberg() {
+    document.getElementById("navBar").innerHTML = huberberg();
+    document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
+    // login modal for hamburger
+    document.getElementById("hamburger_login").onclick = () => {
+      document.getElementById("login_modal_popup").style.display = "block";
+      document.getElementById("login_modal_popup").innerHTML = loginModal();
+      document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
+      // core
+      core();
+    };
+
+    document.getElementById("hamburger_logout").style.display = "none";
+    // document.getElementById("hamburger_login").style.display = "none";
+    document.getElementById("chal").innerText = "K";
+  }
+  function hidehuberberg() {
+    document.getElementById("navBar").innerHTML = null;
+    document.getElementsByTagName("body")[0].removeAttribute("id", "fixedBody");
+  }
+  // login modal
 
   document.getElementById("logIn_button").onclick = () => {
     document.getElementById("login_modal_popup").style.display = "block";
@@ -417,6 +398,7 @@
     // core
     core();
   };
+  
   // footer modal
 
   let foot = document.getElementById("footer");
