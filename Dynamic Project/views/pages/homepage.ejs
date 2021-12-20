@@ -363,73 +363,104 @@
 <script src="/js/homepage.js"></script>
 <script type="module">
   // nav-bar modal
-
-  document.getElementsByTagName("nav")[0].innerHTML = navbar();
+  document.getElementsByTagName("nav")[0].innerHTML = navbar(); // navbar display
   document.getElementById("navBar").addEventListener("click", hidehuberberg);
-  document
-    .getElementById("huberbergMenu")
-    .addEventListener("click", showHuberberg);
+  document.getElementById("huberbergMenu").addEventListener("click", showHuberberg); //selecting hamburger icon
   function showHuberberg() {
-    document.getElementById("navBar").innerHTML = huberberg();
-    document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
-    // login modal for hamburger
-    document.getElementById("hamburger_login").onclick = () => {
+      document.getElementById("navBar").innerHTML = huberberg(); // navbar's hamburger icon, shows mobile view menu
+      document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody"); // will fixed body after hamburger click
+      // login modal for hamburger mobile view menu
+      document.getElementById("hamburger_login").onclick = () => {
       document.getElementById("login_modal_popup").style.display = "block";
       document.getElementById("login_modal_popup").innerHTML = loginModal();
-      document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
-      // core
       core();
     };
-
-    document.getElementById("hamburger_logout").style.display = "none";
-    // document.getElementById("hamburger_login").style.display = "none";
-    document.getElementById("chal").innerText = "K";
-  }
+  const login_status_check = () => {
+   console.log("Ouyt");
+    // localStorage.getItem("bearerToken")
+    if (0) {
+      // const bearerToken = JSON.parse(localStorage.getItem("bearerToken"));
+      // bearerToken.split(" ")[1];
+      // try {
+        // var user = jwt.verify(token, process.env.TOKEN_KEY);
+      // } catch (err) {
+        // return res.status(400).send("Please provide a valid token");
+      // };
+      document.getElementById("nameLogo_icon").innerText = "k"; // change name logo icon with user first_name first letter
+      document.getElementById("register_btn").style.display = "none"; // hide register button
+      document.getElementById("hamburger_user_name").innerText = "Vikas";
+      document.getElementById("hamburger_user_email").innerText = "v@gmail.com";
+      document.getElementById("huberberg").style.height = "70vh";
+      console.log("if");
+    }else{
+      document.getElementById("bookmark_icon").style.display = "none"; // hide/shows navbar bookmark icon
+      document.getElementById("message_icon").style.display = "none"; // hide/shows navbar message icon
+      document.getElementById("post_login_views").style.display = "none"; // hide/shows user name logo icon
+      document.getElementById("hamburger_logout").style.display = "none"; // hide/shows logout icon in hamburger
+      document.getElementById("logout_icon").style.display = "none"; // hide/shows logout icon in non-mobile view
+      document.getElementById("hamburger_useer_details").style.display = "none";
+      document.getElementById("hamburger_rating").style.display = "none";
+      document.getElementById("logout_icon").style.display = "none";
+      console.log("else");
+    };
+  };
+  login_status_check();
+  };
+  // 
   function hidehuberberg() {
     document.getElementById("navBar").innerHTML = null;
     document.getElementsByTagName("body")[0].removeAttribute("id", "fixedBody");
-  }
-  // login modal
-
+  };
+  // login modal non-mobile view menu
   document.getElementById("logIn_button").onclick = () => {
     document.getElementById("login_modal_popup").style.display = "block";
     document.getElementById("login_modal_popup").innerHTML = loginModal();
     document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
-    // core
     core();
   };
-  
+  // checking the loged-in status of user
+  document.addEventListener("DOMContentLoaded", () => {
+   console.log("Ouyt");
+    // localStorage.getItem("bearerToken")
+    if (0) {
+      // const bearerToken = JSON.parse(localStorage.getItem("bearerToken"));
+      // bearerToken.split(" ")[1];
+      // try {
+        // var user = jwt.verify(token, process.env.TOKEN_KEY);
+      // } catch (err) {
+        // return res.status(400).send("Please provide a valid token");
+      // };
+      document.getElementById("nameLogo_icon").innerText = "k"; // change name logo icon with user first_name first letter
+      document.getElementById("register_btn").style.display = "none"; // hide register button
+      // document.getElementById("hamburger_user_name").innerText = "Vikas";
+      // document.getElementById("hamburger_user_email").innerText = "v@gmail.com";
+      // document.getElementById("huberberg").style.height = "70vh";
+      console.log("if");
+    }else{
+      document.getElementById("bookmark_icon").style.display = "none"; // hide/shows navbar bookmark icon
+      document.getElementById("message_icon").style.display = "none"; // hide/shows navbar message icon
+      document.getElementById("post_login_views").style.display = "none"; // hide/shows user name logo icon
+      // document.getElementById("hamburger_logout").style.display = "none"; // hide/shows logout icon in hamburger
+      document.getElementById("logout_icon").style.display = "none"; // hide/shows logout icon in non-mobile view
+      // document.getElementById("hamburger_useer_details").style.display = "none";
+      // document.getElementById("hamburger_rating").style.display = "none";
+      document.getElementById("logout_icon").style.display = "none";
+      console.log("else");
+    };
+  });
   // footer modal
-
   let foot = document.getElementById("footer");
   foot.innerHTML = footer();
-  // register as student page change
+  // redirecting to register_student page onclick navBar button
   document.getElementById("register_as_student").onclick = () => {
-    window.location.href = "./register_student.html";
+    window.location.href = "./register_student.ejs";
   };
-  // register as employer page change
+  // redirecting to register_employer page onclick navBar button
   document.getElementById("register_as_employer").onclick = () => {
-    window.location.href = "./register_employer.html";
+    window.location.href = "./register_employer.ejs";
   };
   // return to homepage onclick brand logo
   document.getElementById("intershalaLogo").onclick = () => {
     window.location.href = "/";
   };
-
-  // document.getElementById("bookmark_icon").style.display = "none";
-  // document.getElementById("message_icon").style.display = "none";
-  // document.getElementById("post_login_views").style.display = "none";
-  document.getElementById("login_btn").style.display = "none";
-  document.getElementById("register_btn").style.display = "none";
-
-  if (localStorage.getItem("bearerToken")) {
-    const bearerToken = JSON.parse(localStorage.getItem("bearerToken"));
-    bearerToken.split(" ")[1];
-    try {
-      var user = jwt.verify(token, process.env.TOKEN_KEY);
-    } catch (err) {
-      // return res.status(400).send("Please provide a valid token");
-    }
-  }
-  document.getElementById("nameLogo_icon").innerText = "k";
 </script>

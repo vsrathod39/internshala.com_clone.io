@@ -39,6 +39,11 @@ router.get('/internships', async function (req, res) {
     });
 });
 
+router.get("/register", (req, res) => {
+    if(req.query.role === "student"){
+        return res.render('pages/register_student');
+    }
+})
 // router.get('/internships/:id',  async function (req, res) {
 //     const product = await Interns.findById(req.params.id).lean().exec();
 //     return res.render('pages/internshipsDetails' , {

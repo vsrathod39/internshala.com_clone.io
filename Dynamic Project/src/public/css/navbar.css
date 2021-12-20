@@ -37,17 +37,18 @@ nav {
   line-height: 75px;
   display: flex;
   justify-content: flex-end;
-  gap: 5%;
+  gap: 2.5vw;
 }
 #services ul {
   list-style: none;
   cursor: pointer;
 }
+
 #services ul li:hover {
   color: #00a5ec;
 }
 #services ul li:hover #upDownArrow {
-  /* transform: rotate(180deg); */
+  transform: rotate(180deg);
 }
 #services ul ul {
   display: none;
@@ -65,9 +66,6 @@ nav {
 #services ul li:hover > ul {
   display: block;
 }
-/* #post_login_views li:nth-child(2):hover > ul{
-    display: block;
-} */
 #services ul li > ul #navbar_nested_dropDown {
   width: 90%;
 }
@@ -82,7 +80,7 @@ nav {
 #services ul ul ul {
   margin-left: 100%;
   line-height: 35px;
-  width: 150%;
+  width: 220px;
   top: 0px;
   position: absolute;
   border-left: 1px solid rgb(230, 230, 230);
@@ -148,18 +146,6 @@ nav {
   margin-bottom: 25px;
   margin-left: 6%;
 }
-#huberbergLogin_button {
-  outline: none;
-  border: none;
-  font-family: "Inter var", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  background-color: white;
-  color: black;
-  width: 0;
-  border-radius: none;
-  margin-bottom: none;
-}
 #navBar {
   position: absolute;
   top: 0;
@@ -171,15 +157,21 @@ nav {
 #fixedBody {
   position: fixed;
 }
-
+#logout_icon {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+#post_login_views {
+  display: flex;
+  align-items: center;
+}
 #nameLogo_icon {
   border-radius: 50%;
   border: 1px solid grey;
   color: rgb(90, 90, 90);
-  height: 35px;
-  margin-top: 2.5%;
-  width: 3vw;
-  text-align: center;
+  height: 30px;
+  width: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,32 +181,15 @@ nav {
   color: #00a5ec;
 }
 #message_icon {
-  height: 35px;
-  margin-top: 3.5%;
-  width: 2vw;
-  text-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-top: 15px;
 }
 #bookmark_icon {
-  height: 35px;
-  margin-top: 3%;
-  width: 2vw;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#post_login_views {
   display: flex;
   align-items: center;
-  margin-right: 5vw;
+  padding-top: 15px;
 }
-#post_login_views_details {
-  top: 36px;
-}
-
 #hamburger_useer_details {
   display: flex;
   gap: 2vw;
@@ -225,7 +200,7 @@ nav {
   padding-left: 20px;
   border-bottom: 1px solid rgb(211, 211, 211);
 }
-#hamburger_useer_details div:first-child {
+#hamburger_post_login_views {
   border-radius: 50%;
   border: 1px solid grey;
   color: rgb(90, 90, 90);
@@ -234,7 +209,7 @@ nav {
   width: 35px;
   font-size: 24px;
   text-align: center;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -273,10 +248,11 @@ a:visited,
 a:active,
 a:link {
   color: inherit;
-  font-weight: 500;
+  font-weight: inherit;
   font-size: inherit;
   text-decoration: none;
 }
+
 @media (max-width: 940px) {
   #brandLogo img:nth-child(1) {
     display: block;
@@ -285,7 +261,10 @@ a:link {
   ul:nth-child(2),
   ul:nth-child(3),
   ul:nth-child(6),
-  ul:nth-child(7) {
+  ul:nth-child(7),
+  #post_login_views,
+  #logout_icon,
+  #login_btn {
     display: none;
   }
   #register_button {
