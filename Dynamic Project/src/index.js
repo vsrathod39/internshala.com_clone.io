@@ -35,7 +35,7 @@ passport.serializeUser(function({user, token}, done) {
           failureRedirect: '/auth/google/failure'
   }),
   function (req, res) {
-    return res.render("pages/postLoginPage", {token: JSON.stringify(req.user.token)});
+    return res.render("pages/postLoginPage", {token: JSON.stringify(req.user.token), user: JSON.stringify(req.user)});
   }
   );
   

@@ -311,35 +311,6 @@
       document.getElementById("login_modal_popup").innerHTML = loginModal();
       core();
     };
-    const login_status_check = () => {
-      console.log("Ouyt");
-      // localStorage.getItem("bearerToken")
-      if (0) {
-        // const bearerToken = JSON.parse(localStorage.getItem("bearerToken"));
-        // bearerToken.split(" ")[1];
-        // try {
-        // var user = jwt.verify(token, process.env.TOKEN_KEY);
-        // } catch (err) {
-        // return res.status(400).send("Please provide a valid token");
-        // };
-        document.getElementById("nameLogo_icon").innerText = "k"; // change name logo icon with user first_name first letter
-        document.getElementById("register_btn").style.display = "none"; // hide register button
-        document.getElementById("hamburger_user_name").innerText = "Vikas";
-        document.getElementById("hamburger_user_email").innerText = "v@gmail.com";
-        document.getElementById("huberberg").style.height = "70vh";
-        console.log("if");
-      } else {
-        document.getElementById("bookmark_icon").style.display = "none"; // hide/shows navbar bookmark icon
-        document.getElementById("message_icon").style.display = "none"; // hide/shows navbar message icon
-        document.getElementById("post_login_views").style.display = "none"; // hide/shows user name logo icon
-        document.getElementById("hamburger_logout").style.display = "none"; // hide/shows logout icon in hamburger
-        document.getElementById("logout_icon").style.display = "none"; // hide/shows logout icon in non-mobile view
-        document.getElementById("hamburger_useer_details").style.display = "none";
-        document.getElementById("hamburger_rating").style.display = "none";
-        document.getElementById("logout_icon").style.display = "none";
-        console.log("else");
-      };
-    };
     login_status_check();
   };
   // 
@@ -352,38 +323,18 @@
     document.getElementById("login_modal_popup").style.display = "block";
     document.getElementById("login_modal_popup").innerHTML = loginModal();
     document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
+    document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
     core();
+
   };
   // checking the loged-in status of user
   document.addEventListener("DOMContentLoaded", () => {
-    console.log("Ouyt");
-    // localStorage.getItem("bearerToken")
-    if (0) {
-      // const bearerToken = JSON.parse(localStorage.getItem("bearerToken"));
-      // bearerToken.split(" ")[1];
-      // try {
-      // var user = jwt.verify(token, process.env.TOKEN_KEY);
-      // } catch (err) {
-      // return res.status(400).send("Please provide a valid token");
-      // };
-      document.getElementById("nameLogo_icon").innerText = "k"; // change name logo icon with user first_name first letter
-      document.getElementById("register_btn").style.display = "none"; // hide register button
-      // document.getElementById("hamburger_user_name").innerText = "Vikas";
-      // document.getElementById("hamburger_user_email").innerText = "v@gmail.com";
-      // document.getElementById("huberberg").style.height = "70vh";
-      console.log("if");
-    } else {
-      document.getElementById("bookmark_icon").style.display = "none"; // hide/shows navbar bookmark icon
-      document.getElementById("message_icon").style.display = "none"; // hide/shows navbar message icon
-      document.getElementById("post_login_views").style.display = "none"; // hide/shows user name logo icon
-      // document.getElementById("hamburger_logout").style.display = "none"; // hide/shows logout icon in hamburger
-      document.getElementById("logout_icon").style.display = "none"; // hide/shows logout icon in non-mobile view
-      // document.getElementById("hamburger_useer_details").style.display = "none";
-      // document.getElementById("hamburger_rating").style.display = "none";
-      document.getElementById("logout_icon").style.display = "none";
-      console.log("else");
-    };
+    desktop_login_status_check();
   });
+  function loginWithGoogle() {
+    console.log("go");
+    window.location.href = "http://localhost:2345/auth/google";
+  }
   // footer modal
   let foot = document.getElementById("footer");
   foot.innerHTML = footer();

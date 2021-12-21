@@ -23,7 +23,7 @@ const register = async (req, res) => {
         user = await User.create(req.body);
         const token = jwt.sign({ user: user }, process.env.TOKEN_KEY);
 
-        res.render("pages/postLoginPage", { token: JSON.stringify(token), user: user });
+        res.render("pages/postLoginPage", { token: JSON.stringify(token), user: JSON.stringify(user)});
     } catch (e) {
         res.status(500).send({ status: "failed" });
     }
@@ -40,7 +40,7 @@ const login = async (req, res) => {
             return res.send({ error: "Please provide a correct email and password" });
         }
         const token = jwt.sign({ user: user }, process.env.TOKEN_KEY);
-        res.render("pages/postLoginPage", { token: JSON.stringify(token), user: user });
+        res.render("pages/postLoginPage", { token: JSON.stringify(token), user: JSON.stringify(user)});
     } catch (e) {
         res.status(500).send({ status: "failed", message: e.message });
     }

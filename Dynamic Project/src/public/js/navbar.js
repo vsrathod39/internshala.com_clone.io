@@ -106,7 +106,7 @@ function navbar() {
 function huberberg() {
     return `<div id="hamburger_useer_details">
         <div id="hamburger_post_login_views">
-            <p id="nameLogo_icon"></p>
+            <p id="hamburger_nameLogo_icon"></p>
         </div>
         <div id="hamburger_user_personal_info">
             <p id="hamburger_user_name"></p>
