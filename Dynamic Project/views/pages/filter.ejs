@@ -1,266 +1,292 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internshala | Summer Internship 2021</title>
-    <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/login.css">
     <title>Index</title>
-<style>
-    section{
-        font-family: "Inter var", sans-serif;
-    }
-    #internships_list_container{
-        padding: 48px 16px 16px 16px;
-        border: 1px solid #ccc;
-    }
-    .max-width-container{
-        max-width: 1224px;
-        margin-left: auto;
-        margin-right: auto;
-        border: 1px solid rgb(226, 226, 226);
-    }
-    #reference{
-        max-width: 956px;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        padding-bottom: 40px;
-        margin-top: 24px;
-    }
-    .reference1{
-        max-width: 956px;
-        margin-left: 24px;
-       display:flex;
-       height: auto;
-       text-align: center;
-    }
-    .reference11{
-    width: 316px;
-    height: auto;
-    }
+    <style>
+        section {
+            font-family: "Inter var", sans-serif;
+        }
 
-    .reference12{
-    flex: 1;
-    max-width: 616px;
-    margin-left: 24px;
-    display:flex;
-    flex-direction: column;
-    }
-    #total-internships{
-        padding-top: 10px;
-        font-size: 18px;
-        line-height: 1.33333333;
-        font-weight: 600;
-    }
+        #internships_list_container {
+            padding: 48px 16px 16px 16px;
+            border: 1px solid #ccc;
+        }
 
-    .fixed_on_scroll{
-        width: 316px;
-        position: relative;
-       top: 0;
-       height:auto;
-    }
-    #filters{
-    overflow: auto;
-    border: 1px solid #EEE;
-    width: 316px;
-    overflow-y: auto;
-    border-radius: 6px;
-    padding: 23px;
-    background: #fff;
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height:70vh;
-    overflow-y: auto;
-    }
+        .max-width-container {
+            max-width: 1224px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgb(226, 226, 226);
+        }
 
-    #list_container{
-    flex: 1;
-    max-width: 616px;
-    margin-left: 24px;
-    display:flex;
-    flex-direction: column;
-    height: 75vh;
-    overflow-y: auto;
-    }
-    #list_container::-webkit-scrollbar {
-        display: none;
-    }
-    *, ::after, ::before {
-    box-sizing: border-box;
-    }
-    .list_container1{
-        letter-spacing: 1px;
-        background: #fff;
-        padding: 23px;
-        margin-bottom: 24px;
-        border: 1px solid #EEE;
-        box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
-        border-radius: 6px;
-    }
-    .individual_internship_header{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 24px;
-    }
-    .company_1{
-    font-size: 18px;
-    line-height: 1.33333333;
-    font-weight: 600;
-    margin-bottom: 8px;
-    letter-spacing: 2px;
-    }
-    .company_2{
-    font-size: 14px;
-    line-height: 1.33333333;
-    font-weight: 600;
-    margin-bottom: 8px;
-    opacity: .8;
-    letter-spacing: 2px;
-    }
-    .internship_logo{
-        margin-left: 16px;
-    }
-     
-    .internship_logo img{
-    max-width: 104px;
-    max-height: 48px;
-    color: transparent;
-    }
-    .individual_internship_details{
-        margin-bottom: 8px;
-        box-sizing: border-box;
-    }
-    #location_names{
-    line-height: 16px;
-    display: flex;
-    margin-bottom: 24px;
-    }
-    #location_names span {
-        display: inline-block;
-        width:5%;
-        opacity: .8;
-        text-align: center;
-    }
-    .internship_other_details_container{
-        display: flex;
-        justify-content:space-between;
-    }
-    .button_container{
-        display: flex;
-        justify-content:space-between;
-    }
-    .button_container11{
-        display: flex;
-    }
-    
-    .button_container1{
-    padding: 6px 12px;
-    background: #F8F8F8;
-    border-radius: 14px;
-    font-size: 14px;
-    color: #666;
-    line-height: 16px;
-    margin-right: 8px;
-    }
-    .button_container2{
-        color: #006BC2;
-        cursor: pointer;
-    }
-    .clear_searchBtn{
-        outline:none;
-        height: 30px;
-        letter-spacing: 1px;
-        padding:2px;
-        cursor: pointer;
-    }
+        #reference {
+            max-width: 956px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            padding-bottom: 40px;
+            margin-top: 24px;
+        }
 
-</style>
+        .reference1 {
+            max-width: 956px;
+            margin-left: 24px;
+            display: flex;
+            height: auto;
+            text-align: center;
+        }
+
+        .reference11 {
+            width: 316px;
+            height: auto;
+        }
+
+        .reference12 {
+            flex: 1;
+            max-width: 616px;
+            margin-left: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #total-internships {
+            padding-top: 10px;
+            font-size: 18px;
+            line-height: 1.33333333;
+            font-weight: 600;
+        }
+
+        .fixed_on_scroll {
+            width: 316px;
+            position: relative;
+            top: 0;
+            height: auto;
+        }
+
+        #filters {
+            overflow: auto;
+            border: 1px solid #EEE;
+            width: 316px;
+            overflow-y: auto;
+            border-radius: 6px;
+            padding: 23px;
+            background: #fff;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 70vh;
+            overflow-y: auto;
+        }
+
+        #list_container {
+            flex: 1;
+            max-width: 616px;
+            margin-left: 24px;
+            display: flex;
+            flex-direction: column;
+            height: 75vh;
+            overflow-y: auto;
+        }
+
+        #list_container::-webkit-scrollbar {
+            display: none;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+        }
+
+        .list_container1 {
+            letter-spacing: 1px;
+            background: #fff;
+            padding: 23px;
+            margin-bottom: 24px;
+            border: 1px solid #EEE;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+            border-radius: 6px;
+        }
+
+        .individual_internship_header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .company_1 {
+            font-size: 18px;
+            line-height: 1.33333333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        .company_2 {
+            font-size: 14px;
+            line-height: 1.33333333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            opacity: .8;
+            letter-spacing: 2px;
+        }
+
+        .internship_logo {
+            margin-left: 16px;
+        }
+
+        .internship_logo img {
+            max-width: 104px;
+            max-height: 48px;
+            color: transparent;
+        }
+
+        .individual_internship_details {
+            margin-bottom: 8px;
+            box-sizing: border-box;
+        }
+
+        #location_names {
+            line-height: 16px;
+            display: flex;
+            margin-bottom: 24px;
+        }
+
+        #location_names span {
+            display: inline-block;
+            width: 5%;
+            opacity: .8;
+            text-align: center;
+        }
+
+        .internship_other_details_container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button_container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button_container11 {
+            display: flex;
+        }
+
+        .button_container1 {
+            padding: 6px 12px;
+            background: #F8F8F8;
+            border-radius: 14px;
+            font-size: 14px;
+            color: #666;
+            line-height: 16px;
+            margin-right: 8px;
+        }
+
+        .button_container2 {
+            color: #006BC2;
+            cursor: pointer;
+        }
+
+        .clear_searchBtn {
+            outline: none;
+            height: 30px;
+            letter-spacing: 1px;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
+
 <body>
     <!-- Navbar  -->
     <div id="navBar">
 
     </div>
     <nav>
-        
+
     </nav>
     <!-- login Modal Pop-up-->
     <div id="login_modal_popup">
 
     </div>
-<section id="internships_list_container">
+    <section id="internships_list_container">
 
-    <div class="max-width-container">
+        <div class="max-width-container">
 
-        <div class="reference1">
+            <div class="reference1">
 
-            <div class="reference11"></div>
-            
-            <div class="reference12">
-                <div id="total-internships"><%= products.length %> Internships</div>
-            </div>
+                <div class="reference11"></div>
 
-        </div>
-        
-        <div id="reference">
-            
-            <!-- Filter -->
-            <div class="fixed_on_scroll">
-
-                <div id="filters">
-
-                    <label class="switch">Include work from home also
-                        <input type="checkbox" id="messageCheckbox" value="work_form_home" onclick="onChecked()">
-
-                        <span class="slider round"></span>
-                    </label><br>
-                      
-                    <label class="switch">Part-time
-                        <input type="checkbox" id="messageCheckbox" value="parttime" onclick="onChecked()">
-                        <span class="slider round"></span>
-                    </label><br>
-            
-                    Desired minimum monthly stipend (₹)
-                    <input type="range" min="0" max="10000" step="2000" id="myRange" value="0" oninput="onChecked()"><br>
-            
-                    <label class="switch">Internships for women
-                        <input type="checkbox" id="messageCheckbox" >
-                        <span class="slider round"></span>
-                    </label><br>
-                      
-                    <label class="switch">Internships with job offer
-                        <input type="checkbox" id="messageCheckbox" value="Internship with job offer" onclick="onChecked()">
-                        <span class="slider round"></span>
-                    </label><br>
-                    
-                    <button type="button" onclick="clearFilter()" class="clear_searchBtn">Clear all</button><br>
-            
-                    <input type="text" id="search_id" placeholder="e.g. Design, Mumbai, infosys" class="clear_searchBtn"><br>
-                    <button onclick="display_search()" class="clear_searchBtn">Search</button>
-
+                <div class="reference12">
+                    <div id="total-internships"><%= products.length %> Internships</div>
                 </div>
 
             </div>
 
-             <!-- List -->
-            <div id="list_container">
-                
-                <div id="list_container1">
+            <div id="reference">
 
-                    <% products.forEach( product => { %>
-                        
+                <!-- Filter -->
+                <div class="fixed_on_scroll">
+
+                    <div id="filters">
+
+                        <label class="switch">Include work from home also
+                            <input type="checkbox" id="messageCheckbox" value="work_form_home" onclick="onChecked()">
+
+                            <span class="slider round"></span>
+                        </label><br>
+
+                        <label class="switch">Part-time
+                            <input type="checkbox" id="messageCheckbox" value="parttime" onclick="onChecked()">
+                            <span class="slider round"></span>
+                        </label><br>
+
+                        Desired minimum monthly stipend (₹)
+                        <input type="range" min="0" max="10000" step="2000" id="myRange" value="0"
+                            oninput="onChecked()"><br>
+
+                        <label class="switch">Internships for women
+                            <input type="checkbox" id="messageCheckbox">
+                            <span class="slider round"></span>
+                        </label><br>
+
+                        <label class="switch">Internships with job offer
+                            <input type="checkbox" id="messageCheckbox" value="Internship with job offer"
+                                onclick="onChecked()">
+                            <span class="slider round"></span>
+                        </label><br>
+
+                        <button type="button" onclick="clearFilter()" class="clear_searchBtn">Clear all</button><br>
+
+                        <input type="text" id="search_id" placeholder="e.g. Design, Mumbai, infosys"
+                            class="clear_searchBtn"><br>
+                        <button onclick="display_search()" class="clear_searchBtn">Search</button>
+
+                    </div>
+
+                </div>
+
+                <!-- List -->
+                <div id="list_container">
+
+                    <div id="list_container1">
+
+                        <% products.forEach( product => { %>
+
 
                         <div class="list_container1">
                             <div class="individual_internship_header">
@@ -269,7 +295,7 @@
                                     <div class="company_2" style="font-size: 14px;"><%= product.company_name%></div>
                                 </div>
                                 <div class="internship_logo">
-                                    <img src = <%= product.company_icon %> >
+                                    <img src=<%= product.company_icon %>>
                                 </div>
                             </div>
 
@@ -277,11 +303,11 @@
                                 <div id="location_names">
                                     <span><i class="material-icons">add_location</i></span>
 
-                                        <%  if(product.work_form_home === "Yes"){ %>
-                                            <p style="opacity:0.8;"> Work From Home</p>
-                                        <% } else { %>
-                                            <span> <%= product.location %>  </span>
-                                        <% } %>
+                                    <%  if(product.work_form_home === "Yes"){ %>
+                                    <p style="opacity:0.8;"> Work From Home</p>
+                                    <% } else { %>
+                                    <span> <%= product.location %> </span>
+                                    <% } %>
                                 </div>
                                 <div class="internship_other_details_container">
                                     <div class="">
@@ -302,39 +328,40 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="button_container" >
-                
+                            <div class="button_container">
+
                                 <div class="button_container11">
                                     <% for( let i = 0; i < product.job_type.length; i++ ) { %>
-                                        <div class='button_container1'>
-                                            <%= product.job_type[i] %>
-                                        </div>
+                                    <div class='button_container1'>
+                                        <%= product.job_type[i] %>
+                                    </div>
                                     <% } %>
                                 </div>
-                                
+
                                 <a class="button_container2" href=/internships/<%= product._id %>>View details</a>
                             </div>
-                            </div>
-                        
-                    <% }) %>
+                        </div>
 
+                        <% }) %>
+
+
+                    </div>
 
                 </div>
 
             </div>
 
         </div>
+    </section>
 
-    </div>
-</section>
-
-<!-- Footer -->
-<div id="footer"></div>
+    <!-- Footer -->
+    <div id="footer"></div>
 
 
-<p id="yy" style="display:none"><%= newProduct %></p>
+    <p id="yy" style="display:none"><%= newProduct %></p>
 
 </body>
+
 </html>
 
 <script src="/js/navbar.js"></script>
@@ -346,16 +373,16 @@
     // nav-bar modal
 
 
-    document.getElementsByTagName('nav')[0].innerHTML =  navbar();
+    document.getElementsByTagName('nav')[0].innerHTML = navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
 
-    function showHuberberg(){
-        document.getElementById('navBar').innerHTML =  huberberg();
+    function showHuberberg() {
+        document.getElementById('navBar').innerHTML = huberberg();
         document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
     }
 
-    function hidehuberberg(){
+    function hidehuberberg() {
         document.getElementById('navBar').innerHTML = null;
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
@@ -388,48 +415,48 @@
 
 <script>
 
-let totalInternships_div = document.getElementById('total-internships');
-let Product_count = 0;
-let internships_div = document.getElementById("list_container1");
+    let totalInternships_div = document.getElementById('total-internships');
+    let Product_count = 0;
+    let internships_div = document.getElementById("list_container1");
 
-let productData = document.getElementById("yy").innerText;
-productData = JSON.parse(productData);
+    let productData = document.getElementById("yy").innerText;
+    productData = JSON.parse(productData);
 
 
-let checkedbrand = null;
-let rangeValue = null;
-var markedCheckbox = null;
+    let checkedbrand = null;
+    let rangeValue = null;
+    var markedCheckbox = null;
 
-function onChecked() {
-    rangeValue = document.getElementById("myRange").value;
-    markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
-        if(markedCheckbox.length > 0 && rangeValue >= 0){
-            for (var checkbox of markedCheckbox) {  
+    function onChecked() {
+        rangeValue = document.getElementById("myRange").value;
+        markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        if (markedCheckbox.length > 0 && rangeValue >= 0) {
+            for (var checkbox of markedCheckbox) {
                 checkedbrand = checkbox.value;
-                if(checkedbrand){
+                if (checkedbrand) {
                     internships_div.innerHTML = null;
-                    
-                    productData.forEach(function(word) {
-                        if(word.work_form_home == checkedbrand && ( word.parttime == checkedbrand  || word.stipend >= rangeValue || word.internships_with_job == checkedbrand ) ){
 
-                            let {_id, id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type ,internships_with_job} = word;
+                    productData.forEach(function (word) {
+                        if (word.work_form_home == checkedbrand && (word.parttime == checkedbrand || word.stipend >= rangeValue || word.internships_with_job == checkedbrand)) {
+
+                            let { _id, id, role, company_name, location, company_icon, work_form_home, parttime, startDate, duration, stipend, applyby, job_type, internships_with_job } = word;
                             totalInternships_div.innerHTML = null;
-                            
+
                             totalInternships_div.innerHTML = `<span>${++Product_count} Work from home/Internships</span>`;
-                            
+
                             let x = "";
                             for (let i = 0; i < job_type.length; i++) {
-                                x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                                x += "<div class='button_container1'>" + job_type[i] + "</div>";
                             }
 
                             let loc = "";
-                            if(work_form_home === "work_form_home"){
+                            if (work_form_home === "work_form_home") {
                                 loc = "Work From Home";
                             }
-                            else{
+                            else {
                                 loc = "<span>" + location + "</span>";
                             }
-                            
+
                             let inside_div = document.createElement('div');
                             inside_div.innerHTML = `                                        
                             <div class="list_container1">
@@ -473,26 +500,26 @@ function onChecked() {
                                     <a class="button_container2" href=/internships/${_id}>View details</a>
                                 </div>
                             </div>`;
-                        internships_div.appendChild(inside_div);
+                            internships_div.appendChild(inside_div);
                         }
-                        else if(word.parttime == checkedbrand && ( word.work_form_home == checkedbrand  || word.stipend >= rangeValue || word.internships_with_job == checkedbrand ) ){
+                        else if (word.parttime == checkedbrand && (word.work_form_home == checkedbrand || word.stipend >= rangeValue || word.internships_with_job == checkedbrand)) {
 
-                            let {_id, id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
+                            let { _id, id, role, company_name, location, company_icon, work_form_home, parttime, startDate, duration, stipend, applyby, job_type, internships_with_job } = word;
                             totalInternships_div.innerHTML = null;
 
                             totalInternships_div.innerHTML = `<span>${++Product_count} Part time/Internships</span>`;
                             let x = "";
                             for (let i = 0; i < job_type.length; i++) {
-                                x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                                x += "<div class='button_container1'>" + job_type[i] + "</div>";
                             }
                             let loc = "";
-                            if(work_form_home === "Yes"){
+                            if (work_form_home === "Yes") {
                                 loc = "Work From Home";
                             }
-                            else{
+                            else {
                                 loc = "<span>" + location + "</span>";
                             }
-                            
+
                             let inside_div = document.createElement('div');
                             inside_div.innerHTML = `
                             <div class="list_container1">
@@ -537,23 +564,23 @@ function onChecked() {
                                 </div>
                                 </div>                                      
                                 `;
-                                internships_div.appendChild(inside_div);
+                            internships_div.appendChild(inside_div);
                         }
-                        else if(word.stipend == checkedbrand && (  word.work_form_home >= rangeValue || word.parttime == checkedbrand || word.internships_with_job == checkedbrand ) ){
+                        else if (word.stipend == checkedbrand && (word.work_form_home >= rangeValue || word.parttime == checkedbrand || word.internships_with_job == checkedbrand)) {
 
-                            let {_id, id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
+                            let { _id, id, role, company_name, location, company_icon, work_form_home, parttime, startDate, duration, stipend, applyby, job_type, internships_with_job } = word;
                             totalInternships_div.innerHTML = null;
 
                             totalInternships_div.innerHTML = `<span>${++Product_count} Stipend/Internships</span>`;
                             let x = "";
                             for (let i = 0; i < job_type.length; i++) {
-                                x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                                x += "<div class='button_container1'>" + job_type[i] + "</div>";
                             }
                             let loc = "";
-                            if(work_form_home === "Yes"){
+                            if (work_form_home === "Yes") {
                                 loc = "Work From Home";
                             }
-                            else{
+                            else {
                                 loc = "<span>" + location + "</span>";
                             }
 
@@ -601,23 +628,23 @@ function onChecked() {
                                 </div>
                                 </div>                                        
                                 `;
-                                internships_div.appendChild(inside_div);
+                            internships_div.appendChild(inside_div);
                         }
-                        else if(word.internships_with_job == checkedbrand && ( word.parttime == checkedbrand  || word.stipend >= rangeValue || word.work_form_home == checkedbrand ) ){
+                        else if (word.internships_with_job == checkedbrand && (word.parttime == checkedbrand || word.stipend >= rangeValue || word.work_form_home == checkedbrand)) {
 
-                            let {_id, id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type,internships_with_job} = word;
+                            let { _id, id, role, company_name, location, company_icon, work_form_home, parttime, startDate, duration, stipend, applyby, job_type, internships_with_job } = word;
                             totalInternships_div.innerHTML = null;
 
                             totalInternships_div.innerHTML = `<span>${++Product_count} Internships with Job/Internships</span>`;
                             let x = "";
                             for (let i = 0; i < job_type.length; i++) {
-                                x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                                x += "<div class='button_container1'>" + job_type[i] + "</div>";
                             }
                             let loc = "";
-                            if(work_form_home === "Yes"){
+                            if (work_form_home === "Yes") {
                                 loc = "Work From Home";
                             }
-                            else{
+                            else {
                                 loc = "<span>" + location + "</span>";
                             }
 
@@ -665,9 +692,9 @@ function onChecked() {
                                 </div>
                                 </div>                                        
                                 `;
-                                internships_div.appendChild(inside_div);
+                            internships_div.appendChild(inside_div);
                         }
-                        else{
+                        else {
                             totalInternships_div.innerHTML = `<span>${Product_count} Internships</span>`;
                         }
                     });
@@ -676,23 +703,23 @@ function onChecked() {
             }
             Product_count = 0;
         }
-        else if(rangeValue > 0){
+        else if (rangeValue > 0) {
             internships_div.innerHTML = null;
-            productData.forEach(function(word) {
-                if( word.stipend >= rangeValue){
+            productData.forEach(function (word) {
+                if (word.stipend >= rangeValue) {
                     totalInternships_div.innerHTML = `<span>${++Product_count} Stipend/Internships</span>`;
-                    let {_id, id, role , company_name , location , company_icon, work_form_home,internships_with_job ,parttime, startDate , duration, stipend, applyby, job_type} = word;
+                    let { _id, id, role, company_name, location, company_icon, work_form_home, internships_with_job, parttime, startDate, duration, stipend, applyby, job_type } = word;
                     let inside_div = document.createElement('div');
 
                     let x = "";
                     for (let i = 0; i < job_type.length; i++) {
-                        x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                        x += "<div class='button_container1'>" + job_type[i] + "</div>";
                     }
                     let loc = "";
-                    if(work_form_home === "Yes"){
+                    if (work_form_home === "Yes") {
                         loc = "Work From Home";
                     }
-                    else{
+                    else {
                         loc = "<span>" + location + "</span>";
                     }
 
@@ -739,27 +766,27 @@ function onChecked() {
                         </div>
                         </div>
                         `;
-                        internships_div.appendChild(inside_div);
-                }    
+                    internships_div.appendChild(inside_div);
+                }
             });
             Product_count = 0;
         }
-        else{
+        else {
             internships_div.innerHTML = null;
-            productData.forEach(function(word) {
-                if( word.stipend >= rangeValue){
+            productData.forEach(function (word) {
+                if (word.stipend >= rangeValue) {
                     totalInternships_div.innerHTML = `<span>${++Product_count} Internships</span>`;
-                    let {_id, id, role , company_name , location , company_icon, work_form_home,internships_with_job ,parttime, startDate , duration, stipend, applyby, job_type} = word;
+                    let { _id, id, role, company_name, location, company_icon, work_form_home, internships_with_job, parttime, startDate, duration, stipend, applyby, job_type } = word;
                     let inside_div = document.createElement('div');
                     let x = "";
                     for (let i = 0; i < job_type.length; i++) {
-                        x += "<div class='button_container1'>" + job_type[i] +"</div>";
+                        x += "<div class='button_container1'>" + job_type[i] + "</div>";
                     }
                     let loc = "";
-                    if(work_form_home === "Yes"){
+                    if (work_form_home === "Yes") {
                         loc = "Work From Home";
                     }
-                    else{
+                    else {
                         loc = "<span>" + location + "</span>";
                     }
 
@@ -806,51 +833,52 @@ function onChecked() {
                         </div>
                         </div>
                         `;
-                        internships_div.appendChild(inside_div);
-                }    
+                    internships_div.appendChild(inside_div);
+                }
             });
             Product_count = 0;
         }
-}
-
-//create uncheckall function
-function clearFilter() {
-    // display_internships(data);
-    // searchInternships();
-    onChecked();
-    let inputs = document.querySelectorAll('#messageCheckbox');
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].checked = false;
-    }
-    document.getElementById("myRange").value = "0";
-    display_internships(productData);
-}
-
- // Display internships
- function display_internships(array){
-
-    internships_div.innerHTML = null;
-    totalInternships_div.innerHTML = `<span>${array.length} Internships</span>`;
-
-    array.forEach( element => {
-
-    let {_id, id, role , company_name , company_icon, location , work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
-
-    let inside_div = document.createElement('div');
-
-    let x = "";
-    for (let i = 0; i < job_type.length; i++) {
-        x += "<div class='button_container1'>" + job_type[i] +"</div>";
-    }
-    let loc = "";
-    if(work_form_home === "Yes"){
-        loc = "Work From Home";
-    }
-    else{
-        loc = "<span>" + location + "</span>";
     }
 
-    inside_div.innerHTML = `
+    //create uncheckall function
+    function clearFilter() {
+        // display_internships(data);
+        // searchInternships();
+        onChecked();
+        let inputs = document.querySelectorAll('#messageCheckbox');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].checked = false;
+        }
+        document.getElementById("myRange").value = "0";
+        display_internships(productData);
+        window.location.href = "/internships";
+    }
+
+    // Display internships
+    function display_internships(array) {
+
+        internships_div.innerHTML = null;
+        totalInternships_div.innerHTML = `<span>${array.length} Internships</span>`;
+
+        array.forEach(element => {
+
+            let { _id, id, role, company_name, company_icon, location, work_form_home, parttime, startDate, duration, stipend, applyby, job_type } = element;
+
+            let inside_div = document.createElement('div');
+
+            let x = "";
+            for (let i = 0; i < job_type.length; i++) {
+                x += "<div class='button_container1'>" + job_type[i] + "</div>";
+            }
+            let loc = "";
+            if (work_form_home === "Yes") {
+                loc = "Work From Home";
+            }
+            else {
+                loc = "<span>" + location + "</span>";
+            }
+
+            inside_div.innerHTML = `
     <div class="list_container1">
         <div class="individual_internship_header">
             <div class="company">
@@ -893,54 +921,54 @@ function clearFilter() {
         </div>
         </div>
             `;
-    internships_div.appendChild(inside_div);
-    });
+            internships_div.appendChild(inside_div);
+        });
     }
 
 
     let roleCount = 0;
-    let locationCount = 0;   
+    let locationCount = 0;
     // Display Search Internships
 
-function display_search(){
-    internships_div.innerHTML = null;
+    function display_search() {
+        internships_div.innerHTML = null;
 
-    // unchecking all Input
-    let inputs = document.querySelectorAll('#messageCheckbox');
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].checked = false;
-    }
-    // set input range Zero
-    document.getElementById("myRange").value = "0";
-    let search_id = document.getElementById('search_id').value;
-    if(search_id == ""){
-        alert("Please Enter something to search");
-        // searchInternships();
-        display_internships(productData);
-    }
-    else{
+        // unchecking all Input
+        let inputs = document.querySelectorAll('#messageCheckbox');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].checked = false;
+        }
+        // set input range Zero
+        document.getElementById("myRange").value = "0";
+        let search_id = document.getElementById('search_id').value;
+        if (search_id == "") {
+            alert("Please Enter something to search");
+            // searchInternships();
+            display_internships(productData);
+        }
+        else {
 
-    totalInternships_div.innerHTML = `<span>${productData.length} Products</span>`;
-    productData.forEach( element => {
-        if(element.role == search_id || element.company_name == search_id ) {
-            totalInternships_div.innerHTML = `<span>${++roleCount} ${search_id}/Internships</span>`;
+            totalInternships_div.innerHTML = `<span>${productData.length} Products</span>`;
+            productData.forEach(element => {
+                if (element.role == search_id || element.company_name == search_id) {
+                    totalInternships_div.innerHTML = `<span>${++roleCount} ${search_id}/Internships</span>`;
 
-            let {_id, id, role , company_name , location , work_form_home , company_icon, parttime, startDate , duration, stipend, applyby, job_type} = element;
+                    let { _id, id, role, company_name, location, work_form_home, company_icon, parttime, startDate, duration, stipend, applyby, job_type } = element;
 
-            let inside_div = document.createElement('div');
-            let x = "";
-            for (let i = 0; i < job_type.length; i++) {
-                x += "<div class='button_container1'>" + job_type[i] +"</div>";
-            }
-            let loc = "";
-            if(work_form_home === "Yes"){
-                loc = "Work From Home";
-            }
-            else{
-                loc = "<span>" + location + "</span>";
-            }
+                    let inside_div = document.createElement('div');
+                    let x = "";
+                    for (let i = 0; i < job_type.length; i++) {
+                        x += "<div class='button_container1'>" + job_type[i] + "</div>";
+                    }
+                    let loc = "";
+                    if (work_form_home === "Yes") {
+                        loc = "Work From Home";
+                    }
+                    else {
+                        loc = "<span>" + location + "</span>";
+                    }
 
-            inside_div.innerHTML = `
+                    inside_div.innerHTML = `
             <div class="list_container1">
                 <div class="individual_internship_header">
                     <div class="company">
@@ -983,29 +1011,29 @@ function display_search(){
                 </div>
                 </div>
                     `;
-            internships_div.appendChild(inside_div);
-        
-        }else{
-            
-            element.location.forEach( loc =>{
-                
-                if(search_id == loc ){
-                    totalInternships_div.innerHTML = `<span>${++locationCount} ${search_id}/Internships</span>`;
-                    let {_id, id, role , company_name , location , company_icon, work_form_home , parttime, startDate , duration, stipend, applyby, job_type} = element;
-                    let inside_div = document.createElement('div');
-                    let x = "";
-                    for (let i = 0; i < job_type.length; i++) {
-                        x += "<div class='button_container1'>" + job_type[i] +"</div>";
-                    }
-                    let loc = "";
-                    if(work_form_home === "Yes"){
-                        loc = "Work From Home";
-                    }
-                    else{
-                        loc = "<span>" + location + "</span>";
-                    }
-                    
-                    inside_div.innerHTML = `
+                    internships_div.appendChild(inside_div);
+
+                } else {
+
+                    element.location.forEach(loc => {
+
+                        if (search_id == loc) {
+                            totalInternships_div.innerHTML = `<span>${++locationCount} ${search_id}/Internships</span>`;
+                            let { _id, id, role, company_name, location, company_icon, work_form_home, parttime, startDate, duration, stipend, applyby, job_type } = element;
+                            let inside_div = document.createElement('div');
+                            let x = "";
+                            for (let i = 0; i < job_type.length; i++) {
+                                x += "<div class='button_container1'>" + job_type[i] + "</div>";
+                            }
+                            let loc = "";
+                            if (work_form_home === "Yes") {
+                                loc = "Work From Home";
+                            }
+                            else {
+                                loc = "<span>" + location + "</span>";
+                            }
+
+                            inside_div.innerHTML = `
                     <div class="list_container1">
                         <div class="individual_internship_header">
                             <div class="company">
@@ -1048,15 +1076,15 @@ function display_search(){
                         </div>
                         </div>
                             `;
-                    internships_div.appendChild(inside_div);
-                     
+                            internships_div.appendChild(inside_div);
+
+                        }
+                    });
                 }
             });
+
+            locationCount = 0;
+            roleCount = 0;
         }
-    });
-    
-    locationCount = 0;
-    roleCount = 0;
     }
-}
 </script>

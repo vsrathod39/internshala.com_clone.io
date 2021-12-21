@@ -1,5 +1,5 @@
 function navbar() {
-  return `
+    return `
         <section id="brandLogo">
             <img id="huberbergMenu" src="https://internshala.com/static/images/icons/hamburger-menu-key-new.svg" alt="menu">
             <img id="intershalaLogo" src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="brandLogo">
@@ -70,7 +70,7 @@ function navbar() {
                 </li>
             </ul>
             <ul>
-                <li><a href="http://localhost:2345/internships">Fressher Jobs</a></li>
+                <li><a href="http://localhost:2345/internships">Fresher Jobs</a></li>
             </ul>
             <ul id="bookmark_icon">
                 <li><img src="https://img.icons8.com/fluency-systems-regular/24/000000/bookmark-ribbon--v2.png"/></li>
@@ -103,7 +103,7 @@ function navbar() {
         </section>`;
 }
 
-function huberberg(){
+function huberberg() {
     return `<div id="hamburger_useer_details">
         <div id="hamburger_post_login_views">
             <p id="nameLogo_icon"></p>

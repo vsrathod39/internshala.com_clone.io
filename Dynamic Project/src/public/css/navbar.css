@@ -242,11 +242,11 @@ nav {
   align-items: center;
   gap: 5px;
 }
-a,
-a:hover,
-a:visited,
-a:active,
-a:link {
+#services a,
+#services a:hover,
+#services a:visited,
+#services a:active,
+#services a:link {
   color: inherit;
   font-weight: inherit;
   font-size: inherit;
