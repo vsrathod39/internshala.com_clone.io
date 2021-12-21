@@ -1,62 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internshala | Summer Internship 2021</title>
-    <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
-    <link  rel='stylesheet' href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'>
-    <link rel="stylesheet" href="../../public/css/navbar.css">
-    <link rel="stylesheet" href="../../public/css/postLoginPage.css">
-    <link rel="stylesheet" href="../../public/css/footer.css">
-    <link rel="stylesheet" href="../../public/css/login.css">
-</head>
-<body>
-    <!-- Navbar  -->
-    <div id="navBar">
-        
-    </div>
-    <nav>
-        
-    </nav>
-    <!-- Post login status -->
-    <div id="container">
-        <img id="picImg" src="https://internshala.com/uploads/cms_banners/Desktop%20dashboard%20banner_454570.png" alt="">
-        <h2 class="textCenter">My applications</h2>
-        <img id="folder" src="https://internshala.com/static/images/student/dashboard/empty_folder.svg"/>
-        <p id="count" class="textCenter">No recent applications</p>
-        <p class="textCenter"><span>View old applications<i class='bx bx-right-arrow-alt'></i></span></p>
-        <h5 class="textCenter">Still looking for internships?</h5>
-        <button class="textCenter">Browse jobs</button>
-    </div>
-    <!-- Footer -->
-    <div id="footer">   
 
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internshala | Summer Internship 2021</title>
+
+  <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'>
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/postLoginPage.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+  <!-- Navbar  -->
+  <div id="navBar"></div>
+  <nav></nav>
+  <!-- Post login status -->
+  <div id="container">
+    <img id="picImg" src="https://internshala.com/uploads/cms_banners/Desktop%20dashboard%20banner_454570.png" alt="" />
+    <h2 class="textCenter">My applications</h2>
+    <img id="folder" src="https://internshala.com/static/images/student/dashboard/empty_folder.svg" />
+    <p id="count" class="textCenter">No recent applications</p>
+    <p class="textCenter">
+      <span>View old applications<i class="bx bx-right-arrow-alt"></i></span>
+    </p>
+    <h5 class="textCenter">Still looking for internships?</h5>
+    <button class="textCenter">Browse jobs</button>
+  </div>
+  <!-- Footer -->
+  <div id="footer">
+  </div>
+  <p id="localToken" style="display: none;"><%=token%></p>
+  <p id="logedin_user" style="display: none;"><%=user%></p>
 </body>
 </html>
+<script src="/js/navbar.js"></script>
+<script src="/js/footer.js"></script>
+<script src="/js/postLoginPage.js"></script>
+<script src="/js/jwt.js"></script>
 <script type="module">
-    // nav-bar modal
-    import {navbar, huberberg} from "../components/navbar.js";
-    document.getElementsByTagName('nav')[0].innerHTML =  navbar();
+  let token = document.getElementById("localToken").innerText;
+  let user = document.getElementById("logedin_user").innerText;
+  token = `Bearer ${token}`;
+  localStorage.setItem("bearerToken", token);
+  localStorage.setItem("logedin_user", user);
+  // nav-bar modal
+  document.getElementsByTagName('nav')[0].innerHTML = navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
-    function showHuberberg(){
-        document.getElementById('navBar').innerHTML =  huberberg();
-        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
-    }
-    function hidehuberberg(){
+    function showHuberberg() {
+        document.getElementById("navBar").innerHTML = huberberg(); // navbar's hamburger icon, shows mobile view menu
+        document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody"); // will fixed body after hamburger click
+        // login modal for hamburger mobile view menu
+            document.getElementById("hamburger_login").onclick = () => {
+            document.getElementById("login_modal_popup").style.display = "block";
+            document.getElementById("login_modal_popup").innerHTML = loginModal();
+            document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
+        };
+        login_status_check();
+    };
+    function hidehuberberg() {
         document.getElementById('navBar').innerHTML = null;
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
+    // login modal non-mobile view menu
+    document.getElementById("logIn_button").onclick = () => {
+        document.getElementById("login_modal_popup").style.display = "block";
+        document.getElementById("login_modal_popup").innerHTML = loginModal();
+        document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
+        document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
+        core();
+    };
+    // checking the loged-in status of user
+    document.addEventListener("DOMContentLoaded", () => {
+        desktop_login_status_check();
+    });
+    function loginWithGoogle() {
+        window.location.href = "http://localhost:2345/auth/google";
+     };
     // footer modal
-    import {footer} from "../components/footer.js";
     let foot = document.getElementById("footer");
-    foot.innerHTML = footer();
+        foot.innerHTML = footer();
+    // redirecting to register_student page onclick navBar button
+    document.getElementById("register_as_student").onclick = () => {
+        window.location.href = "/register_student";
+    };
+    // redirecting to register_employer page onclick navBar button
+    document.getElementById("register_as_employer").onclick = () => {
+        window.location.href = "/register_employer";
+    };
     // return to homepage onclick brand logo
     document.getElementById("intershalaLogo").onclick = () => {
-        window.location.href = "../homepage.html";
-    }
+        window.location.href = "/";
+    };
 </script>
-<script src="../../public/js/postLoginPage.js"></script>
+
