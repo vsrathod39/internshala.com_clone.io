@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internshala | Summer Internship 2021</title>
+
     <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
     <link  rel='stylesheet' href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'>
     <link rel="stylesheet" href="/css/navbar.css">
@@ -14,25 +15,29 @@
 </head>
 <body>
     <!-- Navbar  -->
-    <div id="navBar">
-        
-    </div>
-    <nav>
-        
-    </nav>
+    <div id="navBar"></div>
+    <nav></nav>
     <!-- Post login status -->
     <div id="container">
-        <img id="picImg" src="https://internshala.com/uploads/cms_banners/Desktop%20dashboard%20banner_454570.png" alt="">
-        <h2 class="textCenter">My applications</h2>
-        <img id="folder" src="https://internshala.com/static/images/student/dashboard/empty_folder.svg"/>
-        <p id="count" class="textCenter">No recent applications</p>
-        <p class="textCenter"><span>View old applications<i class='bx bx-right-arrow-alt'></i></span></p>
-        <h5 class="textCenter">Still looking for internships?</h5>
-        <button class="textCenter">Browse jobs</button>
+      <img
+        id="picImg"
+        src="https://internshala.com/uploads/cms_banners/Desktop%20dashboard%20banner_454570.png"
+        alt=""
+      />
+      <h2 class="textCenter">My applications</h2>
+      <img
+        id="folder"
+        src="https://internshala.com/static/images/student/dashboard/empty_folder.svg"
+      />
+      <p id="count" class="textCenter">No recent applications</p>
+      <p class="textCenter">
+        <span>View old applications<i class="bx bx-right-arrow-alt"></i></span>
+      </p>
+      <h5 class="textCenter">Still looking for internships?</h5>
+      <button class="textCenter">Browse jobs</button>
     </div>
     <!-- Footer -->
     <div id="footer">   
-
     </div>
     <p id="localToken" style="display: none;"><%=token%></p>
 </body>
@@ -42,6 +47,7 @@
 <script src="/js/footer.js"></script>
 
 <script type="module">
+
     let token = document.getElementById("localToken").innerText;
     token = `Bearer ${token}`;
     localStorage.setItem("bearerToken", token);
