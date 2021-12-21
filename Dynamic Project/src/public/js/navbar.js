@@ -70,25 +70,22 @@ function navbar() {
                 </li>
             </ul>
             <ul>
-                <li>Fresher Jobs</li>
+                <li><a href="http://localhost:2345/internships">Fressher Jobs</a></li>
             </ul>
             <ul id="bookmark_icon">
-                <li><img src="https://img.icons8.com/fluency-systems-regular/22/000000/bookmark-ribbon--v2.png"/></li>
+                <li><img src="https://img.icons8.com/fluency-systems-regular/24/000000/bookmark-ribbon--v2.png"/></li>
             </ul>
             <ul id="message_icon">
-                <li><img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/28/000000/external-message-chat-flatart-icons-outline-flatarticons-5.png"/></li>
+                <li><img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/24/000000/external-message-chat-flatart-icons-outline-flatarticons-5.png"/></li>
             </ul>
-            
             <ul id="post_login_views">
                 <li>
                     <span id="nameLogo_icon"></span>
                 </li>
+            </ul>
+            <ul id="logout_icon">
                 <li>
-                    <img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow">
-                    <ul>
-                        <li class=" navbar_ul_ul_ul">Logout</li>
-                        <li class=" navbar_ul_ul_ul">Help Center</li>
-                    </ul>
+                    <img src="https://img.icons8.com/small/24/000000/logout-rounded-up.png"/>
                 </li>
             </ul>
             <ul id="login_btn">
@@ -98,7 +95,7 @@ function navbar() {
                 <li>
                     <span id="register_button">Register<img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
                     <ul>
-                        <li class=" navbar_ul_ul_ul" id="register_as_student">As a student</li>
+                        <li class=" navbar_ul_ul_ul" id="register_as_student"><a href="http://localhost:2345/register?role=student">As a student</a></li>
                         <li class=" navbar_ul_ul_ul" id="register_as_employer">As an employer</li>
                     </ul>
                 </li>
@@ -106,17 +103,14 @@ function navbar() {
         </section>`;
 }
 
-// function huberberg() {
-//   return `<div id="huberberg">
-
 function huberberg(){
     return `<div id="hamburger_useer_details">
-        <div>
-            <p id="chal">V</p>
+        <div id="hamburger_post_login_views">
+            <p id="nameLogo_icon"></p>
         </div>
-        <div>
-            <p>Vikas</p>
-            <p>vsrathod39@gmail.com</p>
+        <div id="hamburger_user_personal_info">
+            <p id="hamburger_user_name"></p>
+            <p id="hamburger_user_email"></p>
         </div>
     </div>
     <div id="hamburger_rating">
@@ -139,14 +133,15 @@ function huberberg(){
         <li>Internships</li>
         <li>Online Trainings<span class="hotText">OFFER</span></li>
         <li><a href="http://localhost:2345/internships?work_form_home=work_form_home">WFH Internships</a></li>
-        <li>Fressher Jobs</li>
+        <li><a href="http://localhost:2345/internships">Fressher Jobs</a></li>
         <li>Contact US</li>
     </ul>
-    <div></div>
-    <ul id="register_btn">
+    <ul id="hamburger_register_btn">
         <li>Register - As a Student</li>
         <li>Register - As an Employer</li>
         <li id="hamburger_login">Login</li>
+    </ul>
+    <ul>
         <li id="hamburger_logout">Logout</li>
     </ul>
 
