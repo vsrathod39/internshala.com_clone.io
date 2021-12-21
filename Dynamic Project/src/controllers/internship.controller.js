@@ -10,7 +10,7 @@ router.get("/", async function (req, res) {
   return res.render("pages/homepage");
 });
 
-router.get("/pages/resume", authenticate, async function (req, res) {
+router.get("/pages/resume", async function (req, res) {
   return res.render("pages/resume");
 });
 
@@ -19,7 +19,7 @@ router.get("/register_employer", async function (req, res) {
 });
 
 router.get("/register_student", async function (req, res) {
-  return res.render("pages/register_student");
+  return res.render("pages/register_student", { error: "" });
 });
 
 

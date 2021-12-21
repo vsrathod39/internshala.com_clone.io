@@ -51,23 +51,23 @@
         <div class="textCenter" id="opt">
           <p>OR</p>
         </div>
-        <form onsubmit="signup(event)">
+        <form action="/register" method="post">
           <div class="details1">
             <label>Email</label>
-            <input placeholder="vivek@example.com" />
+            <input placeholder="vivek@example.com" name="email" />
           </div>
           <div class="details1">
             <label>Password</label>
-            <input placeholder="Must be at least 6 characters" type="password" />
+            <input placeholder="Must be at least 6 characters" type="password" name="password" />
           </div>
           <div id="name">
             <div class="details1">
               <label>First Name</label>
-              <input placeholder="Vivek" />
+              <input placeholder="Vivek" name="first_name" />
             </div>
             <div class="details1">
               <label>Last Name</label>
-              <input placeholder="Sharma" />
+              <input placeholder="Sharma" name="last_name" />
             </div>
           </div>
           <p id="tc">
@@ -81,6 +81,7 @@
   </div>
   <!-- Footer -->
   <div id="footer"></div>
+  <p id="yy" style="display:none"><%= error %></p>
 </body>
 
 </html>
@@ -90,7 +91,12 @@
 <script src="/js/register_student.js"></script>
 <script src="/js/footer.js"></script>
 <script type="module">
-
+  let error = document.getElementById("yy").innerText;
+  if (error != "") {
+    error = JSON.parse(error).join("\n");
+    alert(error);
+    window.location.href = "/register_student"
+  }
   // nav bar
 
   document.getElementsByTagName('nav')[0].innerHTML = navbar();

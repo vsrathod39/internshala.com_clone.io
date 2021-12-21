@@ -10,6 +10,6 @@ document.getElementById("application_status_button").onclick = () => {
   parrent.append(div);
 
   setTimeout(() => {
-    window.location.href = "/login";
+    window.location.href = "/";
   }, 3000);
 };

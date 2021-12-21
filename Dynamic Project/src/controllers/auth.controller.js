@@ -11,19 +11,18 @@ const register = async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         const Errors = errors.array().map((err) => {
-            return (`{${err.param} : ${err.msg}}`);
+            return (`${err.msg}`);
         })
-        return res.send(Errors);
+        return res.render("pages/register_student", { error: JSON.stringify(Errors) });
     }
     try {
         let user = await User.findOne({ email: req.body.email }).lean().exec();
         if (user) {
-            return res.send({ error: "User already exist" });
+            return res.render("pages/register_student", { error: "User already exist" });
         }
         user = await User.create(req.body);
         const token = jwt.sign({ user: user }, process.env.TOKEN_KEY);
-
-        res.render("pages/postLoginPage", { token: JSON.stringify(token), user: JSON.stringify(user)});
+        res.render("pages/postLoginPage", { token: JSON.stringify(token), user: JSON.stringify(user) });
     } catch (e) {
         res.status(500).send({ status: "failed" });
     }
@@ -40,7 +39,7 @@ const login = async (req, res) => {
             return res.send({ error: "Please provide a correct email and password" });
         }
         const token = jwt.sign({ user: user }, process.env.TOKEN_KEY);
-        res.render("pages/postLoginPage", { token: JSON.stringify(token), user: JSON.stringify(user)});
+        res.render("pages/postLoginPage", { token: JSON.stringify(token), user: JSON.stringify(user) });
     } catch (e) {
         res.status(500).send({ status: "failed", message: e.message });
     }
