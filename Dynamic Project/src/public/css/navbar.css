@@ -252,6 +252,16 @@ nav {
   font-size: inherit;
   text-decoration: none;
 }
+#huberberg a,
+#huberberg a:hover,
+#huberberg a:visited,
+#huberberg a:active,
+#huberberg a:link {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
 
 @media (max-width: 940px) {
   #brandLogo img:nth-child(1) {

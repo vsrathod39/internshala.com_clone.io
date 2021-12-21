@@ -123,46 +123,55 @@
 <script src="/js/login_modal.js"></script>
 <script src="/js/login.js"></script>
 <script src="/js/register_employer.js"></script>
+<script src="/js/jwt.js"></script>
 <script type="module">
-  // nav bar
-  //  import {navbar, huberberg} from "../components/navbar.js";
+  // nav-bar modal
   document.getElementsByTagName('nav')[0].innerHTML = navbar();
-  document.getElementById('navBar').addEventListener('click', hidehuberberg);
-  document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
-
-  function showHuberberg() {
-    document.getElementById('navBar').innerHTML = huberberg();
-    document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
-  }
-  function hidehuberberg() {
-    document.getElementById('navBar').innerHTML = null;
-    document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
-  }
-  function loginWithGoogle() {
-    console.log("go");
-    window.location.href = "http://localhost:2345/auth/google";
-  }
-  // login modal
-  // import loginModal from "../components/login_modal.js";
-  // import {core} from "../scripts/login.js";
-  document.getElementById("logIn_button").onclick = () => {
-    document.getElementById('login_modal_popup').style.display = "block";
-    document.getElementById('login_modal_popup').innerHTML = loginModal();
-    document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
-    document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
-    // core
-    core();
-  }
-  // register as student page change
-  document.getElementById("register_as_student").onclick = () => {
-    window.location.href = "/register_students";
-  }
-  // register as employer page change
-  document.getElementById("register_as_employer").onclick = () => {
-    window.location.href = "/register_employer";
-  }
-  // return to homepage onclick brand logo
-  document.getElementById("intershalaLogo").onclick = () => {
-    window.location.href = "/";
-  }
+    document.getElementById('navBar').addEventListener('click', hidehuberberg);
+    document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+    function showHuberberg() {
+        document.getElementById("navBar").innerHTML = huberberg(); // navbar's hamburger icon, shows mobile view menu
+        document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody"); // will fixed body after hamburger click
+        // login modal for hamburger mobile view menu
+            document.getElementById("hamburger_login").onclick = () => {
+            document.getElementById("login_modal_popup").style.display = "block";
+            document.getElementById("login_modal_popup").innerHTML = loginModal();
+            document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
+        };
+        login_status_check();
+    };
+    function hidehuberberg() {
+        document.getElementById('navBar').innerHTML = null;
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    }
+    // login modal non-mobile view menu
+    document.getElementById("logIn_button").onclick = () => {
+        document.getElementById("login_modal_popup").style.display = "block";
+        document.getElementById("login_modal_popup").innerHTML = loginModal();
+        document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
+        document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
+        core();
+    };
+    // checking the loged-in status of user
+    document.addEventListener("DOMContentLoaded", () => {
+        desktop_login_status_check();
+    });
+    function loginWithGoogle() {
+        window.location.href = "http://localhost:2345/auth/google";
+     };
+    // footer modal
+    let foot = document.getElementById("footer");
+        foot.innerHTML = footer();
+    // redirecting to register_student page onclick navBar button
+    document.getElementById("register_as_student").onclick = () => {
+        window.location.href = "/register_student";
+    };
+    // redirecting to register_employer page onclick navBar button
+    document.getElementById("register_as_employer").onclick = () => {
+        window.location.href = "/register_employer";
+    };
+    // return to homepage onclick brand logo
+    document.getElementById("intershalaLogo").onclick = () => {
+        window.location.href = "/";
+    };
 </script>

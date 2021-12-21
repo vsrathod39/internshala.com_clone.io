@@ -368,51 +368,58 @@
 <script src="/js/login_modal.js"></script>
 <script src="/js/login.js"></script>
 <script src="/js/footer.js"></script>
-
+<script src="/js/jwt.js"></script>
 <script type="module">
     // nav-bar modal
-
-
     document.getElementsByTagName('nav')[0].innerHTML = navbar();
     document.getElementById('navBar').addEventListener('click', hidehuberberg);
     document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
-
     function showHuberberg() {
-        document.getElementById('navBar').innerHTML = huberberg();
-        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
-    }
-
+        document.getElementById("navBar").innerHTML = huberberg(); // navbar's hamburger icon, shows mobile view menu
+        document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody"); // will fixed body after hamburger click
+        // login modal for hamburger mobile view menu
+            document.getElementById("hamburger_login").onclick = () => {
+            document.getElementById("login_modal_popup").style.display = "block";
+            document.getElementById("login_modal_popup").innerHTML = loginModal();
+            document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
+        };
+        login_status_check();
+    };
     function hidehuberberg() {
         document.getElementById('navBar').innerHTML = null;
         document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
     }
-
-    // login modal
+    // login modal non-mobile view menu
     document.getElementById("logIn_button").onclick = () => {
-        document.getElementById('login_modal_popup').style.display = "block";
-        document.getElementById('login_modal_popup').innerHTML = loginModal();
-        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
-        // core
+        document.getElementById("login_modal_popup").style.display = "block";
+        document.getElementById("login_modal_popup").innerHTML = loginModal();
+        document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
+        document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
         core();
-    }
-
+    };
+    // checking the loged-in status of user
+    document.addEventListener("DOMContentLoaded", () => {
+        desktop_login_status_check();
+    });
+    function loginWithGoogle() {
+        window.location.href = "http://localhost:2345/auth/google";
+     };
     // footer modal
     let foot = document.getElementById("footer");
-    foot.innerHTML = footer();
-    // register as student page change
+        foot.innerHTML = footer();
+    // redirecting to register_student page onclick navBar button
     document.getElementById("register_as_student").onclick = () => {
         window.location.href = "/register_student";
-    }
-    // register as employer page change
+    };
+    // redirecting to register_employer page onclick navBar button
     document.getElementById("register_as_employer").onclick = () => {
         window.location.href = "/register_employer";
-    }
+    };
     // return to homepage onclick brand logo
     document.getElementById("intershalaLogo").onclick = () => {
         window.location.href = "/";
-    }
+    };
 </script>
-
 <script>
 
     let totalInternships_div = document.getElementById('total-internships');

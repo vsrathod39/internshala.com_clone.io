@@ -137,8 +137,8 @@ function huberberg() {
         <li>Contact US</li>
     </ul>
     <ul id="hamburger_register_btn">
-        <li>Register - As a Student</li>
-        <li>Register - As an Employer</li>
+        <li><a href="http://localhost:2345/register_student">Register - As a Student</a></li>
+        <li><a href="http://localhost:2345/register_employer">Register - As an Employer</a></li>
         <li id="hamburger_login">Login</li>
     </ul>
     <ul>
