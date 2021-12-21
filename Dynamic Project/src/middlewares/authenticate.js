@@ -3,7 +3,7 @@ var jwt = require('jsonwebtoken');
 require("dotenv").config();
 
 const authenticate = (req, res, next) => {
-    const bearerToken = req?.headers?.authorization;
+    const bearerToken = JSON.parse(localStorage.getItem("bearerToken"));
     if(!bearerToken)
     {
         return res.status(400).send("Please provide a valid token");

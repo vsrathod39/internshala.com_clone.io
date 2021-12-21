@@ -1,6 +1,22 @@
 let button = document.getElementsByTagName("button");
 button[0].onclick = function () {
-  window.location.href = "/pages/resume";
+  if(localStorage.getItem("bearerToken"))
+  {
+    console.log(localStorage.getItem("bearerToken"));
+    window.location.href = "/pages/resume";
+  }
+  else
+  {
+      document.getElementById("login_modal_popup").style.display = "block";
+      document.getElementById("login_modal_popup").innerHTML = loginModal();
+      document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
+      document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
+      core();
+      function loginWithGoogle() {
+      console.log("go");
+      window.location.href = "http://localhost:2345/auth/google";
+    }
+  }
 };
 
 // const internshipsDetails = document.getElementById("internshipsDetails");

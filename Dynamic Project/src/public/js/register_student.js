@@ -37,41 +37,17 @@ function restoreBorderC(ev) {
 }
 
 loginMsg.onclick = function () {
-  window.location.href = "/login";
+  // login modal non-mobile view menu
+    document.getElementById("login_modal_popup").style.display = "block";
+    document.getElementById("login_modal_popup").innerHTML = loginModal();
+    document.getElementsByTagName("body")[0].setAttribute("id", "fixedBody");
+    document.getElementById("loginGoogle").addEventListener("click", loginWithGoogle);
+    core();
 };
 
-async function signup(event) {
-  event.preventDefault();
-  let num = 1000000000;
-  num = (num + Math.floor(Math.random() * 10000)).toString();
-  let user_data = {
-    name: details[2].value + details[3].value,
-    email: details[0].value,
-    password: details[1].value,
-    username: details[0].value,
-    mobile: num,
-    description: "Masai wale bhaiya",
-  };
-
-  user_data = JSON.stringify(user_data);
-
-  let res = await fetch(
-    "https://masai-api-mocker.herokuapp.com/auth/register",
-    {
-      method: "POST",
-      body: user_data,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-  let data = await res.json();
-
-  alert(data.message);
-  console.log(data);
-
-  details[0].value = "";
-  details[1].value = "";
-  details[2].value = "";
-  details[3].value = "";
+function loginWithGoogle() {
+  window.location.href = "http://localhost:2345/auth/google";
 }
+
+
+

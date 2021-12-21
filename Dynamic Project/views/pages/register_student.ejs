@@ -96,6 +96,7 @@
   document.getElementsByTagName('nav')[0].innerHTML = navbar();
   document.getElementById('navBar').addEventListener('click', hidehuberberg);
   document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+  document.getElementById("signGoogle").addEventListener("click", loginWithGoogle);
   function showHuberberg() {
     document.getElementById('navBar').innerHTML = huberberg();
     document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');

@@ -6,11 +6,6 @@ const User = require("../models/user.model");
 const router = express.Router();
 const authenticate = require("../middlewares/authenticate");
 
-
-router.get("/register", async function (req, res) {
-  return res.render("pages/postLoginPage");
-});
-
 router.get("/", async function (req, res) {
   return res.render("pages/homepage");
 });
@@ -23,14 +18,15 @@ router.get("/register_employer", async function (req, res) {
   return res.render("pages/register_employer");
 });
 
+router.get("/register_student", async function (req, res) {
+  return res.render("pages/register_student");
+});
+
 
 router.get("/searchSec", async function (req, res) {
   return res.render("pages/searchSec");
 });
 
-router.get("/register_student", async function (req, res) {
-  return res.render("pages/register_student");
-});
 
 router.get('/internships', async function (req, res) {
 

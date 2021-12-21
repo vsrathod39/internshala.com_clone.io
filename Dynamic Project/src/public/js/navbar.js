@@ -95,8 +95,8 @@ function navbar() {
                 <li>
                     <span id="register_button">Register<img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
                     <ul>
-                        <li class=" navbar_ul_ul_ul" id="register_as_student"><a href="http://localhost:2345/register?role=student">As a student</a></li>
-                        <li class=" navbar_ul_ul_ul" id="register_as_employer">As an employer</li>
+                        <li class=" navbar_ul_ul_ul" id="register_as_student"><a href="http://localhost:2345/register_student">As a student</a></li>
+                        <li class=" navbar_ul_ul_ul" id="register_as_employer"><a href="http://localhost:2345/register_employer">As an employer</a></li>
                     </ul>
                 </li>
             </ul>

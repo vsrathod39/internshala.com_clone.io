@@ -81,30 +81,4 @@ function core() {
   document.getElementById("logInForm").onsubmit = () => {
     login(event);
   };
-  async function login(event) {
-    event.preventDefault();
-    let user_data = {
-      username: detail[0].value,
-      password: detail[1].value,
-    };
-
-    console.log(detail[0].value);
-    console.log(detail[1].value);
-
-    let data_send = JSON.stringify(user_data);
-
-    let res = await fetch("https://masai-api-mocker.herokuapp.com/auth/login", {
-      method: "POST",
-      body: data_send,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    let data = await res.json();
-
-    if (!data.error) {
-      window.location.href = "/login";
-    } else alert("Invalid credentials");
-  }
 }
-function exp2() {}
