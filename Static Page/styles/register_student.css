@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Inter var',sans-serif;
+}
+#regStd {
+    display: flex;
+    justify-content: center;
+    background-color: #f9feff;
+}
+#poster {
+    flex-basis: 63%;
+    background-image: url("https://internshala.com/static/images/registration/student/background-768.png");
+    background-size: 950px;
+    background-repeat: no-repeat;
+}
+#signupSec {
+    flex-basis: 35%;
+}
+#poster > div {
+    margin: 4.5vh 4.3vw;
+}
+#poster img {
+    width: 4%;
+}
+#poster > div > div:nth-child(1) {
+    font-size: 3.5vw;
+    font-weight: 700;
+}
+#poster > div > div:nth-child(1) > span {
+    background-image: url("https://internshala.com/static/images/registration/student/brush_stroke.svg");
+    color: white;
+    background-size: cover;
+    padding: 5px;
+}
+.cat {
+    margin-top: 16px;
+}
+img {
+    vertical-align: middle;
+}
+h4 {
+    display: inline;
+    font-weight: 600;
+    color: #333;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 23px 0;
+}
+#signupDiv {
+    background-color: white;
+    z-index: 2;
+    width: 75%;
+    margin: auto;
+    margin-top: 4.5vh;
+    padding: 16px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.textCenter {
+    text-align: center;
+}
+#signupDiv img {
+    width: 16px;
+}
+#signupDiv h4 {
+    color: #484848;
+}
+#horStroke {
+    border-bottom: 2px solid #dee2e6;
+    margin-top: 3.5vh;
+}
+#signGoogle {
+    padding: 10px 0;
+    border: 1px solid #eeeeee;
+    cursor: pointer;
+}
+#signGoogle img {
+    vertical-align: top;
+}
+#opt {
+    position: relative;
+    bottom: 1.8vh;
+    margin-bottom: -10px;
+}
+#opt p {
+    background-color: white;
+    display: inline;
+    padding: 0 0.8vw;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+}
+.details1 input {
+    width: 95%;
+    height: 6vh;
+    padding-left: 3%;
+    margin-top: 1vh;
+}
+input {
+    outline: none;
+    border: 1px solid #dddddd;
+}
+#name {
+    display: flex;
+    justify-content: space-between;
+}
+#name input {
+    width: 91%;
+    padding-left: 6%;
+}
+#name > div {
+    flex-basis: 48%;
+}
+.details1 {
+    margin-top: 3vh;
+}
+button {
+    width: 100%;
+    background-color: #008bdc;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+::placeholder {
+    color: #998aa8;
+}
+#tc {
+    font-size: 14px;
+    line-height: 19px;
+    color: #484848;
+    font-weight: 400;
+    margin: 20px 0;
+}
+#signupDiv span {
+    color: #186bc2;
+    font-weight: 500;
+    line-height: 14px;
+    cursor: pointer;
+}
+#msg_regStudent {
+    margin: 0 20%;
+}
+
+@media(max-width: 940px) {
+    #regStd {
+        flex-direction: column;
+        height: 130vh;
+    }
+    #poster {
+        flex-basis: 45%;
+        width: 100%;
+        background-image: url("https://internshala.com/static/images/registration/student/background-425.png");
+        background-size: contain;
+    }
+    h3 {
+        display: none;
+    }
+    h4 {
+        font-size: 2.5vw;
+    }
+    .cat {
+        margin-top: 10px;
+    }
+    #signupSec {
+        flex-basis: 55%;
+    }
+    #poster > div > div:nth-child(1) {
+        font-size: 4.5vw;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Internshala | Summer Internship 2021</title>
+    <link rel="icon" type="image/png" href="https://internshala.com/favicon.ico">
+    <link href="../styles/register_student.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <title>Internships | Summer Internship 2021</title>
+</head>
+<body>
+    <!-- Navbar  -->
+    <div id="navBar">
+        
+    </div>
+    <nav>
+        
+    </nav>
+    <!-- login Modal Pop-up-->
+    <div id="login_modal_popup">
+
+    </div>
+    <!-- register as student -->
+    <div id="regStd">
+        <div id="poster">
+            <div>
+                <div>A <span>free</span> ride to your dream career</div>
+                <h3>Register and apply to 10000+ opportunities</h3>
+                <div class="cat">
+                    <img src="https://internshala.com/static/images/common/check_box.svg">
+                    <h4>Internships</h4>
+                </div>
+                <div class="cat">
+                    <img src="https://internshala.com/static/images/common/check_box.svg">
+                    <h4>Fresher jobs</h4>
+                </div>
+                <div class="cat">
+                    <img src="https://internshala.com/static/images/common/check_box.svg">
+                    <h4>Work from home jobs</h4>
+                </div>
+            </div>
+        </div>
+        <div id="signupSec">
+            <div id="signupDiv">
+                <div class="textCenter" id="signGoogle">
+                    <img src="https://internshala.com/static/images/login/google_logo.png">
+                    <h4>Sign Up with Google</h4>
+                </div>
+                <div id="horStroke">
+
+                </div>
+                <div class="textCenter" id="opt">
+                    <p>OR</p>
+                </div>
+                <form onsubmit="signup(event)">
+                    <div class="details1">
+                        <label>Email</label>
+                        <input placeholder="vivek@example.com"/>
+                    </div>
+                    <div class="details1">
+                        <label>Password</label>
+                        <input placeholder="Must be at least 6 characters" type="password"/>
+                    </div>
+                    <div id="name">
+                        <div class="details1">
+                            <label>First Name</label>
+                            <input placeholder="Vivek"/>
+                        </div>
+                        <div class="details1">
+                            <label>Last Name</label>
+                            <input placeholder="Sharma"/>
+                        </div>
+                    </div>
+                    <p id="tc">By signing up, you agree to our <span>Terms and Conditions</span>.</p>
+                    <button class="textCenter" type="submit">Sign up</button>
+                </form>
+                <p id="msg_regStudent">Already registered? <span>Login</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+<div id="footer">
+    
+</div>
+</body>
+</html>
+<script type="module">
+    // nav bar
+    import {navbar, huberberg} from "../components/navbar.js";
+    document.getElementsByTagName('nav')[0].innerHTML =  navbar();
+    document.getElementById('navBar').addEventListener('click', hidehuberberg);
+    document.getElementById('huberbergMenu').addEventListener('click', showHuberberg);
+    function showHuberberg(){
+        document.getElementById('navBar').innerHTML =  huberberg();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+    }
+    function hidehuberberg(){
+        document.getElementById('navBar').innerHTML = null;
+        document.getElementsByTagName('body')[0].removeAttribute('id', 'fixedBody');
+    }
+    // login modal
+    import loginModal from "../components/login_modal.js";
+    import {core} from "../scripts/login.js";
+    document.getElementById("logIn_button").onclick = () => {
+        document.getElementById('login_modal_popup').style.display = "block";
+        document.getElementById('login_modal_popup').innerHTML = loginModal();
+        document.getElementsByTagName('body')[0].setAttribute('id', 'fixedBody');
+        // core
+        core();
+    }
+    // footer modal
+    import {footer} from "../components/footer.js";
+    let foot = document.getElementById("footer");
+    foot.innerHTML = footer();
+    // register as student page change
+    document.getElementById("register_as_student").onclick = () => {
+        window.location.href = "../pages/register_student.html";
+    }
+    // register as employer page change
+    document.getElementById("register_as_employer").onclick = () => {
+        window.location.href = "../pages/register_employer.html";
+    }
+    // return to homepage onclick brand logo
+    document.getElementById("intershalaLogo").onclick = () => {
+        window.location.href = "../homepage.html";
+    }
+</script>
+<script src="../scripts/register_student.js"></script>
