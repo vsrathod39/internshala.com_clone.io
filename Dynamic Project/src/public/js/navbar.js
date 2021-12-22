@@ -12,10 +12,10 @@ function navbar() {
                         <li>
                             <p class="spanTag navbar_ul_ul_ul">Location</p>
                             <ul>
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?work_form_home=work_form_home">Work From Home</a></li>
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Bangalore">Internship in Bangalore</a></li>
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Delhi">Internship in Delhi</a></li>
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Pune">Internship in Pune</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="/internships?work_form_home=work_form_home">Work From Home</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="/internships?location=Bangalore">Internship in Bangalore</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="/internships?location=Delhi">Internship in Delhi</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="/internships?location=Pune">Internship in Pune</a></li>
                             </ul>
                         </li>
                         <li>
@@ -31,7 +31,7 @@ function navbar() {
                             <ul>
                                 <li class=" navbar_ul_ul_ul">Engineering Internship</li>
                                 <li class=" navbar_ul_ul_ul">MBA Internship</li>
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?part_time=true">Part-Time Jobs/Internship</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="/internships?part_time=true">Part-Time Jobs/Internship</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -44,10 +44,10 @@ function navbar() {
                         <li>
                             <p class="spanTag navbar_ul_ul_ul">Programming</p>
                             <ul id="navbar_nested_dropDown">
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?work_form_home=work_form_home">Web Development</a></li>
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Bangalore">Ethical Hacking</a></li>
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Delhi">Core Java</a></li>
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?location=Pune">Blockchain</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="/internships?work_form_home=work_form_home">Web Development</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="/internships?location=Bangalore">Ethical Hacking</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="/internships?location=Delhi">Core Java</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="/internships?location=Pune">Blockchain</a></li>
                             </ul>
                         </li>
                         <li>
@@ -63,14 +63,14 @@ function navbar() {
                             <ul>
                                 <li class=" navbar_ul_ul_ul">AutoCAD</li>
                                 <li class=" navbar_ul_ul_ul">Autocad 3D</li>
-                                <li class=" navbar_ul_ul_ul"><a href="http://localhost:2345/internships?part_time=true">Fusion 360</a></li>
+                                <li class=" navbar_ul_ul_ul"><a href="/internships?part_time=true">Fusion 360</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
             </ul>
             <ul>
-                <li><a href="http://localhost:2345/internships">Fresher Jobs</a></li>
+                <li><a href="/internships">Fresher Jobs</a></li>
             </ul>
             <ul id="bookmark_icon">
                 <li><img src="https://img.icons8.com/fluency-systems-regular/24/000000/bookmark-ribbon--v2.png"/></li>
@@ -95,8 +95,8 @@ function navbar() {
                 <li>
                     <span id="register_button">Register<img id="upDownArrow" src="/images/icons/down-arrow-solid-24.png" alt="dropDownArrow"></span>
                     <ul>
-                        <li class=" navbar_ul_ul_ul" id="register_as_student"><a href="http://localhost:2345/register_student">As a student</a></li>
-                        <li class=" navbar_ul_ul_ul" id="register_as_employer"><a href="http://localhost:2345/register_employer">As an employer</a></li>
+                        <li class=" navbar_ul_ul_ul" id="register_as_student"><a href="/register_student">As a student</a></li>
+                        <li class=" navbar_ul_ul_ul" id="register_as_employer"><a href="/register_employer">As an employer</a></li>
                     </ul>
                 </li>
             </ul>
@@ -132,13 +132,13 @@ function huberberg() {
     <ul>
         <li>Internships</li>
         <li>Online Trainings<span class="hotText">OFFER</span></li>
-        <li><a href="http://localhost:2345/internships?work_form_home=work_form_home">WFH Internships</a></li>
-        <li><a href="http://localhost:2345/internships">Fressher Jobs</a></li>
+        <li><a href="/internships?work_form_home=work_form_home">WFH Internships</a></li>
+        <li><a href="/internships">Fressher Jobs</a></li>
         <li>Contact US</li>
     </ul>
     <ul id="hamburger_register_btn">
-        <li><a href="http://localhost:2345/register_student">Register - As a Student</a></li>
-        <li><a href="http://localhost:2345/register_employer">Register - As an Employer</a></li>
+        <li><a href="/register_student">Register - As a Student</a></li>
+        <li><a href="/register_employer">Register - As an Employer</a></li>
         <li id="hamburger_login">Login</li>
     </ul>
     <ul>
