@@ -155,7 +155,7 @@ nav {
   z-index: 1;
 }
 #fixedBody {
-  position: fixed;
+  /* position: fixed; */
 }
 #logout_icon {
   display: flex;
