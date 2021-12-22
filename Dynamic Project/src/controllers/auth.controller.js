@@ -6,7 +6,6 @@ const { validationResult } = require('express-validator');
 const express = require("express");
 
 require("dotenv").config();
-
 const register = async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
