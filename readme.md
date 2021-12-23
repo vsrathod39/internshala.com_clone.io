@@ -4,6 +4,7 @@ This is the brief description of our project which was made as a part of the for
 construct week **@Masai School** for the **Full-stack Web Development** course.
 
 URL_Link: [www.internshalaclone.in](http://ec2-13-233-140-129.ap-south-1.compute.amazonaws.com/).
+
 Blog_Link: https://medium.com/@agarwalr327/internshala-clone-87da8af02843
 
 ## About Internshala:
@@ -32,8 +33,13 @@ The training courses include, but are not restricted to, Photography, Business C
 
 ## Project Description:
 
-We as a team of five members Prakhar Bhalla(FW-12_072), Vikas Kumar(FW-12_132), Shakib Jilani(FW-12_204) , 
-Tirthesh Bohra (fw12_114),Vikas Kumar(fw11_305) and myself Rahul Agarwal(FW-11_238) were given a task to clone the website https://internshala.com/.
+###### We a team of five members designed work-flow and build the website from scratch: 
+> Prakhar Bhalla(FW-12_072)
+> Vikas Kumar(FW-12_132)
+> Shakib Jilani(FW-12_204)
+> Tirthesh Bohra (fw12_114)
+> Vikas Kumar(fw11_305)
+> Rahul Agarwal(FW-11_238)
 
 We, as a team distributed our parts from this website, and each individual was assigned with their specific
 task and the project was made by mutually collaborating via git, and the development files were stored as repositories on github.com.
@@ -59,7 +65,17 @@ task and the project was made by mutually collaborating via git, and the develop
 
 ## Glimpses of Website:
 
-![landing page](https://drive.google.com/file/d/1m4D5XGUKMnPzpCw7eVpCwoxMnYE6Zok6/view?usp=sharing).
+![landing_page](https://user-images.githubusercontent.com/91534659/147224823-7e6d3ca7-85f0-4de3-acf2-12c1d687a2ea.png)
+
+
+![filter and loging](https://user-images.githubusercontent.com/91534659/147224895-ae9a16c4-40bf-4a7b-8c62-067b07c71e2a.png)
+
+![register_page](https://user-images.githubusercontent.com/91534659/147224966-9c43850f-4a82-4469-b3c3-193d491ee7fa.png)
+
+![dashboard](https://user-images.githubusercontent.com/91534659/147225066-7993edf9-196e-402e-8411-1331aa2d0cf3.png)
+
+![footer](https://user-images.githubusercontent.com/91534659/147225104-73d640d8-bdc7-4842-a491-c51a88bd2def.png)
+
 
 ## Frequently Asked Questions — FAQs::
 
@@ -72,7 +88,7 @@ Q2). Is it free to apply for internships on Internshala?
 Ans. Yes, applying for internships — paid or unpaid — is free on Internship.
 
 
-Foot Note: 
+##Foot Note: 
 All the images and icon links have been taken from the official website and some other 
 internet sources and may be subject to copyright. So, try not to use the images or icons
 for business purposes or reproduce them without prior approval from the owner. 
