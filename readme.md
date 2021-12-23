@@ -1,7 +1,7 @@
-#[Internshala.come](https://internshala.com/) : Clone
+# [Internshala.come](https://internshala.com/) : Clone
 
 This is the brief description of our project which was made as a part of the forth unit 
-construct week **@Masai School** for the ** Full-stack Web Development ** course.
+construct week **@Masai School** for the **Full-stack Web Development** course.
 
 URL_Link: [www.internshalaclone.in](http://ec2-13-233-140-129.ap-south-1.compute.amazonaws.com/).
 Blog_Link: https://medium.com/@agarwalr327/internshala-clone-87da8af02843
@@ -19,7 +19,7 @@ Internshala’s courses are largely divided into Summer Training and Winter Trai
 Internshala offers different kinds of internships — full time, part-time, and work from home.
 One can find both paid and unpaid internships on Internshala.
 
-##Internshala — How it Works?
+## Internshala — How it Works?
 
 A student has to register, create a decent profile, and apply for various internships listed on the portal. 
 Internshala is a free platform when it comes to applying or searching for internships but earns revenue through two mediums:
@@ -38,7 +38,7 @@ Tirthesh Bohra (fw12_114),Vikas Kumar(fw11_305) and myself Rahul Agarwal(FW-11_2
 We, as a team distributed our parts from this website, and each individual was assigned with their specific
 task and the project was made by mutually collaborating via git, and the development files were stored as repositories on github.com.
 
-### Features:
+###### Features:
 
 1. Google login authentication
 2. Form validation
@@ -47,7 +47,7 @@ task and the project was made by mutually collaborating via git, and the develop
 5. Express-validator
 5. Data management
 
-### Tech stacK:
+###### Tech stacK:
 
 1. HTML
 2. CSS 
