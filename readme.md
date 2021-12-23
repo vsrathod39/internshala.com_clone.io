@@ -59,7 +59,7 @@ task and the project was made by mutually collaborating via git, and the develop
 5. Express-validator
 5. Data management
 
-###### Tech stacK:
+###### Tech Stack:
 
 1. HTML5
 2. CSS3
