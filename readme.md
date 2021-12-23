@@ -94,7 +94,7 @@ Q2). Is it free to apply for internships on Internshala?
 Ans. Yes, applying for internships — paid or unpaid — is free on Internship.
 
 
-##Foot Note: 
+## Foot Note: 
 All the images and icon links have been taken from the official website and some other 
 internet sources and may be subject to copyright. So, try not to use the images or icons
 for business purposes or reproduce them without prior approval from the owner. 
