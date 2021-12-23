@@ -5,7 +5,7 @@ construct week **@Masai School** for the **Full-stack Web Development** course.
 
 URL_Link: [www.internshalaclone.in](http://ec2-13-233-140-129.ap-south-1.compute.amazonaws.com/).
 
-Blog_Link: https://medium.com/@agarwalr327/internshala-clone-87da8af02843
+Blog_Link: [Clone of Internshala](https://medium.com/@agarwalr327/internshala-clone-87da8af02843)
 
 ## About Internshala:
 
