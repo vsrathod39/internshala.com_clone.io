@@ -61,9 +61,9 @@ task and the project was made by mutually collaborating via git, and the develop
 
 ###### Tech stacK:
 
-1. HTML
-2. CSS 
-3. Javascript
+1. HTML5
+2. CSS3
+3. ES6
 4. Node.js
 5. Express.js
 4. MongoDB
