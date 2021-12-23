@@ -1,4 +1,4 @@
-##Internshala.come : Clone
+#Internshala.come : Clone
 This is the brief description of our project which was made as a part of the forth unit 
 construct week @Masai School for the Full-stack Web Developer course.
 
