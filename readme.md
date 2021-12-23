@@ -68,6 +68,8 @@ task and the project was made by mutually collaborating via git, and the develop
 5. Express.js
 4. MongoDB
 5. Mongoose
+6. MongoDB Atlas
+7. AWS for deployment
 
 ## Glimpses of Website:
 
