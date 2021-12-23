@@ -34,12 +34,18 @@ The training courses include, but are not restricted to, Photography, Business C
 ## Project Description:
 
 ###### We a team of five members designed work-flow and build the website from scratch: 
-> Prakhar Bhalla(FW-12_072)
-> Vikas Kumar(FW-12_132)
-> Shakib Jilani(FW-12_204)
-> Tirthesh Bohra (fw12_114)
-> Vikas Kumar(fw11_305)
-> Rahul Agarwal(FW-11_238)
+
+> [Prakhar Bhalla(FW-12_072)](https://www.linkedin.com/in/prakhar-bhalla-a4a476155)
+> 
+> [Vikas Kumar(FW-12_132)](https://www.linkedin.com/in/vikas-kumar39/)
+> 
+> [Shakib Jilani(FW-12_204)](https://www.linkedin.com/in/shakib-jilani/)
+> 
+> [Tirthesh Bohra (fw12_114)](https://www.linkedin.com/in/tirtheshbohra/)
+> 
+> [Vikas Kumar(fw11_305)](https://www.linkedin.com/in/vikas-820001201/)
+> 
+> [Rahul Agarwal(FW-11_238)](https://www.linkedin.com/in/rahul-agarwal-17a24812b/)
 
 We, as a team distributed our parts from this website, and each individual was assigned with their specific
 task and the project was made by mutually collaborating via git, and the development files were stored as repositories on github.com.
