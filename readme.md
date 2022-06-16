@@ -73,17 +73,31 @@ task and the project was made by mutually collaborating via git, and the develop
 
 ## Glimpses of Website:
 
+#### Home
+
 ![landing_page](https://user-images.githubusercontent.com/91534659/147224823-7e6d3ca7-85f0-4de3-acf2-12c1d687a2ea.png)
 
+#### Apply filter here
 
 ![filter and loging](https://user-images.githubusercontent.com/91534659/147224895-ae9a16c4-40bf-4a7b-8c62-067b07c71e2a.png)
 
+#### User registration
+
 ![register_page](https://user-images.githubusercontent.com/91534659/147224966-9c43850f-4a82-4469-b3c3-193d491ee7fa.png)
+
+#### User dashboard
 
 ![dashboard](https://user-images.githubusercontent.com/91534659/147225066-7993edf9-196e-402e-8411-1331aa2d0cf3.png)
 
+#### Footer
+
 ![footer](https://user-images.githubusercontent.com/91534659/147225104-73d640d8-bdc7-4842-a491-c51a88bd2def.png)
 
+
+## 🔗 Links
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://vikas.vercel.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vikas-kumar39/)
 
 ## Frequently Asked Questions — FAQs::
 
@@ -97,7 +111,12 @@ Ans. Yes, applying for internships — paid or unpaid — is free on Internship.
 
 
 ## Foot Note: 
+
 All the images and icon links have been taken from the official website and some other 
 internet sources and may be subject to copyright. So, try not to use the images or icons
 for business purposes or reproduce them without prior approval from the owner. 
 The images and icons used here are just for illustrative purposes.
+
+## Feedback
+
+If you have any feedback, please reach out to me at vsrathod39@gmail.com
