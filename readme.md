@@ -1,7 +1,7 @@
-# [Internshala.come](https://internshala.com/) : Clone
+# [Internshala](https://internshala.com/)
 
 This is the brief description of our project which was made as a part of the forth unit 
-construct week **@Masai School** for the **Full-stack Web Development** course.
+construct week **@Masai School** for the **Full-stack Web Development** course. We have tried to clone the original Internshala website.
 
 URL_Link: [www.internshalaclone.in](http://ec2-35-154-40-77.ap-south-1.compute.amazonaws.com/)
 
